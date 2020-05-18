@@ -1,0 +1,25 @@
+:host {
+  display: block;
+}
+
+/* header */
+.navbar-brand img {
+  width: 125px;
+}
+
+.btn-custom-head {
+  padding: 2px 10px ;
+  font-size: 12px;
+  border-radius: 10px !important;
+  margin-left: -20px;
+}
+
+header {
+  margin-top: 50px;
+}
+
+@media (max-width: 414px) {
+  header {
+    margin-top: 20px;
+  }
+}

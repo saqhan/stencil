@@ -1,0 +1,156 @@
+:host {
+  display: block;
+}
+
+.img-news {
+  background-image: url("https://via.placeholder.com/635x308?text=Visit");
+}
+
+.lenta-img {
+  background-image: url("https://via.placeholder.com/900x900?text=Visit");
+}
+
+.img-news {
+  height: 308px;
+  background-size: cover;
+}
+
+.img-news img {
+  width: 100%;
+  height: 315px;
+}
+
+.btn-custom {
+  padding: 10px 20px;
+  font-size: 12px;
+  border-radius: 10px;
+}
+
+.lenta-news {
+  padding-bottom: 40px;
+  flex: 1;
+}
+
+.lenta-img {
+  width: 110px;
+  height: 110px;
+  background-size: cover;
+  border-radius: 3px;
+  margin-right: 35px;
+}
+
+.lenta-news img {
+  width: 110px;
+  height: 110px;
+}
+
+.lenta-info {
+  flex: 2;
+}
+
+.lenta-title {
+  font-size: 15px;
+}
+
+.lenta-category {
+  font-weight: 600;
+}
+
+.btn-read a {
+  color: #000000;
+  font-weight: 700;
+  transition: 0.3s all;
+  border-bottom: 1px solid #000;
+}
+
+.btn-read a:hover {
+  text-decoration: none;
+  color: #007bff;
+  border-bottom: 1px solid #007bff;
+  cursor: context-menu;
+}
+
+.lenta-title {
+  min-height: 58px;
+  margin-top: 10px;
+  line-height: 1.2;
+}
+
+@media (max-width: 414px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 992px) {
+
+  .img-news img {
+    height: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+
+.img-news {
+  height: 308px;
+  background-size: cover;
+}
+
+.img-news img {
+  width: 100%;
+  height: 315px;
+}
+
+.btn-custom {
+  padding: 10px 20px;
+  font-size: 12px;
+  border-radius: 10px;
+}
+
+.category-news {
+  font-weight: 600;
+}
+
+.btn-read a {
+  color: #000000;
+  font-weight: 700;
+  transition: 0.3s all;
+  border-bottom: 1px solid #000;
+}
+
+.btn-read a:hover {
+  text-decoration: none;
+  color: #007bff;
+  border-bottom: 1px solid #007bff;
+  cursor: context-menu;
+}
+
+
+
+@media (max-width: 414px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (max-width: 768px) {
+  .main-news {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-news {
+    margin-bottom: 40px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+}
