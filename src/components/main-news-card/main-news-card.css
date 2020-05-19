@@ -1,0 +1,87 @@
+:host {
+  display: block;
+}
+
+.img-news {
+  background-image: url("https://via.placeholder.com/635x308?text=Visit");
+}
+
+.btn-custom {
+  padding: 10px 20px;
+  font-size: 12px;
+  border-radius: 10px;
+}
+
+.btn-read a {
+  color: #000000;
+  font-weight: 700;
+  transition: 0.3s all;
+  border-bottom: 1px solid #000;
+}
+
+.btn-read a:hover {
+  text-decoration: none;
+  color: #007bff;
+  border-bottom: 1px solid #007bff;
+  cursor: context-menu;
+}
+
+
+
+.img-news {
+  height: 308px;
+  background-size: cover;
+}
+
+.img-news img {
+  width: 100%;
+  height: 315px;
+}
+
+.btn-custom {
+  padding: 10px 20px;
+  font-size: 12px;
+  border-radius: 10px;
+}
+
+.category-news {
+  font-weight: 600;
+}
+
+.btn-read a {
+  color: #000000;
+  font-weight: 700;
+  transition: 0.3s all;
+  border-bottom: 1px solid #000;
+}
+
+.btn-read a:hover {
+  text-decoration: none;
+  color: #007bff;
+  border-bottom: 1px solid #007bff;
+  cursor: context-menu;
+}
+
+
+
+
+
+@media (max-width: 414px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 992px) {
+
+  .img-news img {
+    height: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+}

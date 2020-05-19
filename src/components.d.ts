@@ -7,11 +7,21 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface FirstSlider {
-        "blogCarouselMock": any;
+        "blogCarouselMock": object;
     }
     interface HeaderApp {
     }
+    interface LentaNewsCard {
+        "lentaNews": any;
+    }
+    interface MainNewsCard {
+        "mainNews": any;
+    }
     interface MyComponent {
+        "blogPost": object;
+    }
+    interface NewBlog {
+        "post": any;
     }
 }
 declare global {
@@ -27,30 +37,64 @@ declare global {
         prototype: HTMLHeaderAppElement;
         new (): HTMLHeaderAppElement;
     };
+    interface HTMLLentaNewsCardElement extends Components.LentaNewsCard, HTMLStencilElement {
+    }
+    var HTMLLentaNewsCardElement: {
+        prototype: HTMLLentaNewsCardElement;
+        new (): HTMLLentaNewsCardElement;
+    };
+    interface HTMLMainNewsCardElement extends Components.MainNewsCard, HTMLStencilElement {
+    }
+    var HTMLMainNewsCardElement: {
+        prototype: HTMLMainNewsCardElement;
+        new (): HTMLMainNewsCardElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLNewBlogElement extends Components.NewBlog, HTMLStencilElement {
+    }
+    var HTMLNewBlogElement: {
+        prototype: HTMLNewBlogElement;
+        new (): HTMLNewBlogElement;
+    };
     interface HTMLElementTagNameMap {
         "first-slider": HTMLFirstSliderElement;
         "header-app": HTMLHeaderAppElement;
+        "lenta-news-card": HTMLLentaNewsCardElement;
+        "main-news-card": HTMLMainNewsCardElement;
         "my-component": HTMLMyComponentElement;
+        "new-blog": HTMLNewBlogElement;
     }
 }
 declare namespace LocalJSX {
     interface FirstSlider {
-        "blogCarouselMock"?: any;
+        "blogCarouselMock"?: object;
     }
     interface HeaderApp {
     }
+    interface LentaNewsCard {
+        "lentaNews"?: any;
+    }
+    interface MainNewsCard {
+        "mainNews"?: any;
+    }
     interface MyComponent {
+        "blogPost"?: object;
+    }
+    interface NewBlog {
+        "post"?: any;
     }
     interface IntrinsicElements {
         "first-slider": FirstSlider;
         "header-app": HeaderApp;
+        "lenta-news-card": LentaNewsCard;
+        "main-news-card": MainNewsCard;
         "my-component": MyComponent;
+        "new-blog": NewBlog;
     }
 }
 export { LocalJSX as JSX };
@@ -59,7 +103,10 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "first-slider": LocalJSX.FirstSlider & JSXBase.HTMLAttributes<HTMLFirstSliderElement>;
             "header-app": LocalJSX.HeaderApp & JSXBase.HTMLAttributes<HTMLHeaderAppElement>;
+            "lenta-news-card": LocalJSX.LentaNewsCard & JSXBase.HTMLAttributes<HTMLLentaNewsCardElement>;
+            "main-news-card": LocalJSX.MainNewsCard & JSXBase.HTMLAttributes<HTMLMainNewsCardElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "new-blog": LocalJSX.NewBlog & JSXBase.HTMLAttributes<HTMLNewBlogElement>;
         }
     }
 }

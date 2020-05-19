@@ -1,6 +1,5 @@
-import { Component, Prop, h } from "@stencil/core";
-// import { format } from "../../utils/utils";
-import { blogCarouselMock } from "../../utils/mock";
+import {Component, h, Prop} from "@stencil/core";
+import {blogPost} from "../../utils/mock";
 
 @Component({
   tag: "my-component",
@@ -9,21 +8,26 @@ import { blogCarouselMock } from "../../utils/mock";
 })
 export class MyComponent {
 
-  componentDidLoad() {
-    blogCarouselMock;
-  }
+  @Prop() blogPost: object;
 
-  // private getText(): string {
-  //   return format(this.first, this.middle, this.last);
-  // }
+  getNewPosts(arr): any[] {
+    return arr.map((item) => item);
+  }
 
   render() {
     return (
       <div>
         <header-app/>
-        <first-slider
-        />
+        <first-slider />
+        <NewPostCard post={this.getNewPosts(blogPost)} />
       </div>
     );
   }
+}
+
+const NewPostCard = (props) => {
+  return (props.post.map((item) => {
+      return <new-blog post={item}/>
+    }
+  ))
 }

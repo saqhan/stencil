@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Host, h } from '@stencil/core';
+import { Component, ComponentInterface, h } from '@stencil/core';
 
 @Component({
   tag: 'header-app',
@@ -51,7 +51,7 @@ export class HeaderApp implements ComponentInterface {
                     </li>
                   </ul>
                   <a href="#" class="pr-4">
-                    <span class="material-icons">search</span>
+                    <i class="fas fa-search"></i>
                   </a>
                   <form class="form">
                     <div class="input-group">
