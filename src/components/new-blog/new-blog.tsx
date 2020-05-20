@@ -27,7 +27,7 @@ export class NewBlog implements ComponentInterface {
                   {this.post.title}
                 </div>
                 <div class="btn-read pt-3">
-                  <a href="/second-page/">Read Story</a>
+                  <a href="/second-page/">Read Story1</a>
                 </div>
               </div>
             </div>
