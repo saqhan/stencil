@@ -1,5 +1,4 @@
-import {Component, h, Prop} from "@stencil/core";
-import {blogPost} from "../../utils/mock";
+import { Component, h } from "@stencil/core";
 
 @Component({
   tag: "my-component",
@@ -7,27 +6,17 @@ import {blogPost} from "../../utils/mock";
   shadow: false,
 })
 export class MyComponent {
-
-  @Prop() blogPost: object;
-
-  getNewPosts(arr): any[] {
-    return arr.map((item) => item);
-  }
-
   render() {
     return (
       <div>
-        <header-app/>
+        <header-app />
         <first-slider />
-        <NewPostCard post={this.getNewPosts(blogPost)} />
+        <new-blog />
+        <popular-news />
+        <events-blog />
+        <subsc-banner />
+        <app-footer/>
       </div>
     );
   }
-}
-
-const NewPostCard = (props) => {
-  return (props.post.map((item) => {
-      return <new-blog post={item}/>
-    }
-  ))
 }

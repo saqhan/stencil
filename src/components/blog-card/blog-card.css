@@ -1,0 +1,20 @@
+.blog-card {
+  width: 310px;
+  margin: auto;
+}
+.blog-img {
+  width: 310px;
+  height: 210px;
+  background-size: cover;
+  border-radius: 3px;
+  background-image: url("https://via.placeholder.com/310");
+}
+
+.blog-card {
+  width: 310px;
+  margin: auto;
+}
+
+.blog-category {
+  font-weight: 600;
+}

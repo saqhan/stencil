@@ -1,0 +1,40 @@
+.banner {
+  background-image: url("https://via.placeholder.com/900x900?text=Visit");
+  background-size: cover;
+}
+
+.banner .btn-read a {
+  color: #fff;
+  border-bottom: 1px solid #ffffff;
+  transition: 0.3s all;
+}
+
+.banner .btn-read a:hover {
+  text-decoration: none;
+  color: #007bff;
+  border-bottom: 1px solid #007bff;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 414px){
+  .banner {
+    margin-top: 50px;
+  }
+  .blog-img {
+    margin: auto;
+  }
+  .block-title {
+    text-align: center;
+  }
+}

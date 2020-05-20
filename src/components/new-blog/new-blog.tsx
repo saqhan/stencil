@@ -1,4 +1,5 @@
 import {Component, ComponentInterface, h, Prop} from "@stencil/core";
+import {blogPost} from "../../utils/mock";
 
 @Component({
   tag: "new-blog",
@@ -7,7 +8,11 @@ import {Component, ComponentInterface, h, Prop} from "@stencil/core";
 })
 export class NewBlog implements ComponentInterface {
 
-  @Prop() post:any;
+  @Prop() blogPost: object;
+
+  getNewPosts(arr): any[] {
+    return arr.map((item) => item);
+  }
 
   render() {
     return (
@@ -16,24 +21,18 @@ export class NewBlog implements ComponentInterface {
           <div class="col-12">
             <h1 class="font-weight-bold">New Blog Post</h1>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 pt-5 pt-lg-4">
-            <div class="d-flex justify-content-between">
-              <div class="blog-card">
-                <div class="blog-img"></div>
-                <div class=" category blog-category text-primary small pt-4">
-                  {this.post.category}
-                </div>
-                <div class="blog-title pt-3 font-weight-bold">
-                  {this.post.title}
-                </div>
-                <div class="btn-read pt-3">
-                  <a href="/second-page/">Read Story</a>
-                </div>
-              </div>
-            </div>
+          <div class="new-blog-cards">
+            <NewPostCard post={this.getNewPosts(blogPost)} />
           </div>
         </div>
       </div>
     );
   }
+}
+
+const NewPostCard = (props) => {
+  return (props.post.map((item) => {
+      return <blog-card post={item}/>
+    }
+  ))
 }

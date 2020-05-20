@@ -1,0 +1,37 @@
+
+.blog-img {
+  width: 310px;
+  height: 210px;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+
+
+.date-event {
+  padding: 10px;
+  background-color: #fff;
+  position: relative;
+  top: 8px;
+  border-bottom-right-radius: 5px;
+}
+
+
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 414px){
+
+  .blog-card {
+    width: 85%;
+    margin:auto;
+  }
+  .block-title {
+    text-align: center;
+  }
+}
+@media (max-width: 375px) {
+
+}

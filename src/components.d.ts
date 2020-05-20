@@ -6,6 +6,17 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface AppFooter {
+    }
+    interface BlogCard {
+        "post": any;
+    }
+    interface EventCard {
+        "event": any;
+    }
+    interface EventsBlog {
+        "events": object;
+    }
     interface FirstSlider {
         "blogCarouselMock": object;
     }
@@ -18,13 +29,44 @@ export namespace Components {
         "mainNews": any;
     }
     interface MyComponent {
-        "blogPost": object;
     }
     interface NewBlog {
+        "blogPost": object;
+    }
+    interface PopularCard {
         "post": any;
+    }
+    interface PopularNews {
+        "popularNews": object;
+    }
+    interface SubscBanner {
     }
 }
 declare global {
+    interface HTMLAppFooterElement extends Components.AppFooter, HTMLStencilElement {
+    }
+    var HTMLAppFooterElement: {
+        prototype: HTMLAppFooterElement;
+        new (): HTMLAppFooterElement;
+    };
+    interface HTMLBlogCardElement extends Components.BlogCard, HTMLStencilElement {
+    }
+    var HTMLBlogCardElement: {
+        prototype: HTMLBlogCardElement;
+        new (): HTMLBlogCardElement;
+    };
+    interface HTMLEventCardElement extends Components.EventCard, HTMLStencilElement {
+    }
+    var HTMLEventCardElement: {
+        prototype: HTMLEventCardElement;
+        new (): HTMLEventCardElement;
+    };
+    interface HTMLEventsBlogElement extends Components.EventsBlog, HTMLStencilElement {
+    }
+    var HTMLEventsBlogElement: {
+        prototype: HTMLEventsBlogElement;
+        new (): HTMLEventsBlogElement;
+    };
     interface HTMLFirstSliderElement extends Components.FirstSlider, HTMLStencilElement {
     }
     var HTMLFirstSliderElement: {
@@ -61,16 +103,52 @@ declare global {
         prototype: HTMLNewBlogElement;
         new (): HTMLNewBlogElement;
     };
+    interface HTMLPopularCardElement extends Components.PopularCard, HTMLStencilElement {
+    }
+    var HTMLPopularCardElement: {
+        prototype: HTMLPopularCardElement;
+        new (): HTMLPopularCardElement;
+    };
+    interface HTMLPopularNewsElement extends Components.PopularNews, HTMLStencilElement {
+    }
+    var HTMLPopularNewsElement: {
+        prototype: HTMLPopularNewsElement;
+        new (): HTMLPopularNewsElement;
+    };
+    interface HTMLSubscBannerElement extends Components.SubscBanner, HTMLStencilElement {
+    }
+    var HTMLSubscBannerElement: {
+        prototype: HTMLSubscBannerElement;
+        new (): HTMLSubscBannerElement;
+    };
     interface HTMLElementTagNameMap {
+        "app-footer": HTMLAppFooterElement;
+        "blog-card": HTMLBlogCardElement;
+        "event-card": HTMLEventCardElement;
+        "events-blog": HTMLEventsBlogElement;
         "first-slider": HTMLFirstSliderElement;
         "header-app": HTMLHeaderAppElement;
         "lenta-news-card": HTMLLentaNewsCardElement;
         "main-news-card": HTMLMainNewsCardElement;
         "my-component": HTMLMyComponentElement;
         "new-blog": HTMLNewBlogElement;
+        "popular-card": HTMLPopularCardElement;
+        "popular-news": HTMLPopularNewsElement;
+        "subsc-banner": HTMLSubscBannerElement;
     }
 }
 declare namespace LocalJSX {
+    interface AppFooter {
+    }
+    interface BlogCard {
+        "post"?: any;
+    }
+    interface EventCard {
+        "event"?: any;
+    }
+    interface EventsBlog {
+        "events"?: object;
+    }
     interface FirstSlider {
         "blogCarouselMock"?: object;
     }
@@ -83,30 +161,51 @@ declare namespace LocalJSX {
         "mainNews"?: any;
     }
     interface MyComponent {
-        "blogPost"?: object;
     }
     interface NewBlog {
+        "blogPost"?: object;
+    }
+    interface PopularCard {
         "post"?: any;
     }
+    interface PopularNews {
+        "popularNews"?: object;
+    }
+    interface SubscBanner {
+    }
     interface IntrinsicElements {
+        "app-footer": AppFooter;
+        "blog-card": BlogCard;
+        "event-card": EventCard;
+        "events-blog": EventsBlog;
         "first-slider": FirstSlider;
         "header-app": HeaderApp;
         "lenta-news-card": LentaNewsCard;
         "main-news-card": MainNewsCard;
         "my-component": MyComponent;
         "new-blog": NewBlog;
+        "popular-card": PopularCard;
+        "popular-news": PopularNews;
+        "subsc-banner": SubscBanner;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "app-footer": LocalJSX.AppFooter & JSXBase.HTMLAttributes<HTMLAppFooterElement>;
+            "blog-card": LocalJSX.BlogCard & JSXBase.HTMLAttributes<HTMLBlogCardElement>;
+            "event-card": LocalJSX.EventCard & JSXBase.HTMLAttributes<HTMLEventCardElement>;
+            "events-blog": LocalJSX.EventsBlog & JSXBase.HTMLAttributes<HTMLEventsBlogElement>;
             "first-slider": LocalJSX.FirstSlider & JSXBase.HTMLAttributes<HTMLFirstSliderElement>;
             "header-app": LocalJSX.HeaderApp & JSXBase.HTMLAttributes<HTMLHeaderAppElement>;
             "lenta-news-card": LocalJSX.LentaNewsCard & JSXBase.HTMLAttributes<HTMLLentaNewsCardElement>;
             "main-news-card": LocalJSX.MainNewsCard & JSXBase.HTMLAttributes<HTMLMainNewsCardElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "new-blog": LocalJSX.NewBlog & JSXBase.HTMLAttributes<HTMLNewBlogElement>;
+            "popular-card": LocalJSX.PopularCard & JSXBase.HTMLAttributes<HTMLPopularCardElement>;
+            "popular-news": LocalJSX.PopularNews & JSXBase.HTMLAttributes<HTMLPopularNewsElement>;
+            "subsc-banner": LocalJSX.SubscBanner & JSXBase.HTMLAttributes<HTMLSubscBannerElement>;
         }
     }
 }

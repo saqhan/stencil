@@ -42,6 +42,23 @@ a:hover {
     padding: 0px;
   }
 }
+
+.form-control {
+  background-color: #fff0;
+  height: 50px;
+  padding-left: 40px;
+  outline: none;
+}
+
+
+.input-group i {
+  position: relative;
+  top: 16px;
+  left: 33px;
+  font-size: 20px;
+  color: #5e5d6c;
+}
+
 @media (max-width: 320px) {
   .user-text {
     width: 85%;

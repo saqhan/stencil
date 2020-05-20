@@ -1,0 +1,71 @@
+.subscribe {
+  background-color: #000;
+}
+.subscribe .left {
+  padding-left: 50px;
+}
+.sub-title h1 {
+  font-size: 52px;
+}
+
+.btn-read  a {
+  transition: 0.3s all;
+  color: #6c757d;
+  border-bottom: 1px solid #6c757d;
+}
+
+.btn-read  a:hover {
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  cursor: context-menu;
+}
+
+
+.btn-custom-head {
+  padding: 10px 10px ;
+  font-size: 12px;
+  border-radius: 10px !important;
+  margin-left: -20px;
+  height: 50px;
+  width: 125px;
+  z-index: 999;
+}
+
+.form-control {
+  background-color: #fff0;
+  height: 50px;
+  padding-left: 40px;
+  outline: none;
+}
+
+
+.input-group i {
+  position: relative;
+  top: 16px;
+  left: 33px;
+  font-size: 20px;
+}
+
+.logos a {
+  font-size: 20px;
+  margin: 0px 10px;
+  transition: 0.3s all;
+}
+.logos a:hover {
+  color: #fff;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .sub-title, .subs-sub-title {
+    text-align: center;
+  }
+}
+@media (max-width: 414px) {
+  .sub-title {
+    font-size: 40px;
+  }
+  .subscribe .left {
+    padding-left: 0px;
+  }
+}
