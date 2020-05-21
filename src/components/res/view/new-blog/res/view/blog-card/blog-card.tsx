@@ -20,7 +20,7 @@ export class BlogCard implements ComponentInterface {
         </div>
         <div class="blog-title pt-3 font-weight-bold">{this.post.title}</div>
         <div class="btn-read pt-3">
-          <a href="/second-page/">Read Story</a>
+          <a href="/second-page/"> {this.post.btnText} </a>
         </div>
       </div>
 

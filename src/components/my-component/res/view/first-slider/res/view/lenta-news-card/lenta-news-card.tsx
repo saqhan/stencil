@@ -20,7 +20,7 @@ export class LentaNewsCard implements ComponentInterface {
             {this.lentaNews.title}
           </div>
           <div class="btn-read">
-            <a href="/second-page/">Read Report</a>
+            <a href="/second-page/">{ this.lentaNews.btnText }</a>
           </div>
         </div>
       </div>

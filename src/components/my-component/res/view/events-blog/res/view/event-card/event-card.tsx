@@ -20,7 +20,7 @@ export class EventCard implements ComponentInterface {
         </div>
         <div class="blog-title pt-3 font-weight-bold">{this.event.title}</div>
         <div class="btn-read pt-3">
-          <a href="/second-page/">Read Story</a>
+          <a href="/second-page/"> {this.event.btnText} </a>
         </div>
       </div>
     );

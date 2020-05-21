@@ -23,7 +23,7 @@ export class MainNewsCard implements ComponentInterface {
             {this.mainNews.subTitle}
           </div>
           <a href="/second-page/" class="btn btn-primary btn-custom">
-            Read Story
+            {this.mainNews.btnText}
           </a>
         </div>
       </div>
