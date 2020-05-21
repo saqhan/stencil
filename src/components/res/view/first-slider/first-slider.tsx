@@ -1,5 +1,5 @@
 import {Component, ComponentInterface, h, Prop} from '@stencil/core';
-import {blogCarouselMock} from "../../utils/mock";
+
 
 @Component({
   tag: 'first-slider',
@@ -8,7 +8,7 @@ import {blogCarouselMock} from "../../utils/mock";
 })
 export class FirstSlider implements ComponentInterface {
 
-  @Prop() blogCarouselMock:object;
+  @Prop() blogCarouselMock:any;
 
   mainNews(arr): any[] {
     return (arr.filter(item => item.main) || []).slice(0, 1);
@@ -23,10 +23,10 @@ export class FirstSlider implements ComponentInterface {
       <div class="container">
         <div class="row pt-5 pb-5">
           <div class="col-12 col-lg-7">
-            <MainNews  arr={this.mainNews(blogCarouselMock)}  ></MainNews>
+            <MainNews  arr={this.mainNews(this.blogCarouselMock)}  ></MainNews>
           </div>
           <div class="col-12 col-lg-5">
-            <LentaNews lenta={this.lentaNews(blogCarouselMock)} ></LentaNews>
+            <LentaNews lenta={this.lentaNews(this.blogCarouselMock)} ></LentaNews>
           </div>
         </div>
       </div>

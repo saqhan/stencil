@@ -1,5 +1,4 @@
 import {Component, ComponentInterface, h, Prop} from "@stencil/core";
-import {blogPost} from "../../utils/mock";
 
 @Component({
   tag: "new-blog",
@@ -17,22 +16,23 @@ export class NewBlog implements ComponentInterface {
   render() {
     return (
       <div class="container">
-        <div class="row pt-5 pb-5">
+        <div class="row">
           <div class="col-12">
             <h1 class="font-weight-bold">New Blog Post</h1>
           </div>
-          <div class="new-blog-cards">
-            <NewPostCard post={this.getNewPosts(blogPost)} />
-          </div>
+        </div>
+        <div class="row">
+          <NewPostCard post={this.getNewPosts(this.blogPost)} />
         </div>
       </div>
+
     );
   }
 }
 
 const NewPostCard = (props) => {
   return (props.post.map((item) => {
-      return <blog-card post={item}/>
+    return <div class="col-12 col-md-6 col-lg-4 "><blog-card post={item}/></div>
     }
   ))
 }

@@ -74,6 +74,10 @@
 
 @media (max-width: 768px) {
 
+  .main-news {
+    margin-bottom: 20px;
+  }
+
 }
 
 @media (max-width: 992px) {

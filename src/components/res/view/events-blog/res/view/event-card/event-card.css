@@ -27,6 +27,7 @@
   .blog-card {
     width: 85%;
     margin:auto;
+    margin-bottom: 15px;
   }
   .block-title {
     text-align: center;

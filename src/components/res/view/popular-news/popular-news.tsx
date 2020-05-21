@@ -1,5 +1,4 @@
 import {Component, ComponentInterface, h, Prop} from '@stencil/core';
-import {popularNews} from "../../utils/mock";
 
 @Component({
   tag: 'popular-news',
@@ -8,7 +7,7 @@ import {popularNews} from "../../utils/mock";
 })
 export class PopularNews implements ComponentInterface {
 
-  @Prop() popularNews:object;
+  @Prop() popularNews:any;
 
   getPopularNews(arr): any[] {
     return arr.map(item => item);
@@ -23,7 +22,7 @@ export class PopularNews implements ComponentInterface {
           </div>
           <div class="col-12 col-lg-7">
             <div class="cards-popular">
-              <CardPopular post={this.getPopularNews(popularNews)}/>
+              <CardPopular post={this.getPopularNews(this.popularNews)}/>
             </div>
           </div>
         <div class="col-12 col-lg-5 p-5 p-lg-0 banner d-flex align-items-center flex-column justify-content-center">

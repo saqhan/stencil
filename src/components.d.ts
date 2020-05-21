@@ -15,10 +15,10 @@ export namespace Components {
         "event": any;
     }
     interface EventsBlog {
-        "events": object;
+        "events": any;
     }
     interface FirstSlider {
-        "blogCarouselMock": object;
+        "blogCarouselMock": any;
     }
     interface HeaderApp {
     }
@@ -37,7 +37,7 @@ export namespace Components {
         "post": any;
     }
     interface PopularNews {
-        "popularNews": object;
+        "popularNews": any;
     }
     interface SubscBanner {
     }
@@ -147,10 +147,10 @@ declare namespace LocalJSX {
         "event"?: any;
     }
     interface EventsBlog {
-        "events"?: object;
+        "events"?: any;
     }
     interface FirstSlider {
-        "blogCarouselMock"?: object;
+        "blogCarouselMock"?: any;
     }
     interface HeaderApp {
     }
@@ -169,7 +169,7 @@ declare namespace LocalJSX {
         "post"?: any;
     }
     interface PopularNews {
-        "popularNews"?: object;
+        "popularNews"?: any;
     }
     interface SubscBanner {
     }
