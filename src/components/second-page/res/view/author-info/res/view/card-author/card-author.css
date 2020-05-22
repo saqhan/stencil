@@ -1,0 +1,36 @@
+.author-sub {
+  display: flex;
+  align-items: center;
+}
+
+.follow {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  justify-content: flex-end;
+  color: #c4c4c4;
+}
+
+.soc-acc {
+  margin-left: 20px;
+}
+
+.sub-auth {
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  margin-right: 30px;
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: 600;
+}
+.info {
+  font-size: 12px;
+}

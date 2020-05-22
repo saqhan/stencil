@@ -1,8 +1,5 @@
 import {Component, h} from "@stencil/core";
-import {blogCarouselMock} from "../../utils/mock";
-import {blogPost} from "../../utils/mock";
-import {popularNews} from "../../utils/mock";
-import {events} from "../../utils/mock";
+import {blogCarouselMock, blogPost,popularNews,events } from "../../utils/mock";
 
 @Component({
   tag: "my-component",

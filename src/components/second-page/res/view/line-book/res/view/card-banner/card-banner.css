@@ -1,0 +1,41 @@
+.banner-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.banner-sub-title {
+  margin: 25px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.right-banner {
+  position: relative;
+  top: -70px;
+}
+
+.right-banner img {
+  border-radius: 3px;
+  position: relative;
+  top: -20px;
+  right: 50px;
+}
+
+.btn-read button {
+  font-size: 12px;
+}
+.btn-black-line {
+  width: 110px;
+  height: 40px;
+  margin-left: 0px;
+}
+
+@media (max-width: 414px) {
+  .banner{
+    width: 109%;
+    text-align: center;
+  }
+  .right-banner {
+    display: none;
+  }
+}

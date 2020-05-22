@@ -1,0 +1,166 @@
+.bread-crumbs {
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+  padding-top: 10px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.right {
+  text-align: right;
+}
+
+.bread-crumbs ul {
+  padding: 0;
+}
+
+.bread-crumbs ul > li {
+  padding: 0;
+  margin: 0;
+  display: inline;
+  font-size: 13px;
+}
+
+.bread-crumbs .left ul > li:after {
+  content: " / ";
+  margin-left: -10px;
+}
+
+.bread-crumbs .right ul > li:after {
+  content: " . ";
+  font-size: 32px;
+  line-height: 2px;
+  position: absolute;
+  margin-left: -8px;
+  top: 2px;
+}
+
+.nav-link a {
+  color: #ccc;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.nav-link a:hover {
+  color: #007bff;
+}
+
+.left .active a {
+  color: #000;
+}
+.active a:hover {
+  color: #000000;
+  cursor: default;
+}
+
+.right .active a {
+  color: #007bff;
+}
+
+.item {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  transition: 0.3s all;
+  border-radius: 3px;
+  color: #353535;
+}
+
+.item:hover .wrapper {
+  background-color: rgba(208, 208, 208, 0.65);
+}
+.item-img {
+  width: 263px;
+  height: 263px;
+  border-radius: 50%;
+  background-size: cover;
+  background-image: url("https://via.placeholder.com/300x300?text=Visit");
+}
+
+.item-info {
+  display: flex;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.item-info div {
+  margin-right: 15px;
+}
+
+.btn-custom-head {
+  padding: 0px 5px;
+}
+
+.item-title {
+  margin-bottom: 25px;
+
+}
+
+.item-title a {
+  font-size: 40px;
+  line-height: 1;
+  color: #353535;
+}
+
+.item-title a:hover {
+  text-decoration: none;
+}
+
+.item-sub-title {
+  margin: 20px 0;
+}
+
+.item-author a, .item-date a {
+  color: #353535;
+}
+
+.item-link {
+  font-size: 18px;
+  color: #008ae1;
+}
+
+.item-link a, .item-author a, .item-date a {
+  text-decoration: none;
+}
+
+.container-fluid:hover {
+  background-color: #efefef;
+}
+
+@media (max-width: 768px) {
+  .item {
+    align-items: center;
+  }
+  .item-img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 414px) {
+  .item {
+    justify-content: center;
+  }
+  .item-img {
+    border-radius: 0px;
+    width: 100%;
+    height: 300px;
+  }
+  .right {
+    display: none;
+  }
+  .bread-crumbs {
+    margin-bottom: 0px;
+  }
+  .item {
+    padding-top: 10px;
+    margin-bottom: 20px;
+  }
+  .item-title {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .item-title a {
+    font-size: 26px;
+  }
+}

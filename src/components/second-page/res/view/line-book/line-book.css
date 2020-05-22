@@ -1,0 +1,12 @@
+.banner {
+  width: 80%;
+  max-height: 320px;
+  background-color: #000;
+  padding: 50px 20px;
+  margin: 80px 0;
+  color: #fff;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+

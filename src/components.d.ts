@@ -8,8 +8,23 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface AppFooter {
     }
+    interface AuthorInfo {
+        "author": any;
+    }
     interface BlogCard {
         "post": any;
+    }
+    interface BreadCard {
+        "links": any;
+    }
+    interface BreadCrumbs {
+        "links": any;
+    }
+    interface CardAuthor {
+        "author": any;
+    }
+    interface CardBanner {
+        "bannerPost": any;
     }
     interface EventCard {
         "event": any;
@@ -22,8 +37,16 @@ export namespace Components {
     }
     interface HeaderApp {
     }
+    interface ItemNews {
+    }
     interface LentaNewsCard {
         "lentaNews": any;
+    }
+    interface LineBook {
+        "banner": any;
+    }
+    interface ListNews {
+        "news": any;
     }
     interface MainNewsCard {
         "mainNews": any;
@@ -33,11 +56,18 @@ export namespace Components {
     interface NewBlog {
         "blogPost": object;
     }
+    interface NewsCard {
+        "news": any;
+    }
     interface PopularCard {
         "post": any;
     }
     interface PopularNews {
         "popularNews": any;
+    }
+    interface QuoteText {
+    }
+    interface SecondPage {
     }
     interface SubscBanner {
     }
@@ -49,11 +79,41 @@ declare global {
         prototype: HTMLAppFooterElement;
         new (): HTMLAppFooterElement;
     };
+    interface HTMLAuthorInfoElement extends Components.AuthorInfo, HTMLStencilElement {
+    }
+    var HTMLAuthorInfoElement: {
+        prototype: HTMLAuthorInfoElement;
+        new (): HTMLAuthorInfoElement;
+    };
     interface HTMLBlogCardElement extends Components.BlogCard, HTMLStencilElement {
     }
     var HTMLBlogCardElement: {
         prototype: HTMLBlogCardElement;
         new (): HTMLBlogCardElement;
+    };
+    interface HTMLBreadCardElement extends Components.BreadCard, HTMLStencilElement {
+    }
+    var HTMLBreadCardElement: {
+        prototype: HTMLBreadCardElement;
+        new (): HTMLBreadCardElement;
+    };
+    interface HTMLBreadCrumbsElement extends Components.BreadCrumbs, HTMLStencilElement {
+    }
+    var HTMLBreadCrumbsElement: {
+        prototype: HTMLBreadCrumbsElement;
+        new (): HTMLBreadCrumbsElement;
+    };
+    interface HTMLCardAuthorElement extends Components.CardAuthor, HTMLStencilElement {
+    }
+    var HTMLCardAuthorElement: {
+        prototype: HTMLCardAuthorElement;
+        new (): HTMLCardAuthorElement;
+    };
+    interface HTMLCardBannerElement extends Components.CardBanner, HTMLStencilElement {
+    }
+    var HTMLCardBannerElement: {
+        prototype: HTMLCardBannerElement;
+        new (): HTMLCardBannerElement;
     };
     interface HTMLEventCardElement extends Components.EventCard, HTMLStencilElement {
     }
@@ -79,11 +139,29 @@ declare global {
         prototype: HTMLHeaderAppElement;
         new (): HTMLHeaderAppElement;
     };
+    interface HTMLItemNewsElement extends Components.ItemNews, HTMLStencilElement {
+    }
+    var HTMLItemNewsElement: {
+        prototype: HTMLItemNewsElement;
+        new (): HTMLItemNewsElement;
+    };
     interface HTMLLentaNewsCardElement extends Components.LentaNewsCard, HTMLStencilElement {
     }
     var HTMLLentaNewsCardElement: {
         prototype: HTMLLentaNewsCardElement;
         new (): HTMLLentaNewsCardElement;
+    };
+    interface HTMLLineBookElement extends Components.LineBook, HTMLStencilElement {
+    }
+    var HTMLLineBookElement: {
+        prototype: HTMLLineBookElement;
+        new (): HTMLLineBookElement;
+    };
+    interface HTMLListNewsElement extends Components.ListNews, HTMLStencilElement {
+    }
+    var HTMLListNewsElement: {
+        prototype: HTMLListNewsElement;
+        new (): HTMLListNewsElement;
     };
     interface HTMLMainNewsCardElement extends Components.MainNewsCard, HTMLStencilElement {
     }
@@ -103,6 +181,12 @@ declare global {
         prototype: HTMLNewBlogElement;
         new (): HTMLNewBlogElement;
     };
+    interface HTMLNewsCardElement extends Components.NewsCard, HTMLStencilElement {
+    }
+    var HTMLNewsCardElement: {
+        prototype: HTMLNewsCardElement;
+        new (): HTMLNewsCardElement;
+    };
     interface HTMLPopularCardElement extends Components.PopularCard, HTMLStencilElement {
     }
     var HTMLPopularCardElement: {
@@ -115,6 +199,18 @@ declare global {
         prototype: HTMLPopularNewsElement;
         new (): HTMLPopularNewsElement;
     };
+    interface HTMLQuoteTextElement extends Components.QuoteText, HTMLStencilElement {
+    }
+    var HTMLQuoteTextElement: {
+        prototype: HTMLQuoteTextElement;
+        new (): HTMLQuoteTextElement;
+    };
+    interface HTMLSecondPageElement extends Components.SecondPage, HTMLStencilElement {
+    }
+    var HTMLSecondPageElement: {
+        prototype: HTMLSecondPageElement;
+        new (): HTMLSecondPageElement;
+    };
     interface HTMLSubscBannerElement extends Components.SubscBanner, HTMLStencilElement {
     }
     var HTMLSubscBannerElement: {
@@ -123,25 +219,51 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "app-footer": HTMLAppFooterElement;
+        "author-info": HTMLAuthorInfoElement;
         "blog-card": HTMLBlogCardElement;
+        "bread-card": HTMLBreadCardElement;
+        "bread-crumbs": HTMLBreadCrumbsElement;
+        "card-author": HTMLCardAuthorElement;
+        "card-banner": HTMLCardBannerElement;
         "event-card": HTMLEventCardElement;
         "events-blog": HTMLEventsBlogElement;
         "first-slider": HTMLFirstSliderElement;
         "header-app": HTMLHeaderAppElement;
+        "item-news": HTMLItemNewsElement;
         "lenta-news-card": HTMLLentaNewsCardElement;
+        "line-book": HTMLLineBookElement;
+        "list-news": HTMLListNewsElement;
         "main-news-card": HTMLMainNewsCardElement;
         "my-component": HTMLMyComponentElement;
         "new-blog": HTMLNewBlogElement;
+        "news-card": HTMLNewsCardElement;
         "popular-card": HTMLPopularCardElement;
         "popular-news": HTMLPopularNewsElement;
+        "quote-text": HTMLQuoteTextElement;
+        "second-page": HTMLSecondPageElement;
         "subsc-banner": HTMLSubscBannerElement;
     }
 }
 declare namespace LocalJSX {
     interface AppFooter {
     }
+    interface AuthorInfo {
+        "author"?: any;
+    }
     interface BlogCard {
         "post"?: any;
+    }
+    interface BreadCard {
+        "links"?: any;
+    }
+    interface BreadCrumbs {
+        "links"?: any;
+    }
+    interface CardAuthor {
+        "author"?: any;
+    }
+    interface CardBanner {
+        "bannerPost"?: any;
     }
     interface EventCard {
         "event"?: any;
@@ -154,8 +276,16 @@ declare namespace LocalJSX {
     }
     interface HeaderApp {
     }
+    interface ItemNews {
+    }
     interface LentaNewsCard {
         "lentaNews"?: any;
+    }
+    interface LineBook {
+        "banner"?: any;
+    }
+    interface ListNews {
+        "news"?: any;
     }
     interface MainNewsCard {
         "mainNews"?: any;
@@ -165,27 +295,45 @@ declare namespace LocalJSX {
     interface NewBlog {
         "blogPost"?: object;
     }
+    interface NewsCard {
+        "news"?: any;
+    }
     interface PopularCard {
         "post"?: any;
     }
     interface PopularNews {
         "popularNews"?: any;
     }
+    interface QuoteText {
+    }
+    interface SecondPage {
+    }
     interface SubscBanner {
     }
     interface IntrinsicElements {
         "app-footer": AppFooter;
+        "author-info": AuthorInfo;
         "blog-card": BlogCard;
+        "bread-card": BreadCard;
+        "bread-crumbs": BreadCrumbs;
+        "card-author": CardAuthor;
+        "card-banner": CardBanner;
         "event-card": EventCard;
         "events-blog": EventsBlog;
         "first-slider": FirstSlider;
         "header-app": HeaderApp;
+        "item-news": ItemNews;
         "lenta-news-card": LentaNewsCard;
+        "line-book": LineBook;
+        "list-news": ListNews;
         "main-news-card": MainNewsCard;
         "my-component": MyComponent;
         "new-blog": NewBlog;
+        "news-card": NewsCard;
         "popular-card": PopularCard;
         "popular-news": PopularNews;
+        "quote-text": QuoteText;
+        "second-page": SecondPage;
         "subsc-banner": SubscBanner;
     }
 }
@@ -194,17 +342,28 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "app-footer": LocalJSX.AppFooter & JSXBase.HTMLAttributes<HTMLAppFooterElement>;
+            "author-info": LocalJSX.AuthorInfo & JSXBase.HTMLAttributes<HTMLAuthorInfoElement>;
             "blog-card": LocalJSX.BlogCard & JSXBase.HTMLAttributes<HTMLBlogCardElement>;
+            "bread-card": LocalJSX.BreadCard & JSXBase.HTMLAttributes<HTMLBreadCardElement>;
+            "bread-crumbs": LocalJSX.BreadCrumbs & JSXBase.HTMLAttributes<HTMLBreadCrumbsElement>;
+            "card-author": LocalJSX.CardAuthor & JSXBase.HTMLAttributes<HTMLCardAuthorElement>;
+            "card-banner": LocalJSX.CardBanner & JSXBase.HTMLAttributes<HTMLCardBannerElement>;
             "event-card": LocalJSX.EventCard & JSXBase.HTMLAttributes<HTMLEventCardElement>;
             "events-blog": LocalJSX.EventsBlog & JSXBase.HTMLAttributes<HTMLEventsBlogElement>;
             "first-slider": LocalJSX.FirstSlider & JSXBase.HTMLAttributes<HTMLFirstSliderElement>;
             "header-app": LocalJSX.HeaderApp & JSXBase.HTMLAttributes<HTMLHeaderAppElement>;
+            "item-news": LocalJSX.ItemNews & JSXBase.HTMLAttributes<HTMLItemNewsElement>;
             "lenta-news-card": LocalJSX.LentaNewsCard & JSXBase.HTMLAttributes<HTMLLentaNewsCardElement>;
+            "line-book": LocalJSX.LineBook & JSXBase.HTMLAttributes<HTMLLineBookElement>;
+            "list-news": LocalJSX.ListNews & JSXBase.HTMLAttributes<HTMLListNewsElement>;
             "main-news-card": LocalJSX.MainNewsCard & JSXBase.HTMLAttributes<HTMLMainNewsCardElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "new-blog": LocalJSX.NewBlog & JSXBase.HTMLAttributes<HTMLNewBlogElement>;
+            "news-card": LocalJSX.NewsCard & JSXBase.HTMLAttributes<HTMLNewsCardElement>;
             "popular-card": LocalJSX.PopularCard & JSXBase.HTMLAttributes<HTMLPopularCardElement>;
             "popular-news": LocalJSX.PopularNews & JSXBase.HTMLAttributes<HTMLPopularNewsElement>;
+            "quote-text": LocalJSX.QuoteText & JSXBase.HTMLAttributes<HTMLQuoteTextElement>;
+            "second-page": LocalJSX.SecondPage & JSXBase.HTMLAttributes<HTMLSecondPageElement>;
             "subsc-banner": LocalJSX.SubscBanner & JSXBase.HTMLAttributes<HTMLSubscBannerElement>;
         }
     }
