@@ -11,11 +11,11 @@ export class FirstSlider implements ComponentInterface {
   @Prop() blogCarouselMock:any;
 
   mainNews(arr): any[] {
-    return (arr.filter(item => item.main) || []).slice(0, 1);
+    return (arr.filter(item => item.main) || []).slice(-1);
   }
 
   lentaNews(arr): any[] {
-    return (arr.filter(item => item.lenta) || []).slice(0, 4);
+    return (arr.filter(item => item.lenta)).slice(-4).reverse();
   }
 
   render() {

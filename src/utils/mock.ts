@@ -42,7 +42,7 @@ export const blogCarouselMock = [
   },
   {
     id: 5,
-    title: "How to optimize your Facebook & Instagram",
+    title: "Last News instagram Video",
     subTitle:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aut dolore doloremque incidunt maxime quasi sint ullam.",
     img: "https://via.placeholder.com/900",
@@ -51,6 +51,29 @@ export const blogCarouselMock = [
     main: false,
     lenta: true,
   },
+  {
+    id: 6,
+    title: "Last News instagram Video",
+    subTitle:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aut dolore doloremque incidunt maxime quasi sint ullam.",
+    img: "https://via.placeholder.com/900",
+    category: "Report",
+    btnText: "Read Report",
+    main: false,
+    lenta: true,
+  },
+  {
+    id: 7,
+    title: "Last News instagram Video",
+    subTitle:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aut dolore doloremque incidunt maxime quasi sint ullam.",
+    img: "https://via.placeholder.com/900",
+    category: "Report",
+    btnText: "Read Report",
+    main: false,
+    lenta: true,
+  }
+
 ];
 
 export const blogPost = [

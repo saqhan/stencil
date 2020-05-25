@@ -13,9 +13,8 @@ export class EventCard implements ComponentInterface {
       <div class="blog-card">
         <div
           class="blog-img"
-          style={{ backgroundImage: "url(" + this.event.img + ")" }}
-        >
-          <span class="date-event">24</span>
+          style={{ backgroundImage: "url(" + this.event.img + ")" }}>
+          <span class={!this.event.date ? 'no-date' : 'date-event' }> {this.event.date} </span>
         </div>
 
         <div class={this.ColorCategory(this.event.category)}>
