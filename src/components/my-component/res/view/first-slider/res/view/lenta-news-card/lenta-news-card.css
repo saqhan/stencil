@@ -39,10 +39,6 @@
   font-size: 15px;
 }
 
-.lenta-category {
-  font-weight: 600;
-}
-
 .btn-read a {
   color: #000000;
   font-weight: 700;
@@ -72,10 +68,6 @@
   padding: 10px 20px;
   font-size: 12px;
   border-radius: 10px;
-}
-
-.category-news {
-  font-weight: 600;
 }
 
 .btn-read a {

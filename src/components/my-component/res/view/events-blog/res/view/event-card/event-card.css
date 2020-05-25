@@ -1,12 +1,9 @@
-
 .blog-img {
   width: 310px;
   height: 210px;
   background-size: cover;
   margin-bottom: 20px;
 }
-
-
 
 .date-event {
   padding: 10px;
@@ -16,17 +13,13 @@
   border-bottom-right-radius: 5px;
 }
 
-
-
 @media (max-width: 768px) {
-
 }
 
-@media (max-width: 414px){
-
+@media (max-width: 414px) {
   .blog-card {
     width: 85%;
-    margin:auto;
+    margin: auto;
     margin-bottom: 15px;
   }
   .block-title {
@@ -34,5 +27,4 @@
   }
 }
 @media (max-width: 375px) {
-
 }

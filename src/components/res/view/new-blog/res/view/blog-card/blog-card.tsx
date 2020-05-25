@@ -10,12 +10,12 @@ export class BlogCard implements ComponentInterface {
 
   render() {
     return (
-
       <div class="blog-card">
-        <div class="blog-img"
-             style={{ backgroundImage: 'url(' + this.post.img + ')'}}
+        <div
+          class="blog-img"
+          style={{ backgroundImage: "url(" + this.post.img + ")" }}
         ></div>
-        <div class=" category blog-category text-primary small pt-4">
+        <div class={this.ColorCategory(this.post.category)}>
           {this.post.category}
         </div>
         <div class="blog-title pt-3 font-weight-bold">{this.post.title}</div>
@@ -23,7 +23,19 @@ export class BlogCard implements ComponentInterface {
           <a href="/second-page/"> {this.post.btnText} </a>
         </div>
       </div>
-
     );
   }
+  public ColorCategory = (nameCategory) => {
+    const classCategory = "category small pt-4";
+    switch (nameCategory) {
+      case "Report":
+        return `report ${classCategory}`;
+      case "Webinar":
+        return `webinar ${classCategory}`;
+      case "Blog Post":
+        return `blog-post ${classCategory}`;
+      default:
+        classCategory;
+    }
+  };
 }

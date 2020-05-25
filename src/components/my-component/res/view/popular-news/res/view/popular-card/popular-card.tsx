@@ -13,7 +13,7 @@ export class PopularCard implements ComponentInterface {
       <div class="news-block">
         <div class="news-img"></div>
         <div class="news-info">
-          <div class="lenta-category category">{this.post.category}</div>
+          <div class={this.ColorCategory(this.post.category)} >{this.post.category}</div>
           <div class="lenta-title">{this.post.title}</div>
           <div class="btn-read">
             <a href="#"> {this.post.btnText} </a>
@@ -22,4 +22,17 @@ export class PopularCard implements ComponentInterface {
       </div>
     );
   }
+  public ColorCategory = (nameCategory) => {
+    const classCategory = "lenta-category category";
+    switch (nameCategory) {
+      case "Report":
+        return `report ${classCategory}`;
+      case "Webinar":
+        return `webinar ${classCategory}`;
+      case "Blog Post":
+        return `blog-post ${classCategory}`;
+      default:
+        classCategory;
+    }
+  };
 }

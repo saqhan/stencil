@@ -32,12 +32,11 @@ export const blogCarouselMock = [
   },
   {
     id: 4,
-    title: "How to optimize your.",
-    subTitle:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aut dolore doloremque incidunt maxime quasi sint ullam.",
+    title: "Explore instagram Video: How to convert.",
+    subTitle: "Lorem ipsum dolor sit amet.",
     img: "https://via.placeholder.com/900",
     category: "Webinar",
-    btnText: "Watch webinar",
+    btnText: "Read Story",
     main: false,
     lenta: true,
   },
@@ -59,7 +58,7 @@ export const blogPost = [
     id: 1,
     title: "How to quickly turn your podcast into a video script",
     img: "https://via.placeholder.com/900",
-    category: "Blog Post",
+    category: "Report",
     btnText: "Read Story",
   },
   {
@@ -73,7 +72,7 @@ export const blogPost = [
     id: 3,
     title: "How to quickly turn your podcast into a video script",
     img: "https://via.placeholder.com/900",
-    category: "Blog Post",
+    category: "Webinar",
     btnText: "Read Story",
   },
 ];
@@ -168,41 +167,45 @@ export const NewsStore = [
   {
     id: 1,
     title: "Annoucing V2.7 Release",
-    subTitle: "At Froala, our mission has always been about pushing web editing beyond its conceived limits—this vision has served as the guiding philosophy for all Froala releases from Version 1.x to",
+    subTitle:
+      "At Froala, our mission has always been about pushing web editing beyond its conceived limits—this vision has served as the guiding philosophy for all Froala releases from Version 1.x to",
     img: "https://via.placeholder.com/500",
-    author: 'Saqhan Abaev',
-    date: '20 Апр 2020',
-    btnText:'Keep Readeing',
-    category:'Editor'
+    author: "Saqhan Abaev",
+    date: "20 Апр 2020",
+    btnText: "Keep Readeing",
+    category: "Editor",
   },
   {
     id: 2,
     title: "Doing Wonders With Images In the Froala Editor",
-    subTitle: "At Froala, our mission has always been about pushing web editing beyond its conceived limits—this vision has served as the guiding philosophy for all Froala releases from Version 1.x to",
+    subTitle:
+      "At Froala, our mission has always been about pushing web editing beyond its conceived limits—this vision has served as the guiding philosophy for all Froala releases from Version 1.x to",
     img: "https://via.placeholder.com/500",
-    author: 'Saqhan Abaev',
-    date: '20 Апр 2019',
-    btnText:'Keep Readeing',
-    category:'Editor'
+    author: "Saqhan Abaev",
+    date: "20 Апр 2019",
+    btnText: "Keep Readeing",
+    category: "Editor",
   },
   {
     id: 3,
     title: "Using Multiple Froala Editors On a Single Webpage",
-    subTitle: "At Froala, our mission has always been about pushing web editing beyond its conceived limits—this vision has served as the guiding philosophy for all Froala releases from Version 1.x to",
+    subTitle:
+      "At Froala, our mission has always been about pushing web editing beyond its conceived limits—this vision has served as the guiding philosophy for all Froala releases from Version 1.x to",
     img: "https://via.placeholder.com/500",
-    author: 'Saqhan Abaev',
-    date: '20 Апр 2020',
-    btnText:'Keep Readeing',
-    category:'Editor'
+    author: "Saqhan Abaev",
+    date: "20 Апр 2020",
+    btnText: "Keep Readeing",
+    category: "Editor",
   },
   {
     id: 4,
     title: "Annoucing V2.7 Release",
-    subTitle: "At Froala, our mission has always been about pushing web editing beyond its conceived limits—this vision has served as the guiding philosophy for all Froala releases from Version 1.x to",
+    subTitle:
+      "At Froala, our mission has always been about pushing web editing beyond its conceived limits—this vision has served as the guiding philosophy for all Froala releases from Version 1.x to",
     img: "https://via.placeholder.com/500",
-    author: 'Saqhan Abaev',
-    date: '20 Апр 2020',
-    btnText:'Keep Readeing',
-    category:'Editor'
+    author: "Saqhan Abaev",
+    date: "20 Апр 2020",
+    btnText: "Keep Readeing",
+    category: "Editor",
   },
 ];

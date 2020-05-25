@@ -13,7 +13,7 @@ export class MainNewsCard implements ComponentInterface {
       <div class="main-news">
         <div>
           <div class="img-news m-auto"></div>
-          <div class="category category-news pt-3 text-primary small">
+          <div class={this.ColorCategory(this.mainNews.category)}>
             {this.mainNews.category}
           </div>
           <div class="title-news pt-3 h2 font-weight-bold">
@@ -29,4 +29,18 @@ export class MainNewsCard implements ComponentInterface {
       </div>
     );
   }
+  public ColorCategory = (nameCategory) => {
+    const classCategory = 'category category-news pt-3 small';
+    switch (nameCategory) {
+      case 'Report':
+        return `report ${classCategory}`;
+      case `Webinar ${classCategory}`:
+        return `webinar ${classCategory}`;
+      case 'Blog Post':
+        return `blog-post ${classCategory}`;
+      default: classCategory ;
+    }
+  }
 }
+
+

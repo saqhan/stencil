@@ -11,11 +11,14 @@ export class EventCard implements ComponentInterface {
   render() {
     return (
       <div class="blog-card">
-        <div class="blog-img" style={{ backgroundImage: 'url(' + this.event.img + ')'}}>
+        <div
+          class="blog-img"
+          style={{ backgroundImage: "url(" + this.event.img + ")" }}
+        >
           <span class="date-event">24</span>
         </div>
 
-        <div class="blog-category text-warning small">
+        <div class={this.ColorCategory(this.event.category)}>
           {this.event.category}
         </div>
         <div class="blog-title pt-3 font-weight-bold">{this.event.title}</div>
@@ -25,4 +28,17 @@ export class EventCard implements ComponentInterface {
       </div>
     );
   }
+  public ColorCategory = (nameCategory) => {
+    const classCategory = "category text-warning small";
+    switch (nameCategory) {
+      case "Report":
+        return `report ${classCategory}`;
+      case "Webinar":
+        return `webinar ${classCategory}`;
+      case "Blog Post":
+        return `blog-post ${classCategory}`;
+      default:
+        classCategory;
+    }
+  };
 }

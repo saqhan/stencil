@@ -1,4 +1,3 @@
-
 .category {
   font-weight: 600;
 }
@@ -19,6 +18,22 @@
 
 .text-primary {
   color: #007bff;
+}
+
+/*colors categories*/
+
+.blog-post {
+  color: #005cbf;
+}
+.report {
+  color: #dc3545;
+}
+.webinar {
+  color: #ffc107;
+}
+
+.small {
+  font-size: 80%;
 }
 
 a {
@@ -49,7 +64,6 @@ a:hover {
   padding-left: 40px;
   outline: none;
 }
-
 
 .input-group i {
   position: relative;
