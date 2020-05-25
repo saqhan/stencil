@@ -6,365 +6,365 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface AppFooter {
+    interface SSaqhanAppFooter {
     }
-    interface AuthorInfo {
+    interface SSaqhanAuthorInfo {
         "author": any;
     }
-    interface BlogCard {
+    interface SSaqhanBlogCard {
         "post": any;
     }
-    interface BreadCard {
+    interface SSaqhanBreadCard {
         "links": any;
     }
-    interface BreadCrumbs {
+    interface SSaqhanBreadCrumbs {
         "links": any;
     }
-    interface CardAuthor {
+    interface SSaqhanCardAuthor {
         "author": any;
     }
-    interface CardBanner {
+    interface SSaqhanCardBanner {
         "bannerPost": any;
     }
-    interface EventCard {
+    interface SSaqhanComponent {
+    }
+    interface SSaqhanEventCard {
         "event": any;
     }
-    interface EventsBlog {
+    interface SSaqhanEventsBlog {
         "events": any;
     }
-    interface FirstSlider {
+    interface SSaqhanFirstSlider {
         "blogCarouselMock": any;
     }
-    interface HeaderApp {
+    interface SSaqhanHeaderApp {
     }
-    interface ItemNews {
+    interface SSaqhanItemNews {
     }
-    interface LentaNewsCard {
+    interface SSaqhanLentaNewsCard {
         "lentaNews": any;
     }
-    interface LineBook {
+    interface SSaqhanLineBook {
         "banner": any;
     }
-    interface ListNews {
+    interface SSaqhanListNews {
         "news": any;
     }
-    interface MainNewsCard {
+    interface SSaqhanMainNewsCard {
         "mainNews": any;
     }
-    interface MyComponent {
-    }
-    interface NewBlog {
+    interface SSaqhanNewBlog {
         "blogPost": object;
     }
-    interface NewsCard {
+    interface SSaqhanNewsCard {
         "news": any;
     }
-    interface PopularCard {
+    interface SSaqhanPopularCard {
         "post": any;
     }
-    interface PopularNews {
+    interface SSaqhanPopularNews {
         "popularNews": any;
     }
-    interface QuoteText {
+    interface SSaqhanQuoteText {
     }
-    interface SecondPage {
+    interface SSaqhanSecondPage {
     }
-    interface SubscBanner {
+    interface SSaqhanSubscBanner {
     }
 }
 declare global {
-    interface HTMLAppFooterElement extends Components.AppFooter, HTMLStencilElement {
+    interface HTMLSSaqhanAppFooterElement extends Components.SSaqhanAppFooter, HTMLStencilElement {
     }
-    var HTMLAppFooterElement: {
-        prototype: HTMLAppFooterElement;
-        new (): HTMLAppFooterElement;
+    var HTMLSSaqhanAppFooterElement: {
+        prototype: HTMLSSaqhanAppFooterElement;
+        new (): HTMLSSaqhanAppFooterElement;
     };
-    interface HTMLAuthorInfoElement extends Components.AuthorInfo, HTMLStencilElement {
+    interface HTMLSSaqhanAuthorInfoElement extends Components.SSaqhanAuthorInfo, HTMLStencilElement {
     }
-    var HTMLAuthorInfoElement: {
-        prototype: HTMLAuthorInfoElement;
-        new (): HTMLAuthorInfoElement;
+    var HTMLSSaqhanAuthorInfoElement: {
+        prototype: HTMLSSaqhanAuthorInfoElement;
+        new (): HTMLSSaqhanAuthorInfoElement;
     };
-    interface HTMLBlogCardElement extends Components.BlogCard, HTMLStencilElement {
+    interface HTMLSSaqhanBlogCardElement extends Components.SSaqhanBlogCard, HTMLStencilElement {
     }
-    var HTMLBlogCardElement: {
-        prototype: HTMLBlogCardElement;
-        new (): HTMLBlogCardElement;
+    var HTMLSSaqhanBlogCardElement: {
+        prototype: HTMLSSaqhanBlogCardElement;
+        new (): HTMLSSaqhanBlogCardElement;
     };
-    interface HTMLBreadCardElement extends Components.BreadCard, HTMLStencilElement {
+    interface HTMLSSaqhanBreadCardElement extends Components.SSaqhanBreadCard, HTMLStencilElement {
     }
-    var HTMLBreadCardElement: {
-        prototype: HTMLBreadCardElement;
-        new (): HTMLBreadCardElement;
+    var HTMLSSaqhanBreadCardElement: {
+        prototype: HTMLSSaqhanBreadCardElement;
+        new (): HTMLSSaqhanBreadCardElement;
     };
-    interface HTMLBreadCrumbsElement extends Components.BreadCrumbs, HTMLStencilElement {
+    interface HTMLSSaqhanBreadCrumbsElement extends Components.SSaqhanBreadCrumbs, HTMLStencilElement {
     }
-    var HTMLBreadCrumbsElement: {
-        prototype: HTMLBreadCrumbsElement;
-        new (): HTMLBreadCrumbsElement;
+    var HTMLSSaqhanBreadCrumbsElement: {
+        prototype: HTMLSSaqhanBreadCrumbsElement;
+        new (): HTMLSSaqhanBreadCrumbsElement;
     };
-    interface HTMLCardAuthorElement extends Components.CardAuthor, HTMLStencilElement {
+    interface HTMLSSaqhanCardAuthorElement extends Components.SSaqhanCardAuthor, HTMLStencilElement {
     }
-    var HTMLCardAuthorElement: {
-        prototype: HTMLCardAuthorElement;
-        new (): HTMLCardAuthorElement;
+    var HTMLSSaqhanCardAuthorElement: {
+        prototype: HTMLSSaqhanCardAuthorElement;
+        new (): HTMLSSaqhanCardAuthorElement;
     };
-    interface HTMLCardBannerElement extends Components.CardBanner, HTMLStencilElement {
+    interface HTMLSSaqhanCardBannerElement extends Components.SSaqhanCardBanner, HTMLStencilElement {
     }
-    var HTMLCardBannerElement: {
-        prototype: HTMLCardBannerElement;
-        new (): HTMLCardBannerElement;
+    var HTMLSSaqhanCardBannerElement: {
+        prototype: HTMLSSaqhanCardBannerElement;
+        new (): HTMLSSaqhanCardBannerElement;
     };
-    interface HTMLEventCardElement extends Components.EventCard, HTMLStencilElement {
+    interface HTMLSSaqhanComponentElement extends Components.SSaqhanComponent, HTMLStencilElement {
     }
-    var HTMLEventCardElement: {
-        prototype: HTMLEventCardElement;
-        new (): HTMLEventCardElement;
+    var HTMLSSaqhanComponentElement: {
+        prototype: HTMLSSaqhanComponentElement;
+        new (): HTMLSSaqhanComponentElement;
     };
-    interface HTMLEventsBlogElement extends Components.EventsBlog, HTMLStencilElement {
+    interface HTMLSSaqhanEventCardElement extends Components.SSaqhanEventCard, HTMLStencilElement {
     }
-    var HTMLEventsBlogElement: {
-        prototype: HTMLEventsBlogElement;
-        new (): HTMLEventsBlogElement;
+    var HTMLSSaqhanEventCardElement: {
+        prototype: HTMLSSaqhanEventCardElement;
+        new (): HTMLSSaqhanEventCardElement;
     };
-    interface HTMLFirstSliderElement extends Components.FirstSlider, HTMLStencilElement {
+    interface HTMLSSaqhanEventsBlogElement extends Components.SSaqhanEventsBlog, HTMLStencilElement {
     }
-    var HTMLFirstSliderElement: {
-        prototype: HTMLFirstSliderElement;
-        new (): HTMLFirstSliderElement;
+    var HTMLSSaqhanEventsBlogElement: {
+        prototype: HTMLSSaqhanEventsBlogElement;
+        new (): HTMLSSaqhanEventsBlogElement;
     };
-    interface HTMLHeaderAppElement extends Components.HeaderApp, HTMLStencilElement {
+    interface HTMLSSaqhanFirstSliderElement extends Components.SSaqhanFirstSlider, HTMLStencilElement {
     }
-    var HTMLHeaderAppElement: {
-        prototype: HTMLHeaderAppElement;
-        new (): HTMLHeaderAppElement;
+    var HTMLSSaqhanFirstSliderElement: {
+        prototype: HTMLSSaqhanFirstSliderElement;
+        new (): HTMLSSaqhanFirstSliderElement;
     };
-    interface HTMLItemNewsElement extends Components.ItemNews, HTMLStencilElement {
+    interface HTMLSSaqhanHeaderAppElement extends Components.SSaqhanHeaderApp, HTMLStencilElement {
     }
-    var HTMLItemNewsElement: {
-        prototype: HTMLItemNewsElement;
-        new (): HTMLItemNewsElement;
+    var HTMLSSaqhanHeaderAppElement: {
+        prototype: HTMLSSaqhanHeaderAppElement;
+        new (): HTMLSSaqhanHeaderAppElement;
     };
-    interface HTMLLentaNewsCardElement extends Components.LentaNewsCard, HTMLStencilElement {
+    interface HTMLSSaqhanItemNewsElement extends Components.SSaqhanItemNews, HTMLStencilElement {
     }
-    var HTMLLentaNewsCardElement: {
-        prototype: HTMLLentaNewsCardElement;
-        new (): HTMLLentaNewsCardElement;
+    var HTMLSSaqhanItemNewsElement: {
+        prototype: HTMLSSaqhanItemNewsElement;
+        new (): HTMLSSaqhanItemNewsElement;
     };
-    interface HTMLLineBookElement extends Components.LineBook, HTMLStencilElement {
+    interface HTMLSSaqhanLentaNewsCardElement extends Components.SSaqhanLentaNewsCard, HTMLStencilElement {
     }
-    var HTMLLineBookElement: {
-        prototype: HTMLLineBookElement;
-        new (): HTMLLineBookElement;
+    var HTMLSSaqhanLentaNewsCardElement: {
+        prototype: HTMLSSaqhanLentaNewsCardElement;
+        new (): HTMLSSaqhanLentaNewsCardElement;
     };
-    interface HTMLListNewsElement extends Components.ListNews, HTMLStencilElement {
+    interface HTMLSSaqhanLineBookElement extends Components.SSaqhanLineBook, HTMLStencilElement {
     }
-    var HTMLListNewsElement: {
-        prototype: HTMLListNewsElement;
-        new (): HTMLListNewsElement;
+    var HTMLSSaqhanLineBookElement: {
+        prototype: HTMLSSaqhanLineBookElement;
+        new (): HTMLSSaqhanLineBookElement;
     };
-    interface HTMLMainNewsCardElement extends Components.MainNewsCard, HTMLStencilElement {
+    interface HTMLSSaqhanListNewsElement extends Components.SSaqhanListNews, HTMLStencilElement {
     }
-    var HTMLMainNewsCardElement: {
-        prototype: HTMLMainNewsCardElement;
-        new (): HTMLMainNewsCardElement;
+    var HTMLSSaqhanListNewsElement: {
+        prototype: HTMLSSaqhanListNewsElement;
+        new (): HTMLSSaqhanListNewsElement;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLSSaqhanMainNewsCardElement extends Components.SSaqhanMainNewsCard, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLSSaqhanMainNewsCardElement: {
+        prototype: HTMLSSaqhanMainNewsCardElement;
+        new (): HTMLSSaqhanMainNewsCardElement;
     };
-    interface HTMLNewBlogElement extends Components.NewBlog, HTMLStencilElement {
+    interface HTMLSSaqhanNewBlogElement extends Components.SSaqhanNewBlog, HTMLStencilElement {
     }
-    var HTMLNewBlogElement: {
-        prototype: HTMLNewBlogElement;
-        new (): HTMLNewBlogElement;
+    var HTMLSSaqhanNewBlogElement: {
+        prototype: HTMLSSaqhanNewBlogElement;
+        new (): HTMLSSaqhanNewBlogElement;
     };
-    interface HTMLNewsCardElement extends Components.NewsCard, HTMLStencilElement {
+    interface HTMLSSaqhanNewsCardElement extends Components.SSaqhanNewsCard, HTMLStencilElement {
     }
-    var HTMLNewsCardElement: {
-        prototype: HTMLNewsCardElement;
-        new (): HTMLNewsCardElement;
+    var HTMLSSaqhanNewsCardElement: {
+        prototype: HTMLSSaqhanNewsCardElement;
+        new (): HTMLSSaqhanNewsCardElement;
     };
-    interface HTMLPopularCardElement extends Components.PopularCard, HTMLStencilElement {
+    interface HTMLSSaqhanPopularCardElement extends Components.SSaqhanPopularCard, HTMLStencilElement {
     }
-    var HTMLPopularCardElement: {
-        prototype: HTMLPopularCardElement;
-        new (): HTMLPopularCardElement;
+    var HTMLSSaqhanPopularCardElement: {
+        prototype: HTMLSSaqhanPopularCardElement;
+        new (): HTMLSSaqhanPopularCardElement;
     };
-    interface HTMLPopularNewsElement extends Components.PopularNews, HTMLStencilElement {
+    interface HTMLSSaqhanPopularNewsElement extends Components.SSaqhanPopularNews, HTMLStencilElement {
     }
-    var HTMLPopularNewsElement: {
-        prototype: HTMLPopularNewsElement;
-        new (): HTMLPopularNewsElement;
+    var HTMLSSaqhanPopularNewsElement: {
+        prototype: HTMLSSaqhanPopularNewsElement;
+        new (): HTMLSSaqhanPopularNewsElement;
     };
-    interface HTMLQuoteTextElement extends Components.QuoteText, HTMLStencilElement {
+    interface HTMLSSaqhanQuoteTextElement extends Components.SSaqhanQuoteText, HTMLStencilElement {
     }
-    var HTMLQuoteTextElement: {
-        prototype: HTMLQuoteTextElement;
-        new (): HTMLQuoteTextElement;
+    var HTMLSSaqhanQuoteTextElement: {
+        prototype: HTMLSSaqhanQuoteTextElement;
+        new (): HTMLSSaqhanQuoteTextElement;
     };
-    interface HTMLSecondPageElement extends Components.SecondPage, HTMLStencilElement {
+    interface HTMLSSaqhanSecondPageElement extends Components.SSaqhanSecondPage, HTMLStencilElement {
     }
-    var HTMLSecondPageElement: {
-        prototype: HTMLSecondPageElement;
-        new (): HTMLSecondPageElement;
+    var HTMLSSaqhanSecondPageElement: {
+        prototype: HTMLSSaqhanSecondPageElement;
+        new (): HTMLSSaqhanSecondPageElement;
     };
-    interface HTMLSubscBannerElement extends Components.SubscBanner, HTMLStencilElement {
+    interface HTMLSSaqhanSubscBannerElement extends Components.SSaqhanSubscBanner, HTMLStencilElement {
     }
-    var HTMLSubscBannerElement: {
-        prototype: HTMLSubscBannerElement;
-        new (): HTMLSubscBannerElement;
+    var HTMLSSaqhanSubscBannerElement: {
+        prototype: HTMLSSaqhanSubscBannerElement;
+        new (): HTMLSSaqhanSubscBannerElement;
     };
     interface HTMLElementTagNameMap {
-        "app-footer": HTMLAppFooterElement;
-        "author-info": HTMLAuthorInfoElement;
-        "blog-card": HTMLBlogCardElement;
-        "bread-card": HTMLBreadCardElement;
-        "bread-crumbs": HTMLBreadCrumbsElement;
-        "card-author": HTMLCardAuthorElement;
-        "card-banner": HTMLCardBannerElement;
-        "event-card": HTMLEventCardElement;
-        "events-blog": HTMLEventsBlogElement;
-        "first-slider": HTMLFirstSliderElement;
-        "header-app": HTMLHeaderAppElement;
-        "item-news": HTMLItemNewsElement;
-        "lenta-news-card": HTMLLentaNewsCardElement;
-        "line-book": HTMLLineBookElement;
-        "list-news": HTMLListNewsElement;
-        "main-news-card": HTMLMainNewsCardElement;
-        "my-component": HTMLMyComponentElement;
-        "new-blog": HTMLNewBlogElement;
-        "news-card": HTMLNewsCardElement;
-        "popular-card": HTMLPopularCardElement;
-        "popular-news": HTMLPopularNewsElement;
-        "quote-text": HTMLQuoteTextElement;
-        "second-page": HTMLSecondPageElement;
-        "subsc-banner": HTMLSubscBannerElement;
+        "s-saqhan-app-footer": HTMLSSaqhanAppFooterElement;
+        "s-saqhan-author-info": HTMLSSaqhanAuthorInfoElement;
+        "s-saqhan-blog-card": HTMLSSaqhanBlogCardElement;
+        "s-saqhan-bread-card": HTMLSSaqhanBreadCardElement;
+        "s-saqhan-bread-crumbs": HTMLSSaqhanBreadCrumbsElement;
+        "s-saqhan-card-author": HTMLSSaqhanCardAuthorElement;
+        "s-saqhan-card-banner": HTMLSSaqhanCardBannerElement;
+        "s-saqhan-component": HTMLSSaqhanComponentElement;
+        "s-saqhan-event-card": HTMLSSaqhanEventCardElement;
+        "s-saqhan-events-blog": HTMLSSaqhanEventsBlogElement;
+        "s-saqhan-first-slider": HTMLSSaqhanFirstSliderElement;
+        "s-saqhan-header-app": HTMLSSaqhanHeaderAppElement;
+        "s-saqhan-item-news": HTMLSSaqhanItemNewsElement;
+        "s-saqhan-lenta-news-card": HTMLSSaqhanLentaNewsCardElement;
+        "s-saqhan-line-book": HTMLSSaqhanLineBookElement;
+        "s-saqhan-list-news": HTMLSSaqhanListNewsElement;
+        "s-saqhan-main-news-card": HTMLSSaqhanMainNewsCardElement;
+        "s-saqhan-new-blog": HTMLSSaqhanNewBlogElement;
+        "s-saqhan-news-card": HTMLSSaqhanNewsCardElement;
+        "s-saqhan-popular-card": HTMLSSaqhanPopularCardElement;
+        "s-saqhan-popular-news": HTMLSSaqhanPopularNewsElement;
+        "s-saqhan-quote-text": HTMLSSaqhanQuoteTextElement;
+        "s-saqhan-second-page": HTMLSSaqhanSecondPageElement;
+        "s-saqhan-subsc-banner": HTMLSSaqhanSubscBannerElement;
     }
 }
 declare namespace LocalJSX {
-    interface AppFooter {
+    interface SSaqhanAppFooter {
     }
-    interface AuthorInfo {
+    interface SSaqhanAuthorInfo {
         "author"?: any;
     }
-    interface BlogCard {
+    interface SSaqhanBlogCard {
         "post"?: any;
     }
-    interface BreadCard {
+    interface SSaqhanBreadCard {
         "links"?: any;
     }
-    interface BreadCrumbs {
+    interface SSaqhanBreadCrumbs {
         "links"?: any;
     }
-    interface CardAuthor {
+    interface SSaqhanCardAuthor {
         "author"?: any;
     }
-    interface CardBanner {
+    interface SSaqhanCardBanner {
         "bannerPost"?: any;
     }
-    interface EventCard {
+    interface SSaqhanComponent {
+    }
+    interface SSaqhanEventCard {
         "event"?: any;
     }
-    interface EventsBlog {
+    interface SSaqhanEventsBlog {
         "events"?: any;
     }
-    interface FirstSlider {
+    interface SSaqhanFirstSlider {
         "blogCarouselMock"?: any;
     }
-    interface HeaderApp {
+    interface SSaqhanHeaderApp {
     }
-    interface ItemNews {
+    interface SSaqhanItemNews {
     }
-    interface LentaNewsCard {
+    interface SSaqhanLentaNewsCard {
         "lentaNews"?: any;
     }
-    interface LineBook {
+    interface SSaqhanLineBook {
         "banner"?: any;
     }
-    interface ListNews {
+    interface SSaqhanListNews {
         "news"?: any;
     }
-    interface MainNewsCard {
+    interface SSaqhanMainNewsCard {
         "mainNews"?: any;
     }
-    interface MyComponent {
-    }
-    interface NewBlog {
+    interface SSaqhanNewBlog {
         "blogPost"?: object;
     }
-    interface NewsCard {
+    interface SSaqhanNewsCard {
         "news"?: any;
     }
-    interface PopularCard {
+    interface SSaqhanPopularCard {
         "post"?: any;
     }
-    interface PopularNews {
+    interface SSaqhanPopularNews {
         "popularNews"?: any;
     }
-    interface QuoteText {
+    interface SSaqhanQuoteText {
     }
-    interface SecondPage {
+    interface SSaqhanSecondPage {
     }
-    interface SubscBanner {
+    interface SSaqhanSubscBanner {
     }
     interface IntrinsicElements {
-        "app-footer": AppFooter;
-        "author-info": AuthorInfo;
-        "blog-card": BlogCard;
-        "bread-card": BreadCard;
-        "bread-crumbs": BreadCrumbs;
-        "card-author": CardAuthor;
-        "card-banner": CardBanner;
-        "event-card": EventCard;
-        "events-blog": EventsBlog;
-        "first-slider": FirstSlider;
-        "header-app": HeaderApp;
-        "item-news": ItemNews;
-        "lenta-news-card": LentaNewsCard;
-        "line-book": LineBook;
-        "list-news": ListNews;
-        "main-news-card": MainNewsCard;
-        "my-component": MyComponent;
-        "new-blog": NewBlog;
-        "news-card": NewsCard;
-        "popular-card": PopularCard;
-        "popular-news": PopularNews;
-        "quote-text": QuoteText;
-        "second-page": SecondPage;
-        "subsc-banner": SubscBanner;
+        "s-saqhan-app-footer": SSaqhanAppFooter;
+        "s-saqhan-author-info": SSaqhanAuthorInfo;
+        "s-saqhan-blog-card": SSaqhanBlogCard;
+        "s-saqhan-bread-card": SSaqhanBreadCard;
+        "s-saqhan-bread-crumbs": SSaqhanBreadCrumbs;
+        "s-saqhan-card-author": SSaqhanCardAuthor;
+        "s-saqhan-card-banner": SSaqhanCardBanner;
+        "s-saqhan-component": SSaqhanComponent;
+        "s-saqhan-event-card": SSaqhanEventCard;
+        "s-saqhan-events-blog": SSaqhanEventsBlog;
+        "s-saqhan-first-slider": SSaqhanFirstSlider;
+        "s-saqhan-header-app": SSaqhanHeaderApp;
+        "s-saqhan-item-news": SSaqhanItemNews;
+        "s-saqhan-lenta-news-card": SSaqhanLentaNewsCard;
+        "s-saqhan-line-book": SSaqhanLineBook;
+        "s-saqhan-list-news": SSaqhanListNews;
+        "s-saqhan-main-news-card": SSaqhanMainNewsCard;
+        "s-saqhan-new-blog": SSaqhanNewBlog;
+        "s-saqhan-news-card": SSaqhanNewsCard;
+        "s-saqhan-popular-card": SSaqhanPopularCard;
+        "s-saqhan-popular-news": SSaqhanPopularNews;
+        "s-saqhan-quote-text": SSaqhanQuoteText;
+        "s-saqhan-second-page": SSaqhanSecondPage;
+        "s-saqhan-subsc-banner": SSaqhanSubscBanner;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "app-footer": LocalJSX.AppFooter & JSXBase.HTMLAttributes<HTMLAppFooterElement>;
-            "author-info": LocalJSX.AuthorInfo & JSXBase.HTMLAttributes<HTMLAuthorInfoElement>;
-            "blog-card": LocalJSX.BlogCard & JSXBase.HTMLAttributes<HTMLBlogCardElement>;
-            "bread-card": LocalJSX.BreadCard & JSXBase.HTMLAttributes<HTMLBreadCardElement>;
-            "bread-crumbs": LocalJSX.BreadCrumbs & JSXBase.HTMLAttributes<HTMLBreadCrumbsElement>;
-            "card-author": LocalJSX.CardAuthor & JSXBase.HTMLAttributes<HTMLCardAuthorElement>;
-            "card-banner": LocalJSX.CardBanner & JSXBase.HTMLAttributes<HTMLCardBannerElement>;
-            "event-card": LocalJSX.EventCard & JSXBase.HTMLAttributes<HTMLEventCardElement>;
-            "events-blog": LocalJSX.EventsBlog & JSXBase.HTMLAttributes<HTMLEventsBlogElement>;
-            "first-slider": LocalJSX.FirstSlider & JSXBase.HTMLAttributes<HTMLFirstSliderElement>;
-            "header-app": LocalJSX.HeaderApp & JSXBase.HTMLAttributes<HTMLHeaderAppElement>;
-            "item-news": LocalJSX.ItemNews & JSXBase.HTMLAttributes<HTMLItemNewsElement>;
-            "lenta-news-card": LocalJSX.LentaNewsCard & JSXBase.HTMLAttributes<HTMLLentaNewsCardElement>;
-            "line-book": LocalJSX.LineBook & JSXBase.HTMLAttributes<HTMLLineBookElement>;
-            "list-news": LocalJSX.ListNews & JSXBase.HTMLAttributes<HTMLListNewsElement>;
-            "main-news-card": LocalJSX.MainNewsCard & JSXBase.HTMLAttributes<HTMLMainNewsCardElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
-            "new-blog": LocalJSX.NewBlog & JSXBase.HTMLAttributes<HTMLNewBlogElement>;
-            "news-card": LocalJSX.NewsCard & JSXBase.HTMLAttributes<HTMLNewsCardElement>;
-            "popular-card": LocalJSX.PopularCard & JSXBase.HTMLAttributes<HTMLPopularCardElement>;
-            "popular-news": LocalJSX.PopularNews & JSXBase.HTMLAttributes<HTMLPopularNewsElement>;
-            "quote-text": LocalJSX.QuoteText & JSXBase.HTMLAttributes<HTMLQuoteTextElement>;
-            "second-page": LocalJSX.SecondPage & JSXBase.HTMLAttributes<HTMLSecondPageElement>;
-            "subsc-banner": LocalJSX.SubscBanner & JSXBase.HTMLAttributes<HTMLSubscBannerElement>;
+            "s-saqhan-app-footer": LocalJSX.SSaqhanAppFooter & JSXBase.HTMLAttributes<HTMLSSaqhanAppFooterElement>;
+            "s-saqhan-author-info": LocalJSX.SSaqhanAuthorInfo & JSXBase.HTMLAttributes<HTMLSSaqhanAuthorInfoElement>;
+            "s-saqhan-blog-card": LocalJSX.SSaqhanBlogCard & JSXBase.HTMLAttributes<HTMLSSaqhanBlogCardElement>;
+            "s-saqhan-bread-card": LocalJSX.SSaqhanBreadCard & JSXBase.HTMLAttributes<HTMLSSaqhanBreadCardElement>;
+            "s-saqhan-bread-crumbs": LocalJSX.SSaqhanBreadCrumbs & JSXBase.HTMLAttributes<HTMLSSaqhanBreadCrumbsElement>;
+            "s-saqhan-card-author": LocalJSX.SSaqhanCardAuthor & JSXBase.HTMLAttributes<HTMLSSaqhanCardAuthorElement>;
+            "s-saqhan-card-banner": LocalJSX.SSaqhanCardBanner & JSXBase.HTMLAttributes<HTMLSSaqhanCardBannerElement>;
+            "s-saqhan-component": LocalJSX.SSaqhanComponent & JSXBase.HTMLAttributes<HTMLSSaqhanComponentElement>;
+            "s-saqhan-event-card": LocalJSX.SSaqhanEventCard & JSXBase.HTMLAttributes<HTMLSSaqhanEventCardElement>;
+            "s-saqhan-events-blog": LocalJSX.SSaqhanEventsBlog & JSXBase.HTMLAttributes<HTMLSSaqhanEventsBlogElement>;
+            "s-saqhan-first-slider": LocalJSX.SSaqhanFirstSlider & JSXBase.HTMLAttributes<HTMLSSaqhanFirstSliderElement>;
+            "s-saqhan-header-app": LocalJSX.SSaqhanHeaderApp & JSXBase.HTMLAttributes<HTMLSSaqhanHeaderAppElement>;
+            "s-saqhan-item-news": LocalJSX.SSaqhanItemNews & JSXBase.HTMLAttributes<HTMLSSaqhanItemNewsElement>;
+            "s-saqhan-lenta-news-card": LocalJSX.SSaqhanLentaNewsCard & JSXBase.HTMLAttributes<HTMLSSaqhanLentaNewsCardElement>;
+            "s-saqhan-line-book": LocalJSX.SSaqhanLineBook & JSXBase.HTMLAttributes<HTMLSSaqhanLineBookElement>;
+            "s-saqhan-list-news": LocalJSX.SSaqhanListNews & JSXBase.HTMLAttributes<HTMLSSaqhanListNewsElement>;
+            "s-saqhan-main-news-card": LocalJSX.SSaqhanMainNewsCard & JSXBase.HTMLAttributes<HTMLSSaqhanMainNewsCardElement>;
+            "s-saqhan-new-blog": LocalJSX.SSaqhanNewBlog & JSXBase.HTMLAttributes<HTMLSSaqhanNewBlogElement>;
+            "s-saqhan-news-card": LocalJSX.SSaqhanNewsCard & JSXBase.HTMLAttributes<HTMLSSaqhanNewsCardElement>;
+            "s-saqhan-popular-card": LocalJSX.SSaqhanPopularCard & JSXBase.HTMLAttributes<HTMLSSaqhanPopularCardElement>;
+            "s-saqhan-popular-news": LocalJSX.SSaqhanPopularNews & JSXBase.HTMLAttributes<HTMLSSaqhanPopularNewsElement>;
+            "s-saqhan-quote-text": LocalJSX.SSaqhanQuoteText & JSXBase.HTMLAttributes<HTMLSSaqhanQuoteTextElement>;
+            "s-saqhan-second-page": LocalJSX.SSaqhanSecondPage & JSXBase.HTMLAttributes<HTMLSSaqhanSecondPageElement>;
+            "s-saqhan-subsc-banner": LocalJSX.SSaqhanSubscBanner & JSXBase.HTMLAttributes<HTMLSSaqhanSubscBannerElement>;
         }
     }
 }
