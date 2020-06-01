@@ -26,7 +26,7 @@ export class SSaqhanChatFormSearchFiles implements ComponentInterface {
           <div class="block-input">
             <input
               type="text"
-              class="input-search"
+              class="input-search-files"
               placeholder="Поиск файлов"
             />
           </div>

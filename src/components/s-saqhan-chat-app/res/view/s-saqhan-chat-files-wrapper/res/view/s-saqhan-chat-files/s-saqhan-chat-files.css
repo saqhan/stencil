@@ -6,25 +6,25 @@
 .block-file {
   cursor: pointer;
 }
-.chat-files {
-  text-align: center;
-  margin: 10px auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
+/*.chat-files {*/
+/*  text-align: center;*/
+/*  margin: 10px auto;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: space-evenly;*/
+/*}*/
 
 .chat-files .row {
   align-items: center;
 }
-.input-search {
-  width: 64%;
-  border-radius: 3px;
-  border: none;
-  background-color: #ececec;
-  padding: 10px 40px;
-  outline: none;
-}
+/*.input-search {*/
+/*  width: 64%;*/
+/*  border-radius: 3px;*/
+/*  border: none;*/
+/*  background-color: #ececec;*/
+/*  padding: 10px 40px;*/
+/*  outline: none;*/
+/*}*/
 
 .chat-files .block-input::before {
   font-family: "Font Awesome 5 Free";

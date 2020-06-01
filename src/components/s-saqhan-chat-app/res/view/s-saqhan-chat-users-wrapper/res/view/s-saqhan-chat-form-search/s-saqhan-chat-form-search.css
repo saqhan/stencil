@@ -15,13 +15,23 @@
   align-items: center;
 }
 
+.block-input {
+  width: 80%;
+  text-align: left;
+  margin-right: -15px;
+}
+
 .input-search {
-  width: 64%;
+  width: 95%;
   border-radius: 3px;
   border: none;
   background-color: #ececec;
-  padding: 10px 40px;
   outline: none;
+  color: #5a5a5a;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  margin-left: -10px;
 }
 
 .chat-files .block-input::before {
@@ -47,6 +57,12 @@
     width: auto;
     padding: 10px 30px;
   }
+  .chat-files .block-input::before {
+    left: 13px;
+  }
 }
-
-
+@media (max-width: 320px) {
+  .block-input {
+    text-align: center;
+  }
+}

@@ -153,10 +153,7 @@ a:hover {
   .wrapper {
     width: 100%;
   }
-  .wrapper-chat {
-    width: auto;
-    padding-right: 10px;
-  }
+
   .user {
     padding: 0px;
   }
