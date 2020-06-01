@@ -45,6 +45,110 @@ a:hover {
   color: inherit;
 }
 
+/*
+  Global App CSS
+  ----------------------
+  Use this file for styles that should be applied to all components.
+  For example, "font-family" within the "body" selector is a CSS property
+  most apps will want applied to all components.
+
+  Any global CSS variables should also be applied here.
+*/
+
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+/* You can add global styles to this file, and also import other style files */
+
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+a:hover {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+
+
+
+
+
+.message {
+  font-size: 14px;
+  height: 21px;
+  overflow: hidden;
+  width: 260px;
+  margin-top: 5px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.user {
+  display: flex;
+  cursor: pointer;
+  align-items: flex-end;
+}
+
+.user-img {
+  width: 20%;
+  margin: auto;
+}
+
+.user-img .img {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background-size: cover;
+  margin: auto;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.user-info .name {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-border-radius: 5px;
+  border-radius: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(108, 108, 108, 0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(106, 106, 106, 0.4);
+}
+
+
+
+
+
+
 @media (max-width: 375px) {
   .wrapper {
     width: 100%;

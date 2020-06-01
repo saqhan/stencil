@@ -20,6 +20,7 @@ export class SSaqhanComponent {
         <s-saqhan-events-blog events={events}/>
         <s-saqhan-subsc-banner />
         <s-saqhan-app-footer/>
+        <s-saqhan-chat-app></s-saqhan-chat-app>
       </div>
     );
   }

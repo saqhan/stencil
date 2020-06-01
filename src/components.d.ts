@@ -26,6 +26,45 @@ export namespace Components {
     interface SSaqhanCardBanner {
         "bannerPost": any;
     }
+    interface SSaqhanChatAddQuestion {
+    }
+    interface SSaqhanChatApp {
+    }
+    interface SSaqhanChatFiles {
+    }
+    interface SSaqhanChatFilesWrapper {
+    }
+    interface SSaqhanChatFormSearch {
+    }
+    interface SSaqhanChatFormSearchFiles {
+    }
+    interface SSaqhanChatMainUser {
+        "mainUser": any;
+    }
+    interface SSaqhanChatMainUserCard {
+        "main": any;
+    }
+    interface SSaqhanChatPersonal {
+    }
+    interface SSaqhanChatUser {
+        "messages": any;
+    }
+    interface SSaqhanChatUserCard {
+        "user": any;
+    }
+    interface SSaqhanChatUsers {
+        "mainUser": any;
+        "messages": any;
+    }
+    interface SSaqhanChatUsersWrapper {
+        "mainUser": any;
+        "messages": any;
+    }
+    interface SSaqhanChatWrapper {
+        "mainUser": any;
+        "messages": any;
+        "showContent": string;
+    }
     interface SSaqhanComponent {
     }
     interface SSaqhanEventCard {
@@ -114,6 +153,90 @@ declare global {
     var HTMLSSaqhanCardBannerElement: {
         prototype: HTMLSSaqhanCardBannerElement;
         new (): HTMLSSaqhanCardBannerElement;
+    };
+    interface HTMLSSaqhanChatAddQuestionElement extends Components.SSaqhanChatAddQuestion, HTMLStencilElement {
+    }
+    var HTMLSSaqhanChatAddQuestionElement: {
+        prototype: HTMLSSaqhanChatAddQuestionElement;
+        new (): HTMLSSaqhanChatAddQuestionElement;
+    };
+    interface HTMLSSaqhanChatAppElement extends Components.SSaqhanChatApp, HTMLStencilElement {
+    }
+    var HTMLSSaqhanChatAppElement: {
+        prototype: HTMLSSaqhanChatAppElement;
+        new (): HTMLSSaqhanChatAppElement;
+    };
+    interface HTMLSSaqhanChatFilesElement extends Components.SSaqhanChatFiles, HTMLStencilElement {
+    }
+    var HTMLSSaqhanChatFilesElement: {
+        prototype: HTMLSSaqhanChatFilesElement;
+        new (): HTMLSSaqhanChatFilesElement;
+    };
+    interface HTMLSSaqhanChatFilesWrapperElement extends Components.SSaqhanChatFilesWrapper, HTMLStencilElement {
+    }
+    var HTMLSSaqhanChatFilesWrapperElement: {
+        prototype: HTMLSSaqhanChatFilesWrapperElement;
+        new (): HTMLSSaqhanChatFilesWrapperElement;
+    };
+    interface HTMLSSaqhanChatFormSearchElement extends Components.SSaqhanChatFormSearch, HTMLStencilElement {
+    }
+    var HTMLSSaqhanChatFormSearchElement: {
+        prototype: HTMLSSaqhanChatFormSearchElement;
+        new (): HTMLSSaqhanChatFormSearchElement;
+    };
+    interface HTMLSSaqhanChatFormSearchFilesElement extends Components.SSaqhanChatFormSearchFiles, HTMLStencilElement {
+    }
+    var HTMLSSaqhanChatFormSearchFilesElement: {
+        prototype: HTMLSSaqhanChatFormSearchFilesElement;
+        new (): HTMLSSaqhanChatFormSearchFilesElement;
+    };
+    interface HTMLSSaqhanChatMainUserElement extends Components.SSaqhanChatMainUser, HTMLStencilElement {
+    }
+    var HTMLSSaqhanChatMainUserElement: {
+        prototype: HTMLSSaqhanChatMainUserElement;
+        new (): HTMLSSaqhanChatMainUserElement;
+    };
+    interface HTMLSSaqhanChatMainUserCardElement extends Components.SSaqhanChatMainUserCard, HTMLStencilElement {
+    }
+    var HTMLSSaqhanChatMainUserCardElement: {
+        prototype: HTMLSSaqhanChatMainUserCardElement;
+        new (): HTMLSSaqhanChatMainUserCardElement;
+    };
+    interface HTMLSSaqhanChatPersonalElement extends Components.SSaqhanChatPersonal, HTMLStencilElement {
+    }
+    var HTMLSSaqhanChatPersonalElement: {
+        prototype: HTMLSSaqhanChatPersonalElement;
+        new (): HTMLSSaqhanChatPersonalElement;
+    };
+    interface HTMLSSaqhanChatUserElement extends Components.SSaqhanChatUser, HTMLStencilElement {
+    }
+    var HTMLSSaqhanChatUserElement: {
+        prototype: HTMLSSaqhanChatUserElement;
+        new (): HTMLSSaqhanChatUserElement;
+    };
+    interface HTMLSSaqhanChatUserCardElement extends Components.SSaqhanChatUserCard, HTMLStencilElement {
+    }
+    var HTMLSSaqhanChatUserCardElement: {
+        prototype: HTMLSSaqhanChatUserCardElement;
+        new (): HTMLSSaqhanChatUserCardElement;
+    };
+    interface HTMLSSaqhanChatUsersElement extends Components.SSaqhanChatUsers, HTMLStencilElement {
+    }
+    var HTMLSSaqhanChatUsersElement: {
+        prototype: HTMLSSaqhanChatUsersElement;
+        new (): HTMLSSaqhanChatUsersElement;
+    };
+    interface HTMLSSaqhanChatUsersWrapperElement extends Components.SSaqhanChatUsersWrapper, HTMLStencilElement {
+    }
+    var HTMLSSaqhanChatUsersWrapperElement: {
+        prototype: HTMLSSaqhanChatUsersWrapperElement;
+        new (): HTMLSSaqhanChatUsersWrapperElement;
+    };
+    interface HTMLSSaqhanChatWrapperElement extends Components.SSaqhanChatWrapper, HTMLStencilElement {
+    }
+    var HTMLSSaqhanChatWrapperElement: {
+        prototype: HTMLSSaqhanChatWrapperElement;
+        new (): HTMLSSaqhanChatWrapperElement;
     };
     interface HTMLSSaqhanComponentElement extends Components.SSaqhanComponent, HTMLStencilElement {
     }
@@ -225,6 +348,20 @@ declare global {
         "s-saqhan-bread-crumbs": HTMLSSaqhanBreadCrumbsElement;
         "s-saqhan-card-author": HTMLSSaqhanCardAuthorElement;
         "s-saqhan-card-banner": HTMLSSaqhanCardBannerElement;
+        "s-saqhan-chat-add-question": HTMLSSaqhanChatAddQuestionElement;
+        "s-saqhan-chat-app": HTMLSSaqhanChatAppElement;
+        "s-saqhan-chat-files": HTMLSSaqhanChatFilesElement;
+        "s-saqhan-chat-files-wrapper": HTMLSSaqhanChatFilesWrapperElement;
+        "s-saqhan-chat-form-search": HTMLSSaqhanChatFormSearchElement;
+        "s-saqhan-chat-form-search-files": HTMLSSaqhanChatFormSearchFilesElement;
+        "s-saqhan-chat-main-user": HTMLSSaqhanChatMainUserElement;
+        "s-saqhan-chat-main-user-card": HTMLSSaqhanChatMainUserCardElement;
+        "s-saqhan-chat-personal": HTMLSSaqhanChatPersonalElement;
+        "s-saqhan-chat-user": HTMLSSaqhanChatUserElement;
+        "s-saqhan-chat-user-card": HTMLSSaqhanChatUserCardElement;
+        "s-saqhan-chat-users": HTMLSSaqhanChatUsersElement;
+        "s-saqhan-chat-users-wrapper": HTMLSSaqhanChatUsersWrapperElement;
+        "s-saqhan-chat-wrapper": HTMLSSaqhanChatWrapperElement;
         "s-saqhan-component": HTMLSSaqhanComponentElement;
         "s-saqhan-event-card": HTMLSSaqhanEventCardElement;
         "s-saqhan-events-blog": HTMLSSaqhanEventsBlogElement;
@@ -264,6 +401,58 @@ declare namespace LocalJSX {
     }
     interface SSaqhanCardBanner {
         "bannerPost"?: any;
+    }
+    interface SSaqhanChatAddQuestion {
+    }
+    interface SSaqhanChatApp {
+        "onClose"?: (event: CustomEvent<any>) => void;
+        "onSelectFiles"?: (event: CustomEvent<any>) => void;
+        "onSelectPersonal"?: (event: CustomEvent<any>) => void;
+        "onSelectUsers"?: (event: CustomEvent<any>) => void;
+    }
+    interface SSaqhanChatFiles {
+    }
+    interface SSaqhanChatFilesWrapper {
+    }
+    interface SSaqhanChatFormSearch {
+        "onSelectFiles"?: (event: CustomEvent<any>) => void;
+    }
+    interface SSaqhanChatFormSearchFiles {
+        "onSelectUsers"?: (event: CustomEvent<any>) => void;
+    }
+    interface SSaqhanChatMainUser {
+        "mainUser"?: any;
+    }
+    interface SSaqhanChatMainUserCard {
+        "main"?: any;
+        "onSelectPersonal"?: (event: CustomEvent<any>) => void;
+    }
+    interface SSaqhanChatPersonal {
+        "onSelectUsers"?: (event: CustomEvent<any>) => void;
+    }
+    interface SSaqhanChatUser {
+        "messages"?: any;
+    }
+    interface SSaqhanChatUserCard {
+        "onSelectPersonal"?: (event: CustomEvent<any>) => void;
+        "user"?: any;
+    }
+    interface SSaqhanChatUsers {
+        "mainUser"?: any;
+        "messages"?: any;
+    }
+    interface SSaqhanChatUsersWrapper {
+        "mainUser"?: any;
+        "messages"?: any;
+    }
+    interface SSaqhanChatWrapper {
+        "mainUser"?: any;
+        "messages"?: any;
+        "onClose"?: (event: CustomEvent<any>) => void;
+        "onSelectFiles"?: (event: CustomEvent<any>) => void;
+        "onSelectPersonal"?: (event: CustomEvent<any>) => void;
+        "onSelectUsers"?: (event: CustomEvent<any>) => void;
+        "showContent"?: string;
     }
     interface SSaqhanComponent {
     }
@@ -318,6 +507,20 @@ declare namespace LocalJSX {
         "s-saqhan-bread-crumbs": SSaqhanBreadCrumbs;
         "s-saqhan-card-author": SSaqhanCardAuthor;
         "s-saqhan-card-banner": SSaqhanCardBanner;
+        "s-saqhan-chat-add-question": SSaqhanChatAddQuestion;
+        "s-saqhan-chat-app": SSaqhanChatApp;
+        "s-saqhan-chat-files": SSaqhanChatFiles;
+        "s-saqhan-chat-files-wrapper": SSaqhanChatFilesWrapper;
+        "s-saqhan-chat-form-search": SSaqhanChatFormSearch;
+        "s-saqhan-chat-form-search-files": SSaqhanChatFormSearchFiles;
+        "s-saqhan-chat-main-user": SSaqhanChatMainUser;
+        "s-saqhan-chat-main-user-card": SSaqhanChatMainUserCard;
+        "s-saqhan-chat-personal": SSaqhanChatPersonal;
+        "s-saqhan-chat-user": SSaqhanChatUser;
+        "s-saqhan-chat-user-card": SSaqhanChatUserCard;
+        "s-saqhan-chat-users": SSaqhanChatUsers;
+        "s-saqhan-chat-users-wrapper": SSaqhanChatUsersWrapper;
+        "s-saqhan-chat-wrapper": SSaqhanChatWrapper;
         "s-saqhan-component": SSaqhanComponent;
         "s-saqhan-event-card": SSaqhanEventCard;
         "s-saqhan-events-blog": SSaqhanEventsBlog;
@@ -348,6 +551,20 @@ declare module "@stencil/core" {
             "s-saqhan-bread-crumbs": LocalJSX.SSaqhanBreadCrumbs & JSXBase.HTMLAttributes<HTMLSSaqhanBreadCrumbsElement>;
             "s-saqhan-card-author": LocalJSX.SSaqhanCardAuthor & JSXBase.HTMLAttributes<HTMLSSaqhanCardAuthorElement>;
             "s-saqhan-card-banner": LocalJSX.SSaqhanCardBanner & JSXBase.HTMLAttributes<HTMLSSaqhanCardBannerElement>;
+            "s-saqhan-chat-add-question": LocalJSX.SSaqhanChatAddQuestion & JSXBase.HTMLAttributes<HTMLSSaqhanChatAddQuestionElement>;
+            "s-saqhan-chat-app": LocalJSX.SSaqhanChatApp & JSXBase.HTMLAttributes<HTMLSSaqhanChatAppElement>;
+            "s-saqhan-chat-files": LocalJSX.SSaqhanChatFiles & JSXBase.HTMLAttributes<HTMLSSaqhanChatFilesElement>;
+            "s-saqhan-chat-files-wrapper": LocalJSX.SSaqhanChatFilesWrapper & JSXBase.HTMLAttributes<HTMLSSaqhanChatFilesWrapperElement>;
+            "s-saqhan-chat-form-search": LocalJSX.SSaqhanChatFormSearch & JSXBase.HTMLAttributes<HTMLSSaqhanChatFormSearchElement>;
+            "s-saqhan-chat-form-search-files": LocalJSX.SSaqhanChatFormSearchFiles & JSXBase.HTMLAttributes<HTMLSSaqhanChatFormSearchFilesElement>;
+            "s-saqhan-chat-main-user": LocalJSX.SSaqhanChatMainUser & JSXBase.HTMLAttributes<HTMLSSaqhanChatMainUserElement>;
+            "s-saqhan-chat-main-user-card": LocalJSX.SSaqhanChatMainUserCard & JSXBase.HTMLAttributes<HTMLSSaqhanChatMainUserCardElement>;
+            "s-saqhan-chat-personal": LocalJSX.SSaqhanChatPersonal & JSXBase.HTMLAttributes<HTMLSSaqhanChatPersonalElement>;
+            "s-saqhan-chat-user": LocalJSX.SSaqhanChatUser & JSXBase.HTMLAttributes<HTMLSSaqhanChatUserElement>;
+            "s-saqhan-chat-user-card": LocalJSX.SSaqhanChatUserCard & JSXBase.HTMLAttributes<HTMLSSaqhanChatUserCardElement>;
+            "s-saqhan-chat-users": LocalJSX.SSaqhanChatUsers & JSXBase.HTMLAttributes<HTMLSSaqhanChatUsersElement>;
+            "s-saqhan-chat-users-wrapper": LocalJSX.SSaqhanChatUsersWrapper & JSXBase.HTMLAttributes<HTMLSSaqhanChatUsersWrapperElement>;
+            "s-saqhan-chat-wrapper": LocalJSX.SSaqhanChatWrapper & JSXBase.HTMLAttributes<HTMLSSaqhanChatWrapperElement>;
             "s-saqhan-component": LocalJSX.SSaqhanComponent & JSXBase.HTMLAttributes<HTMLSSaqhanComponentElement>;
             "s-saqhan-event-card": LocalJSX.SSaqhanEventCard & JSXBase.HTMLAttributes<HTMLSSaqhanEventCardElement>;
             "s-saqhan-events-blog": LocalJSX.SSaqhanEventsBlog & JSXBase.HTMLAttributes<HTMLSSaqhanEventsBlogElement>;
