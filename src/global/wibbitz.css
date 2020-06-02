@@ -74,7 +74,9 @@ a:hover {
   color: inherit;
 }
 
-
+.custom-link {
+  cursor: pointer;
+}
 
 
 

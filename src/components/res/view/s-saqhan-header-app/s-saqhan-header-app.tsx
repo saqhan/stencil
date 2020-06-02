@@ -1,11 +1,48 @@
-import { Component, ComponentInterface, h } from '@stencil/core';
+import {
+  Component,
+  ComponentInterface,
+  h,
+  EventEmitter,
+  Event,
+  Prop,
+} from "@stencil/core";
+import { SSaqhanHedearMenuItem } from "./interface/common.interface";
 
 @Component({
-  tag: 's-saqhan-header-app',
-  styleUrl: 's-saqhan-header-app.css',
+  tag: "s-saqhan-header-app",
+  styleUrl: "s-saqhan-header-app.css",
   shadow: false,
 })
 export class SSaqhanHeaderApp implements ComponentInterface {
+  /**
+   * массив меню для вывода
+   */
+  @Prop() menu: SSaqhanHedearMenuItem[] = [];
+
+  /**
+   * ссылка на изображение логотипа
+   */
+  @Prop() logoUrl: string;
+
+  /**
+   * текст вывода в кнопке подписаться
+   */
+  @Prop() subscribeText: string;
+
+  /**
+   * клик по конкретному меню
+   */
+  @Event() clickOnMenu: EventEmitter<SSaqhanHedearMenuItem>;
+
+  /**
+   * клик по кнопке подписаться
+   */
+  @Event() clickOnSubscribeButton: EventEmitter;
+
+  /**
+   * клик по лого
+   */
+  @Event() clickToLogo: EventEmitter;
 
   render() {
     return (
@@ -13,10 +50,14 @@ export class SSaqhanHeaderApp implements ComponentInterface {
         <div class="row">
           <div class="col">
             <header>
-              <nav
-                class="navbar navbar-expand-lg navbar-light p-0 d-flex justify-content-between"
-              >
-                <a href="/" class="navbar-brand"><img src="https://saqhan.github.io/wibbitz/assets/img/logo.jpg" /></a>
+              <nav class="navbar navbar-expand-lg navbar-light p-0 d-flex ">
+                <a
+                  onClick={() => {
+                    this.clickToLogo.emit();
+                  }}
+                  class="navbar-brand logo-header"
+                  style={{ backgroundImage: "url(" + this.logoUrl + ")" }}
+                ></a>
                 <button
                   class="navbar-toggler"
                   type="button"
@@ -30,30 +71,25 @@ export class SSaqhanHeaderApp implements ComponentInterface {
                 </button>
 
                 <div
-                  class="collapse navbar-collapse justify-content-around align-items-center"
+                  class="collapse navbar-collapse"
                   id="navbarSupportedContent"
                 >
                   <ul class="navbar-nav m-auto">
-                    <li class="nav-item">
-                      <a class="nav-link active" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/second-page/">Second Page</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/list-items/">List Items</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/chat/">Online Chat</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/second-page/">Customer Stories</a>
-                    </li>
+                    {this.menu.map((item) => {
+                      return (
+                        <li
+                          class="nav-item"
+                          onClick={() => this.clickOnMenu.emit(item)}
+                        >
+                          <a class="nav-link header active">{item.name}</a>
+                        </li>
+                      );
+                    })}
                   </ul>
                   <a href="#" class="pr-4">
                     <i class="fas fa-search"></i>
                   </a>
-                  <form class="form">
+                  <form class="form" onSubmit={(event) => this.clickOnSubscribeButton.emit(event)}>
                     <div class="input-group">
                       <input
                         type="text"
@@ -61,8 +97,12 @@ export class SSaqhanHeaderApp implements ComponentInterface {
                         placeholder="Enter work email"
                       />
                       <div class="input-group-append">
-                        <button class="btn btn-primary btn-custom-head" type="submit">
-                          Subscribe
+                        <button
+                          class="btn btn-primary btn-custom-head"
+                          type="submit"
+
+                        >
+                          {this.subscribeText}
                         </button>
                       </div>
                     </div>
@@ -72,9 +112,9 @@ export class SSaqhanHeaderApp implements ComponentInterface {
             </header>
           </div>
         </div>
-
       </div>
     );
   }
-
 }
+
+

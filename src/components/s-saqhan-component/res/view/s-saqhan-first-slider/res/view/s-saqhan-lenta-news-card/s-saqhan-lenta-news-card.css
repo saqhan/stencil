@@ -1,12 +1,3 @@
-.lenta-img {
-  background-image: url("https://via.placeholder.com/900x900?text=Visit");
-}
-
-.img-news {
-  height: 308px;
-  background-size: cover;
-}
-
 .btn-custom {
   padding: 10px 20px;
   font-size: 12px;
@@ -15,6 +6,8 @@
 
 .lenta-news {
   padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
   flex: 1;
 }
 
@@ -26,58 +19,24 @@
   margin-right: 35px;
 }
 
-.lenta-news img {
-  width: 110px;
-  height: 110px;
-}
-
 .lenta-info {
   flex: 2;
 }
 
 .lenta-title {
   font-size: 15px;
-}
-
-.btn-read a {
-  color: #000000;
-  font-weight: 700;
-  transition: 0.3s all;
-  border-bottom: 1px solid #000;
-}
-
-.btn-read a:hover {
-  text-decoration: none;
-  color: #007bff;
-  border-bottom: 1px solid #007bff;
-  cursor: context-menu;
-}
-
-.lenta-title {
-  min-height: 58px;
   margin-top: 10px;
-  line-height: 1.2;
+  font-weight: 600;
 }
 
-.img-news {
-  height: 308px;
-  background-size: cover;
-}
-
-.btn-custom {
-  padding: 10px 20px;
-  font-size: 12px;
-  border-radius: 10px;
-}
-
-.btn-read a {
+.btn-read span {
   color: #000000;
   font-weight: 700;
   transition: 0.3s all;
   border-bottom: 1px solid #000;
 }
 
-.btn-read a:hover {
+.btn-read span:hover {
   text-decoration: none;
   color: #007bff;
   border-bottom: 1px solid #007bff;
@@ -91,12 +50,16 @@
 }
 
 @media (max-width: 768px) {
-
 }
 
 @media (max-width: 992px) {
-
 }
 
 @media (min-width: 1200px) {
+}
+
+@media (min-width: 768px) {
+.lenta-title-first {
+  width: 100%;
+}
 }

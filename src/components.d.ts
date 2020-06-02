@@ -5,6 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { SSaqhanHedearMenuItem, } from "./components/res/view/s-saqhan-header-app/interface/common.interface";
 export namespace Components {
     interface SSaqhanAppFooter {
     }
@@ -74,9 +75,24 @@ export namespace Components {
         "events": any;
     }
     interface SSaqhanFirstSlider {
+        /**
+          * массив новостей для вывода
+         */
         "blogCarouselMock": any;
     }
     interface SSaqhanHeaderApp {
+        /**
+          * ссылка на изображение логотипа
+         */
+        "logoUrl": string;
+        /**
+          * массив меню для вывода
+         */
+        "menu": SSaqhanHedearMenuItem[];
+        /**
+          * текст вывода в кнопке подписаться
+         */
+        "subscribeText": string;
     }
     interface SSaqhanItemNews {
     }
@@ -463,14 +479,55 @@ declare namespace LocalJSX {
         "events"?: any;
     }
     interface SSaqhanFirstSlider {
+        /**
+          * массив новостей для вывода
+         */
         "blogCarouselMock"?: any;
+        /**
+          * клик по публикации ленты новостей
+         */
+        "onClickOnLentaNews"?: (event: CustomEvent<any>) => void;
+        /**
+          * клик по публикации главной новости
+         */
+        "onClickOnMainNews"?: (event: CustomEvent<any>) => void;
+        /**
+          * клик по категории публикаций
+         */
+        "onClickOnNewsCategory"?: (event: CustomEvent<any>) => void;
     }
     interface SSaqhanHeaderApp {
+        /**
+          * ссылка на изображение логотипа
+         */
+        "logoUrl"?: string;
+        /**
+          * массив меню для вывода
+         */
+        "menu"?: SSaqhanHedearMenuItem[];
+        /**
+          * клик по конкретному меню
+         */
+        "onClickOnMenu"?: (event: CustomEvent<SSaqhanHedearMenuItem>) => void;
+        /**
+          * клик по кнопке подписаться
+         */
+        "onClickOnSubscribeButton"?: (event: CustomEvent<any>) => void;
+        /**
+          * клик по лого
+         */
+        "onClickToLogo"?: (event: CustomEvent<any>) => void;
+        /**
+          * текст вывода в кнопке подписаться
+         */
+        "subscribeText"?: string;
     }
     interface SSaqhanItemNews {
     }
     interface SSaqhanLentaNewsCard {
         "lentaNews"?: any;
+        "onClickOnLentaNews"?: (event: CustomEvent<any>) => void;
+        "onClickOnNewsCategory"?: (event: CustomEvent<any>) => void;
     }
     interface SSaqhanLineBook {
         "banner"?: any;
@@ -480,6 +537,8 @@ declare namespace LocalJSX {
     }
     interface SSaqhanMainNewsCard {
         "mainNews"?: any;
+        "onClickOnMainNews"?: (event: CustomEvent<any>) => void;
+        "onClickOnNewsCategory"?: (event: CustomEvent<any>) => void;
     }
     interface SSaqhanNewBlog {
         "blogPost"?: object;

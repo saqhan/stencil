@@ -19,6 +19,7 @@
   width: 248px;
   height: 128px;
   background-size: cover;
+  background-position: center;
   border-radius: 3px;
   margin-right: 30px;
   background-image: url("https://via.placeholder.com/500");

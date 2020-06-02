@@ -4,7 +4,7 @@ export const blogCarouselMock = [
     title: "How to optimize your Facebook & Instagram video ads for success",
     subTitle:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aut dolore doloremque incidunt maxime quasi sint ullam.",
-    img: "https://via.placeholder.com/900",
+    img: "https://via.placeholder.com/600x600?text=Main",
     category: "Blog Post",
     btnText: "Read Story",
     main: true,
@@ -12,9 +12,9 @@ export const blogCarouselMock = [
   },
   {
     id: 2,
-    title: "Explore instagram Video: How to convert..",
+    title: "Explore instagram Video: How to convert.. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     subTitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
-    img: "https://via.placeholder.com/900",
+    img: "https://via.placeholder.com/600x600?text=Lenta",
     category: "Report",
     btnText: "Read Report",
     main: false,
@@ -24,7 +24,7 @@ export const blogCarouselMock = [
     id: 3,
     title: "Explore instagram Video: How to convert.",
     subTitle: "Lorem ipsum dolor sit amet.",
-    img: "https://via.placeholder.com/900",
+    img: "https://via.placeholder.com/600x600?text=Lenta",
     category: "Blog Post",
     btnText: "Read Story",
     main: false,
@@ -34,7 +34,7 @@ export const blogCarouselMock = [
     id: 4,
     title: "Explore instagram Video: How to convert.",
     subTitle: "Lorem ipsum dolor sit amet.",
-    img: "https://via.placeholder.com/900",
+    img: "https://via.placeholder.com/600x600?text=Lenta",
     category: "Webinar",
     btnText: "Read Story",
     main: false,
@@ -45,7 +45,7 @@ export const blogCarouselMock = [
     title: "Last News instagram Video",
     subTitle:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aut dolore doloremque incidunt maxime quasi sint ullam.",
-    img: "https://via.placeholder.com/900",
+    img: "https://via.placeholder.com/600x600?text=Lenta",
     category: "Report",
     btnText: "Read Report",
     main: false,
@@ -53,10 +53,10 @@ export const blogCarouselMock = [
   },
   {
     id: 6,
-    title: "Last News instagram Video",
+    title: "Last News instagram Video Lorem ipsum dolor sit amet",
     subTitle:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aut dolore doloremque incidunt maxime quasi sint ullam.",
-    img: "https://via.placeholder.com/900",
+    img: "https://via.placeholder.com/600x600?text=Lenta",
     category: "Report",
     btnText: "Read Report",
     main: false,
@@ -64,10 +64,10 @@ export const blogCarouselMock = [
   },
   {
     id: 7,
-    title: "Last News instagram Video",
+    title: "Last News instagram  Accusantium, aut dolore doloremque incidunt maxime",
     subTitle:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aut dolore doloremque incidunt maxime quasi sint ullam.",
-    img: "https://via.placeholder.com/900",
+    img: "https://via.placeholder.com/600x600?text=Lenta",
     category: "Report",
     btnText: "Read Report",
     main: false,
@@ -232,6 +232,30 @@ export const NewsStore = [
     category: "Editor",
   },
 ];
+
+export const menu = [
+  {
+    id: 'home-menu',
+    name: 'Home'
+  },
+  {
+    id: 'second-page',
+    name: 'Second Page'
+  },
+  {
+    id: 'list-items',
+    name: 'List Items'
+  },
+  {
+    id: 'online-chat',
+    name: 'Online Chat'
+  }
+
+];
+
+export const logoUrl = 'https://saqhan.github.io/wibbitz/assets/img/logo.jpg';
+
+export const subscribeText = 'Subscribe';
 
 
 //chat data
