@@ -71,10 +71,10 @@ export class SSaqhanHeaderApp implements ComponentInterface {
                 </button>
 
                 <div
-                  class="collapse navbar-collapse"
+                  class="collapse navbar-collapse header-nav"
                   id="navbarSupportedContent"
                 >
-                  <ul class="navbar-nav m-auto">
+                  <ul class="navbar-nav ">
                     {this.menu.map((item) => {
                       return (
                         <li
@@ -86,27 +86,28 @@ export class SSaqhanHeaderApp implements ComponentInterface {
                       );
                     })}
                   </ul>
-                  <a href="#" class="pr-4">
-                    <i class="fas fa-search"></i>
-                  </a>
-                  <form class="form" onSubmit={(event) => this.clickOnSubscribeButton.emit(event)}>
-                    <div class="input-group">
-                      <input
-                        type="text"
-                        class="form-control rounded"
-                        placeholder="Enter work email"
-                      />
-                      <div class="input-group-append">
-                        <button
-                          class="btn btn-primary btn-custom-head"
-                          type="submit"
-
-                        >
-                          {this.subscribeText}
-                        </button>
+                  <div class="header-right">
+                    <a href="#" class="pr-4">
+                      <i class="fas fa-search"></i>
+                    </a>
+                    <form class="form" onSubmit={(event) => this.clickOnSubscribeButton.emit(event)}>
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control rounded"
+                          placeholder="Enter work email"
+                        />
+                        <div class="input-group-append">
+                          <button
+                            class="btn btn-primary btn-custom-head"
+                            type="submit"
+                          >
+                            {this.subscribeText}
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  </form>
+                    </form>
+                  </div>
                 </div>
               </nav>
             </header>

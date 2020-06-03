@@ -20,19 +20,33 @@ export class SSaqhanMainNewsCard implements ComponentInterface {
     return (
       <div class="main-news">
         <div>
-          <div class="img-news m-auto custon-link"
+          <div
+            class="img-news m-auto custon-link"
+            onClick={(event) => this.clickOnMainNews.emit(event)}
             style={{ backgroundImage: `url(${this.mainNews.img})` }}
           ></div>
-          <div onClick={() => this.clickOnNewsCategory.emit()} class={this.ColorCategory(this.mainNews.category)}>
+          <div
+            onClick={() => this.clickOnNewsCategory.emit()}
+            class={this.ColorCategory(this.mainNews.category)}
+          >
             {this.mainNews.category}
           </div>
-          <div onClick={() => this.clickOnMainNews.emit(event)} class="title-news pt-3 h2 font-weight-bold custon-link">
+          <div
+            onClick={() => this.clickOnMainNews.emit(event)}
+            class="title-news pt-3 h2 font-weight-bold custon-link"
+          >
             {this.mainNews.title}
           </div>
-          <div onClick={() => this.clickOnMainNews.emit(event)} class="sub-title-news pt-3 pb-3 text-muted custon-link">
+          <div
+            onClick={() => this.clickOnMainNews.emit(event)}
+            class="sub-title-news pt-3 pb-3 text-muted custon-link"
+          >
             {this.mainNews.subTitle}
           </div>
-          <span onClick={() => this.clickOnMainNews.emit(event)} class="btn btn-primary btn-custom custon-link">
+          <span
+            onClick={() => this.clickOnMainNews.emit(event)}
+            class="btn btn-primary btn-custom custon-link"
+          >
             {this.mainNews.btnText}
           </span>
         </div>

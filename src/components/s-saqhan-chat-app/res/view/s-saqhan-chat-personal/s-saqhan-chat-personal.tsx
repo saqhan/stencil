@@ -138,8 +138,7 @@ export class SSaqhanChatPersonal implements ComponentInterface {
             </div>
           </div>
         </div>
-
-        <chat-add-question></chat-add-question>
+        <s-saqhan-chat-add-question></s-saqhan-chat-add-question>
       </div>
     );
   }

@@ -31,7 +31,7 @@ export class SSaqhanComponent {
         <s-saqhan-first-slider
           onClickOnLentaNews={(event) => this.clickOnLentaNews(event)}
           onClickOnNewsCategory={() => this.clickOnNewsCategory()}
-          onClickOnMainNews={() => this.clickOnMainNews()}
+          onClickOnMainNews={(event) => this.clickOnMainNews(event)}
           blogCarouselMock={blogCarouselMock}
         />
         <s-saqhan-new-blog blogPost={blogPost} />
@@ -46,8 +46,8 @@ export class SSaqhanComponent {
   /*
    *  Клик по меню
    */
-  public clickOnMenu(item) {
-    return console.log("clickOnMenu", item);
+  public clickOnMenu({detail}) {
+    return console.log("clickOnMenu", detail);
   }
 
   /*
@@ -67,8 +67,8 @@ export class SSaqhanComponent {
   /*
    *  Клик по главной новости
    * */
-  public clickOnMainNews() {
-    return console.log("clickOnMainNews");
+  public clickOnMainNews(event) {
+    return console.log("clickOnMainNews", event);
   }
 
   public clickOnSubscribeButton(event) {

@@ -29,7 +29,7 @@
   font-weight: 400;
   content: "\f274";
   position: relative;
-  left: 25px;
+  left: 20px;
   z-index: 999;
   color: #5a5a5a;
 }
@@ -41,7 +41,6 @@
 
 @media (max-width: 375px) {
   .chat-files {
-    /*justify-content: center;*/
   }
   .input-search {
     width: auto;
