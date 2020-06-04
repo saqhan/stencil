@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from '@stencil/core';
 
 @Component({
   tag: 's-saqhan-popular-news',
@@ -8,10 +8,14 @@ import {Component, ComponentInterface, h, Prop} from '@stencil/core';
 export class SSaqhanPopularNews implements ComponentInterface {
 
   @Prop() popularNews:any;
+  @Prop() bannerPopular:any;
+  @Event() clickOnLentaNews: EventEmitter;
+  @Event() clickOnNewsCategory: EventEmitter;
 
   getPopularNews(arr): any[] {
     return arr.map(item => item);
   }
+
 
   render() {
     return (
@@ -25,13 +29,12 @@ export class SSaqhanPopularNews implements ComponentInterface {
               <CardPopular post={this.getPopularNews(this.popularNews)}/>
             </div>
           </div>
-        <div class="col-12 col-lg-5 p-5 p-lg-0 banner d-flex align-items-center flex-column justify-content-center">
+        <div class="col-12 col-lg-5 p-5 p-lg-0 banner">
           <div class="banner-title text-center text-white">
-            Storyteller Circle <br />
-            Event Series
+            {this.bannerPopular.title}
           </div>
           <div class="btn-read pt-3">
-            <a href="#">Watch Webinar</a>
+            <span >{this.bannerPopular.nameLink}</span>
           </div>
         </div>
       </div>

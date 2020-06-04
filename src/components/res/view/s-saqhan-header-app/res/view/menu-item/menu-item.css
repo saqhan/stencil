@@ -1,0 +1,8 @@
+
+.header-nav {
+  justify-content: space-between;
+}
+
+.nav-link.header {
+  cursor: pointer;
+}

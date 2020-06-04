@@ -15,36 +15,36 @@ import {
 export class SSaqhanMainNewsCard implements ComponentInterface {
   @Prop() mainNews: any;
   @Event() clickOnNewsCategory: EventEmitter;
-  @Event() clickOnMainNews: EventEmitter;
+  @Event({bubbles: true}) clickOnMainNews: EventEmitter;
   render() {
     return (
       <div class="main-news">
         <div>
           <div
             class="img-news m-auto custon-link"
-            onClick={(event) => this.clickOnMainNews.emit(event)}
+            onClick={() => this.clickOnMainNews.emit(this.mainNews.img)}
             style={{ backgroundImage: `url(${this.mainNews.img})` }}
           ></div>
           <div
-            onClick={() => this.clickOnNewsCategory.emit()}
+            onClick={() => this.clickOnNewsCategory.emit(this.mainNews.category)}
             class={this.ColorCategory(this.mainNews.category)}
           >
             {this.mainNews.category}
           </div>
           <div
-            onClick={() => this.clickOnMainNews.emit(event)}
+            onClick={() => this.clickOnMainNews.emit(this.mainNews.title)}
             class="title-news pt-3 h2 font-weight-bold custon-link"
           >
             {this.mainNews.title}
           </div>
           <div
-            onClick={() => this.clickOnMainNews.emit(event)}
+            onClick={() => this.clickOnMainNews.emit(this.mainNews.subTitle)}
             class="sub-title-news pt-3 pb-3 text-muted custon-link"
           >
             {this.mainNews.subTitle}
           </div>
           <span
-            onClick={() => this.clickOnMainNews.emit(event)}
+            onClick={() => this.clickOnMainNews.emit(this.mainNews.btnText)}
             class="btn btn-primary btn-custom custon-link"
           >
             {this.mainNews.btnText}

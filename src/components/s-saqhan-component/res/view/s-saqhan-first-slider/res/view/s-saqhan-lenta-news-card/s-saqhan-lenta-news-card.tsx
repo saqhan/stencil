@@ -4,7 +4,9 @@ import {
   h,
   Prop,
 } from "@stencil/core";
-// import { SSaqhanLentaNewsCardItem } from "./interface/common.interface";
+import { SSaqhanLentaNewsCardItem } from "./interface/common.interface";
+
+
 
 @Component({
   tag: "s-saqhan-lenta-news-card",
@@ -12,8 +14,8 @@ import {
   shadow: false,
 })
 export class SSaqhanLentaNewsCard implements ComponentInterface {
-  // @Prop() lentaNews: SSaqhanLentaNewsCardItem[] = [];
-  @Prop() lentaNews: any;
+ @Prop() lentaNews: SSaqhanLentaNewsCardItem;
+
   @Event() clickOnLentaNews: EventEmitter;
   @Event() clickOnNewsCategory: EventEmitter;
   render() {
@@ -21,18 +23,18 @@ export class SSaqhanLentaNewsCard implements ComponentInterface {
       <div class="lenta-news ">
         <div
           class="lenta-img pr-4 custom-link"
-          onClick={() => this.clickOnLentaNews.emit(event)}
+          onClick={() => this.clickOnLentaNews.emit(this.lentaNews.img)}
           style={{ backgroundImage: `url(${this.lentaNews.img})` }}
         ></div>
         <div class="lenta-info custom-link">
-          <div onClick={() => this.clickOnNewsCategory.emit()} class={this.ColorCategory(this.lentaNews.category)}>
+          <div onClick={() => this.clickOnNewsCategory.emit(this.lentaNews.category)} class={this.ColorCategory(this.lentaNews.category)}>
             {this.lentaNews.category}
           </div>
-          <div onClick={() => this.clickOnLentaNews.emit(event)} class="lenta-title  custom-link">
+          <div onClick={() => this.clickOnLentaNews.emit(this.lentaNews.title)} class="lenta-title  custom-link">
             {this.lentaNews.title}
           </div>
           <div class="btn-read custom-link"  >
-            <span onClick={() => this.clickOnLentaNews.emit(event)} >{this.lentaNews.btnText}</span>
+            <span onClick={() => this.clickOnLentaNews.emit(this.lentaNews.btnText)} >{this.lentaNews.btnText}</span>
           </div>
         </div>
       </div>

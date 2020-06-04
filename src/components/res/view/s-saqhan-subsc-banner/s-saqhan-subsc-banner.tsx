@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h } from '@stencil/core';
+import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from '@stencil/core';
 
 @Component({
   tag: 's-saqhan-subsc-banner',
@@ -6,6 +6,15 @@ import { Component, ComponentInterface, h } from '@stencil/core';
   shadow: false,
 })
 export class SSaqhanSubscBanner implements ComponentInterface {
+
+  /**
+   * текст вывода в кнопке подписаться
+   */
+  @Prop() subscribeText: string;
+  /**
+   * клик по кнопке подписаться
+   */
+  @Event() clickOnSubscribeButton: EventEmitter;
 
   render() {
     return (
@@ -35,10 +44,11 @@ export class SSaqhanSubscBanner implements ComponentInterface {
                   />
                   <div class="input-group-append">
                     <button
+                      onClick={() => this.clickOnSubscribeButton.emit()}
                       class="btn btn-primary btn-custom-head"
                       type="submit"
                     >
-                      Try it Free
+                      {this.subscribeText}
                     </button>
                   </div>
                 </div>

@@ -18,7 +18,9 @@
   cursor: context-menu;
 }
 
-
+.custon-link {
+  cursor: pointer;
+}
 
 .img-news {
   height: 308px;

@@ -56,7 +56,7 @@ export class SSaqhanHeaderApp implements ComponentInterface {
                     this.clickToLogo.emit();
                   }}
                   class="navbar-brand logo-header"
-                  style={{ backgroundImage: "url(" + this.logoUrl + ")" }}
+                  style={{backgroundImage: `url( ${this.logoUrl} )`}}
                 ></a>
                 <button
                   class="navbar-toggler"
@@ -75,22 +75,13 @@ export class SSaqhanHeaderApp implements ComponentInterface {
                   id="navbarSupportedContent"
                 >
                   <ul class="navbar-nav ">
-                    {this.menu.map((item) => {
-                      return (
-                        <li
-                          class="nav-item"
-                          onClick={() => this.clickOnMenu.emit(item)}
-                        >
-                          <a class="nav-link header active">{item.name}</a>
-                        </li>
-                      );
-                    })}
+                      <ItemLink arr={this.menu}></ItemLink>
                   </ul>
                   <div class="header-right">
                     <a href="#" class="pr-4">
                       <i class="fas fa-search"></i>
                     </a>
-                    <form class="form" onSubmit={(event) => this.clickOnSubscribeButton.emit(event)}>
+                    <form onSubmit={(event) => (event.preventDefault())} class="form" >
                       <div class="input-group">
                         <input
                           type="text"
@@ -99,8 +90,9 @@ export class SSaqhanHeaderApp implements ComponentInterface {
                         />
                         <div class="input-group-append">
                           <button
+                            onClick={() => this.clickOnSubscribeButton.emit()}
                             class="btn btn-primary btn-custom-head"
-                            type="submit"
+
                           >
                             {this.subscribeText}
                           </button>
@@ -117,5 +109,10 @@ export class SSaqhanHeaderApp implements ComponentInterface {
     );
   }
 }
-
-
+const ItemLink = (props) => {
+  return props.arr.map((item) => {
+    return (
+      <menu-item arr={item} ></menu-item>
+    );
+  });
+}

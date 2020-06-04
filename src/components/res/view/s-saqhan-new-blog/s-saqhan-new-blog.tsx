@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, h, Prop} from "@stencil/core";
+import {Component, ComponentInterface, h, Prop, Event, EventEmitter} from "@stencil/core";
 
 @Component({
   tag: "s-saqhan-new-blog",
@@ -8,6 +8,8 @@ import {Component, ComponentInterface, h, Prop} from "@stencil/core";
 export class SSaqhanNewBlog implements ComponentInterface {
 
   @Prop() blogPost: object;
+  @Event() clickOnLentaNews: EventEmitter;
+  @Event() clickOnNewsCategory: EventEmitter;
 
   getNewPosts(arr): any[] {
     return arr.map((item) => item);

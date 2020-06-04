@@ -1,4 +1,11 @@
-import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import {
+  Component,
+  ComponentInterface,
+  Event,
+  EventEmitter,
+  h,
+  Prop,
+} from "@stencil/core";
 
 @Component({
   tag: "s-saqhan-popular-card",
@@ -6,17 +13,44 @@ import { Component, ComponentInterface, h, Prop } from "@stencil/core";
   shadow: false,
 })
 export class SSaqhanPopularCard implements ComponentInterface {
+  /**
+  * Массив с популярными элементами
+  * */
   @Prop() post: any;
+  /**
+   * клик по новости
+  **/
+  @Event() clickOnLentaNews: EventEmitter;
+  /**
+   * клик по категории новости
+   **/
+  @Event() clickOnNewsCategory: EventEmitter;
 
   render() {
     return (
       <div class="news-block">
-        <div class="news-img"></div>
+        <div
+          class="news-img"
+          style={{ backgroundImage: `url(${this.post.img})` }}
+          onClick={() => this.clickOnLentaNews.emit(this.post.img)}
+        ></div>
         <div class="news-info">
-          <div class={this.ColorCategory(this.post.category)} >{this.post.category}</div>
-          <div class="lenta-title">{this.post.title}</div>
+          <div
+            class={this.ColorCategory(this.post.category)}
+            onClick={() => this.clickOnNewsCategory.emit(this.post.category)}
+          >
+            {this.post.category}
+          </div>
+          <div
+            class="lenta-title"
+            onClick={() => this.clickOnLentaNews.emit(this.post.title)}
+          >
+            {this.post.title}
+          </div>
           <div class="btn-read">
-            <a href="#"> {this.post.btnText} </a>
+            <span onClick={() => this.clickOnLentaNews.emit(this.post.btnText)}>
+              {this.post.btnText}
+            </span>
           </div>
         </div>
       </div>

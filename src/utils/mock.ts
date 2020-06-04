@@ -106,23 +106,30 @@ export const popularNews = [
     title: "How to quickly turn your podcast into a video script",
     category: "Blog Post",
     btnText: "Read Story",
-    img: "https://via.placeholder.com/900",
+    img: "https://via.placeholder.com/900x600?text=Popular",
   },
   {
     id: 2,
     title: "How to quickly turn your podcast into a video script",
     category: "Webinar",
     btnText: "Watch Webinar",
-    img: "https://via.placeholder.com/900",
+    img: "https://via.placeholder.com/500x500?text=Popular",
   },
   {
     id: 3,
     title: "How to quickly turn your podcast into a video script",
     category: "Report",
     btnText: "Read Report ",
-    img: "https://via.placeholder.com/900",
+    img: "https://via.placeholder.com/500x500?text=Popular",
   },
 ];
+
+export const bannerPopular =  {
+  title: 'Storyteller Circle Event Series',
+  nameLink: 'Read Webinar',
+  img: 'https://via.placeholder.com/900x900?text=Banner'
+}
+
 
 export const events = [
   {
@@ -245,18 +252,18 @@ export const menu = [
   {
     id: 'list-items',
     name: 'List Items'
-  },
-  {
-    id: 'online-chat',
-    name: 'Online Chat'
   }
 
 ];
 
+export const footerItems = [
+  {title: 'Products', children: [{name: 'Меню 1', id: 'menu-1'}]},
+  {title: 'Pricing', children: [{name: 'Меню 1', id: 'menu-1'}]},
+]
+
 export const logoUrl = 'https://saqhan.github.io/wibbitz/assets/img/logo.jpg';
 
 export const subscribeText = 'Subscribe';
-
 
 //chat data
 

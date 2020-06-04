@@ -1,6 +1,10 @@
 .banner {
   background-image: url("https://via.placeholder.com/900x900?text=Visit");
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .banner .btn-read a {
@@ -14,10 +18,6 @@
   color: #007bff;
   border-bottom: 1px solid #007bff;
 }
-
-
-
-
 
 @media (min-width: 768px) {
 
