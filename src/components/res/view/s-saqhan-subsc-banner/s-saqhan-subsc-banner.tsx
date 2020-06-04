@@ -12,6 +12,10 @@ export class SSaqhanSubscBanner implements ComponentInterface {
    */
   @Prop() subscribeText: string;
   /**
+  * Массив данных для черного баннера
+  * */
+  @Prop() subscribeBlockText: any;
+  /**
    * клик по кнопке подписаться
    */
   @Event() clickOnSubscribeButton: EventEmitter;
@@ -22,19 +26,18 @@ export class SSaqhanSubscBanner implements ComponentInterface {
         <div class="row subscribe d-flex justify-content-between align-items-center pt-5 pb-5 text-white">
           <div class="col-12 col-lg-6 left">
             <div class="sub-title">
-              <h1>Ready to take a test drive</h1>
+              <h1> {this.subscribeBlockText.title} </h1>
             </div>
             <div class="subs-sub-title text-muted">
-              We'll help you elevate your video content strategy. Prices
-              strating from $49 a month.
+              {this.subscribeBlockText.subTitle}
               <span class="btn-read">
-                <a href="/second-page/">See&nbsp;pricing</a>
+                <span>{this.subscribeBlockText.nameLink}</span>
               </span>
             </div>
           </div>
           <div class="col-12 col-lg-6 p-3 right pr-sm-5 text-right">
             <div class="col-12">
-              <form class="form">
+              <form class="form" onSubmit={(event) => event.preventDefault()} >
                 <div class="input-group">
                   <i class="fas fa-at"></i>
                   <input
@@ -44,7 +47,7 @@ export class SSaqhanSubscBanner implements ComponentInterface {
                   />
                   <div class="input-group-append">
                     <button
-                      onClick={() => this.clickOnSubscribeButton.emit()}
+                      onClick={() => this.clickOnSubscribeButton.emit(this.subscribeText)}
                       class="btn btn-primary btn-custom-head"
                       type="submit"
                     >
@@ -56,18 +59,18 @@ export class SSaqhanSubscBanner implements ComponentInterface {
             </div>
             <div class="col-12">
               <div class="logos text-center text-muted pt-4">
-                <a href="/second-page/">
+                <span onClick={() => this.clickOnSubscribeButton.emit()} >
                   <i class="far fa-address-book"></i>
-                </a>
-                <a href="/second-page/">
+                </span>
+                <span onClick={() => this.clickOnSubscribeButton.emit()} >
                   <i class="fas fa-paper-plane"></i>
-                </a>
-                <a href="/second-page/">
+                </span>
+                <span onClick={() => this.clickOnSubscribeButton.emit()} >
                   <i class="fas fa-envelope"></i>
-                </a>
-                <a href="/second-page/">
+                </span>
+                <span onClick={() => this.clickOnSubscribeButton.emit()} >
                   <i class="fas fa-map-marked"></i>
-                </a>
+                </span>
               </div>
             </div>
           </div>
@@ -75,5 +78,4 @@ export class SSaqhanSubscBanner implements ComponentInterface {
       </div>
     );
   }
-
 }

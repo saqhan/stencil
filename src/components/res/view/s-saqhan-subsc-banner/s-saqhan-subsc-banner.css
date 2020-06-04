@@ -9,13 +9,13 @@
   font-size: 52px;
 }
 
-.btn-read  a {
+.btn-read  span {
   transition: 0.3s all;
   color: #6c757d;
   border-bottom: 1px solid #6c757d;
 }
 
-.btn-read  a:hover {
+.btn-read  span:hover {
   text-decoration: none;
   color: #fff;
   border-bottom: 1px solid #fff;
@@ -48,12 +48,12 @@
   font-size: 20px;
 }
 
-.logos a {
+.logos span {
   font-size: 20px;
   margin: 0px 10px;
   transition: 0.3s all;
 }
-.logos a:hover {
+.logos span:hover {
   color: #fff;
   cursor: pointer;
 }

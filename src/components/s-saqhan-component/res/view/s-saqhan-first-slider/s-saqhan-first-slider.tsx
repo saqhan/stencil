@@ -19,19 +19,9 @@ export class SSaqhanFirstSlider implements ComponentInterface {
   @Prop() blogCarouselMock: any;
 
   /**
-   * клик по публикации ленты новостей
-   */
-  @Event() clickOnLentaNews: EventEmitter;
-
-  /**
-   * клик по категории публикаций
-   */
-  @Event() clickOnNewsCategory: EventEmitter;
-
-  /**
-   * клик по публикации главной новости
-   */
-  @Event() clickOnMainNews: EventEmitter;
+   * Клик по новости
+   * */
+  @Event() clickOnNews: EventEmitter;
 
   mainNews(arr): any[] {
     return (arr.filter((item) => item.main) || []).slice(-1);

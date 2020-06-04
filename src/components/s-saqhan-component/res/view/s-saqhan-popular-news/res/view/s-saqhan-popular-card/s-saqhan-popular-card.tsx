@@ -18,13 +18,9 @@ export class SSaqhanPopularCard implements ComponentInterface {
   * */
   @Prop() post: any;
   /**
-   * клик по новости
+   * Клик по новости
   **/
-  @Event() clickOnLentaNews: EventEmitter;
-  /**
-   * клик по категории новости
-   **/
-  @Event() clickOnNewsCategory: EventEmitter;
+  @Event() clickOnNews: EventEmitter;
 
   render() {
     return (
@@ -32,23 +28,23 @@ export class SSaqhanPopularCard implements ComponentInterface {
         <div
           class="news-img"
           style={{ backgroundImage: `url(${this.post.img})` }}
-          onClick={() => this.clickOnLentaNews.emit(this.post.img)}
+          onClick={() => this.clickOnNews.emit(this.post.id)}
         ></div>
         <div class="news-info">
           <div
             class={this.ColorCategory(this.post.category)}
-            onClick={() => this.clickOnNewsCategory.emit(this.post.category)}
+            onClick={() => this.clickOnNews.emit(this.post.category)}
           >
             {this.post.category}
           </div>
           <div
             class="lenta-title"
-            onClick={() => this.clickOnLentaNews.emit(this.post.title)}
+            onClick={() => this.clickOnNews.emit(this.post.id)}
           >
             {this.post.title}
           </div>
           <div class="btn-read">
-            <span onClick={() => this.clickOnLentaNews.emit(this.post.btnText)}>
+            <span onClick={() => this.clickOnNews.emit(this.post.id)}>
               {this.post.btnText}
             </span>
           </div>

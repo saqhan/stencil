@@ -9,6 +9,7 @@ import {
   logoUrl,
   subscribeText,
   footerItems,
+  subscribeBlockText,
 } from "../../utils/mock";
 
 @Component({
@@ -33,25 +34,25 @@ export class SSaqhanComponent {
           }
         />
         <s-saqhan-first-slider
-          onClickOnLentaNews={(event) => this.clickOnLentaNews(event)}
-          onClickOnNewsCategory={(event) => this.clickOnNewsCategory(event)}
-          onClickOnMainNews={(event) => this.clickOnMainNews(event)}
+          onClickOnNews={(event) => this.clickOnNews(event)}
           blogCarouselMock={blogCarouselMock}
         />
         <s-saqhan-new-blog
           blogPost={blogPost}
-          onClickOnLentaNews={(event) => this.clickOnLentaNews(event)}
-          onClickOnNewsCategory={(event) => this.clickOnNewsCategory(event)}
+          onClickOnNews={(event) => this.clickOnNews(event)}
         />
         <s-saqhan-popular-news
           popularNews={popularNews}
           bannerPopular={bannerPopular}
-          onClickOnLentaNews={(event) => this.clickOnLentaNews(event)}
-          onClickOnNewsCategory={(event) => this.clickOnNewsCategory(event)}
+          onClickOnNews={(event) => this.clickOnNews(event)}
         />
-        <s-saqhan-events-blog events={events} />
+        <s-saqhan-events-blog
+          onClickOnNews={(event) => this.clickOnNews(event)}
+          events={events}
+        />
         <s-saqhan-subsc-banner
           subscribeText={subscribeText}
+          subscribeBlockText={subscribeBlockText}
           onClickOnSubscribeButton={(event) =>
             this.clickOnSubscribeButton(event)
           }
@@ -69,11 +70,12 @@ export class SSaqhanComponent {
   }
 
   /**
-   *  Клик по ссылке в ленте новостей
+   *  Клик по новости
    * */
-  public clickOnLentaNews({ detail }) {
+  public clickOnNews({ detail }) {
     return console.log("clickOnNews", detail);
   }
+
   /**
    *  Клик по категории публикации
    * */
@@ -82,16 +84,10 @@ export class SSaqhanComponent {
   }
 
   /**
-   *  Клик по главной новости
-   * */
-  public clickOnMainNews({ detail }) {
-    return console.log("clickOnMainNews", detail);
-  }
-  /**
    *  Клик по кнопке подписаться
    * */
-  public clickOnSubscribeButton(event) {
+  public clickOnSubscribeButton({ detail }) {
     event.preventDefault();
-    return console.log("clickOnSubscribeButton", event);
+    return console.log("clickOnSubscribeButton", detail);
   }
 }

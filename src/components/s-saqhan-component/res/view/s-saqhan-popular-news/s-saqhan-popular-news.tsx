@@ -6,11 +6,18 @@ import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from '@sten
   shadow: false,
 })
 export class SSaqhanPopularNews implements ComponentInterface {
-
+  /**
+   * Массив публикаций
+   * */
   @Prop() popularNews:any;
+  /**
+   * Данные для баннера
+   * */
   @Prop() bannerPopular:any;
-  @Event() clickOnLentaNews: EventEmitter;
-  @Event() clickOnNewsCategory: EventEmitter;
+  /**
+   * Клик по новости
+   * */
+  @Event() clickOnNews: EventEmitter;
 
   getPopularNews(arr): any[] {
     return arr.map(item => item);
@@ -29,11 +36,18 @@ export class SSaqhanPopularNews implements ComponentInterface {
               <CardPopular post={this.getPopularNews(this.popularNews)}/>
             </div>
           </div>
-        <div class="col-12 col-lg-5 p-5 p-lg-0 banner">
-          <div class="banner-title text-center text-white">
+        <div class="col-12 col-lg-5 p-5 p-lg-0 banner"
+          style={{backgroundImage: `url(${this.bannerPopular.img})`}}
+
+        >
+          <div class="banner-title text-center text-white"
+               onClick={() => this.clickOnNews.emit(this.bannerPopular.title)}
+          >
             {this.bannerPopular.title}
           </div>
-          <div class="btn-read pt-3">
+          <div class="btn-read pt-3"
+               onClick={() => this.clickOnNews.emit(this.bannerPopular.nameLink)}
+          >
             <span >{this.bannerPopular.nameLink}</span>
           </div>
         </div>

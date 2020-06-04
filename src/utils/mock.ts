@@ -12,7 +12,8 @@ export const blogCarouselMock = [
   },
   {
     id: 2,
-    title: "Explore instagram Video: How to convert.. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    title:
+      "Explore instagram Video: How to convert.. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     subTitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
     img: "https://via.placeholder.com/600x600?text=Lenta",
     category: "Report",
@@ -64,7 +65,8 @@ export const blogCarouselMock = [
   },
   {
     id: 7,
-    title: "Last News instagram  Accusantium, aut dolore doloremque incidunt maxime",
+    title:
+      "Last News instagram  Accusantium, aut dolore doloremque incidunt maxime",
     subTitle:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aut dolore doloremque incidunt maxime quasi sint ullam.",
     img: "https://via.placeholder.com/600x600?text=Lenta",
@@ -72,8 +74,7 @@ export const blogCarouselMock = [
     btnText: "Read Report",
     main: false,
     lenta: true,
-  }
-
+  },
 ];
 
 export const blogPost = [
@@ -124,12 +125,11 @@ export const popularNews = [
   },
 ];
 
-export const bannerPopular =  {
-  title: 'Storyteller Circle Event Series',
-  nameLink: 'Read Webinar',
-  img: 'https://via.placeholder.com/900x900?text=Banner'
-}
-
+export const bannerPopular = {
+  title: "Storyteller Circle Event Series",
+  nameLink: "Read Webinar",
+  img: "https://via.placeholder.com/900x900?text=Banner",
+};
 
 export const events = [
   {
@@ -242,28 +242,52 @@ export const NewsStore = [
 
 export const menu = [
   {
-    id: 'home-menu',
-    name: 'Home'
+    id: "home-menu",
+    name: "Home",
   },
   {
-    id: 'second-page',
-    name: 'Second Page'
+    id: "second-page",
+    name: "Second Page",
   },
   {
-    id: 'list-items',
-    name: 'List Items'
-  }
-
+    id: "list-items",
+    name: "List Items",
+  },
 ];
 
 export const footerItems = [
-  {title: 'Products', children: [{name: 'Меню 1', id: 'menu-1'}]},
-  {title: 'Pricing', children: [{name: 'Меню 1', id: 'menu-1'}]},
-]
+  {
+    title: "Solutions",
+    links: [
+      { name: "Marketing", id: "Marketing" },
+      { name: "Social Media", id: "Social" },
+      { name: "Agencies", id: "Agencies" },
+      { name: "Internal", id: "Internal" },
+      { name: "How to optimize", id: "How" },
+    ],
+  },
+  {
+    title: "Pricing",
+    links: [
+      { name: "Lorem ", id: "Lorem " },
+      { name: "Alias ", id: "Alias " },
+      { name: "Choose ", id: "Choose " },
+      { name: "Language", id: "Language" },
+    ],
+  }
+];
 
-export const logoUrl = 'https://saqhan.github.io/wibbitz/assets/img/logo.jpg';
+export const logoUrl = "https://saqhan.github.io/wibbitz/assets/img/logo.jpg";
 
-export const subscribeText = 'Subscribe';
+export const subscribeText = "Subscribe";
+
+export const subscribeBlockText = {
+  btnText: "Subscribe",
+  title: "Ready to take a test drive",
+  subTitle:
+    "We`ll help you elevate your video content strategy. Prices strating from $49 a month.",
+  nameLink: "See pricing",
+};
 
 //chat data
 
@@ -293,12 +317,12 @@ export const messages = [
     img: "https://via.placeholder.com/500x500?text=User",
     date: "24 Апр 15:20",
     position: "Тренер",
-
   },
   {
     id: 3,
     name: "Владимир Путин",
-    message: "Предсознательное стабильно. Рефлексия вызывает стимул. Эскапизм осознаёт импульс. ",
+    message:
+      "Предсознательное стабильно. Рефлексия вызывает стимул. Эскапизм осознаёт импульс. ",
     img: "https://via.placeholder.com/500x500?text=User",
     date: "30 Окт 15:20",
     position: "Президент",
@@ -374,7 +398,8 @@ export const messages = [
     img: "https://via.placeholder.com/500x500?text=User",
     date: "24 Апр 15:20",
     position: "Футболист",
-  },  {
+  },
+  {
     id: 13,
     name: "Маргарита",
     message: "Психоз изменяем. Конформизм понимает психоз.",

@@ -6,9 +6,14 @@ import {Component, ComponentInterface, Prop, h, Event, EventEmitter} from "@sten
   shadow: false,
 })
 export class SSaqhanBlogCard implements ComponentInterface {
+  /**
+   * Массив с публикациями
+   * */
   @Prop() post: any;
-  @Event() clickOnLentaNews: EventEmitter;
-  @Event() clickOnNewsCategory: EventEmitter;
+  /**
+   * Клик по новости
+   * */
+  @Event() clickOnNews: EventEmitter;
 
   render() {
     return (
@@ -16,18 +21,18 @@ export class SSaqhanBlogCard implements ComponentInterface {
         <div
           class="blog-img"
           style={{ backgroundImage: `url( ${this.post.img})` }}
-          onClick={() => this.clickOnLentaNews.emit(this.post.img)}
+          onClick={() => this.clickOnNews.emit(this.post.id)}
         ></div>
         <div class={this.ColorCategory(this.post.category)}
-             onClick={() => this.clickOnNewsCategory.emit(this.post.category)}
+             onClick={() => this.clickOnNews.emit(this.post.category)}
         >
           {this.post.category}
         </div>
         <div class="blog-title pt-3 font-weight-bold"
-             onClick={() => this.clickOnLentaNews.emit(this.post.title)}
+             onClick={() => this.clickOnNews.emit(this.post.id)}
         >{this.post.title}</div>
         <div class="btn-read pt-3">
-          <span  onClick={() => this.clickOnLentaNews.emit(this.post.btnText)}
+          <span  onClick={() => this.clickOnNews.emit(this.post.id)}
           > {this.post.btnText} </span>
         </div>
       </div>

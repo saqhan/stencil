@@ -6,10 +6,14 @@ import {Component, ComponentInterface, h, Prop, Event, EventEmitter} from "@sten
   shadow: false,
 })
 export class SSaqhanNewBlog implements ComponentInterface {
-
+  /**
+   * Массив с публикациями
+   * */
   @Prop() blogPost: object;
-  @Event() clickOnLentaNews: EventEmitter;
-  @Event() clickOnNewsCategory: EventEmitter;
+  /**
+   * Клик по новости
+   * */
+  @Event() clickOnNews: EventEmitter;
 
   getNewPosts(arr): any[] {
     return arr.map((item) => item);

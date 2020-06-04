@@ -9,20 +9,27 @@ export class FooterFirst implements ComponentInterface {
 
   @Prop() footer:any;
 
+  getItemsFooter(array){
+    return array.map(item => item)
+  }
+
   render() {
+    console.log(this.footer)
     return (
       <div>
         <div class="footer-title">{this.footer.title}</div>
         <div class="footer-item">
           <ul>
-            <li><a href="#" class="foot-nav-link"> </a></li>
-            <li><a href="#" class="foot-nav-link"></a></li>
-            <li><a href="#" class="foot-nav-link">2</a></li>
-            <li><a href="#" class="foot-nav-link">22</a></li>
+            <FooterValue arr={this.footer.links} ></FooterValue>
           </ul>
         </div>
       </div>
     );
   }
+}
 
+const FooterValue = (props) => {
+  return props.arr.map(item => {
+    return <footer-item arr={item} ></footer-item>
+  })
 }

@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Prop, h } from "@stencil/core";
+import {Component, ComponentInterface, Prop, h, Event, EventEmitter} from "@stencil/core";
 
 @Component({
   tag: "s-saqhan-events-blog",
@@ -6,7 +6,14 @@ import { Component, ComponentInterface, Prop, h } from "@stencil/core";
   shadow: false,
 })
 export class SSaqhanEventsBlog implements ComponentInterface {
+  /**
+   * Массив с публикациями
+   * */
   @Prop() events: any;
+  /**
+   * Клик по новости
+   * */
+  @Event() clickOnNews: EventEmitter;
 
   getEvents(arr) {
     return arr.map((item) => item);

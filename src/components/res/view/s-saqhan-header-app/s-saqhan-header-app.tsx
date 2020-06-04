@@ -92,7 +92,6 @@ export class SSaqhanHeaderApp implements ComponentInterface {
                           <button
                             onClick={() => this.clickOnSubscribeButton.emit()}
                             class="btn btn-primary btn-custom-head"
-
                           >
                             {this.subscribeText}
                           </button>
