@@ -274,6 +274,24 @@ export const footerItems = [
       { name: "Choose ", id: "Choose " },
       { name: "Language", id: "Language" },
     ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { name: "Subscribe ", id: "Subscribe " },
+      { name: "Language ", id: "Languag " },
+      { name: "Month ", id: "Month " },
+      { name: "Ready ", id: "Ready " },
+    ],
+  },
+  {
+    title: "Component ",
+    links: [
+      { name: "FooterValue ", id: "FooterValue " },
+      { name: "Items ", id: "Items " },
+      { name: "Saqhan ", id: "Saqhan " },
+      { name: "Intocode ", id: "Intocode " },
+    ],
   }
 ];
 

@@ -57,7 +57,9 @@ export class SSaqhanComponent {
             this.clickOnSubscribeButton(event)
           }
         />
-        <s-saqhan-app-footer footerItems={footerItems} />
+        <s-saqhan-app-footer
+          onClickOnMenu={(item) => this.clickOnMenu(item)}
+          footerItems={footerItems} />
         <s-saqhan-chat-app></s-saqhan-chat-app>
       </div>
     );

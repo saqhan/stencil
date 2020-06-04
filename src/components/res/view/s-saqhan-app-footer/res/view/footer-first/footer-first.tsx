@@ -6,15 +6,13 @@ import { Component, ComponentInterface, h , Prop} from '@stencil/core';
   shadow: false,
 })
 export class FooterFirst implements ComponentInterface {
-
+  /**
+   * массив 1 футера
+   */
   @Prop() footer:any;
 
-  getItemsFooter(array){
-    return array.map(item => item)
-  }
-
   render() {
-    console.log(this.footer)
+
     return (
       <div>
         <div class="footer-title">{this.footer.title}</div>
@@ -30,6 +28,6 @@ export class FooterFirst implements ComponentInterface {
 
 const FooterValue = (props) => {
   return props.arr.map(item => {
-    return <footer-item arr={item} ></footer-item>
+    return <footer-first-item arr={item} ></footer-first-item>
   })
 }

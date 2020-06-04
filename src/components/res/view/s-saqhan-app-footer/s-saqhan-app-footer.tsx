@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import { Component, ComponentInterface, h, Prop, EventEmitter, Event } from "@stencil/core";
 
 @Component({
   tag: "s-saqhan-app-footer",
@@ -10,11 +10,10 @@ export class SSaqhanAppFooter implements ComponentInterface {
    * массив меню для вывода
    */
   @Prop() footerItems: any;
-
-  // getProducts(array) {
-  //   return array.filter((item) => item.title === "Products");
-  //   // .map(item => item.children);
-  // }
+  /**
+   * клик по кнопке в футере
+   */
+  @Event() clickOnMenu: EventEmitter;
 
   render() {
     return (
@@ -56,6 +55,12 @@ export class SSaqhanAppFooter implements ComponentInterface {
           <div class="col-lg-2 col-md-3 col-sm-6 col-6">
             <FooterSecond footerSecond={(this.footerItems)} ></FooterSecond>
           </div>
+          <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+            <FooterThird footerThird={(this.footerItems)} ></FooterThird>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+            <FooterFourth footerFourth={(this.footerItems)} ></FooterFourth>
+          </div>
           <div class="col-12 pt-5">
             <div class="choose-language text-muted small">
               <i class="fas fa-globe-africa"></i> Choose Language
@@ -78,10 +83,26 @@ const FooterFirst = (props) => {
       return <footer-first footer={item}></footer-first>;
     }))
 };
+
 const FooterSecond = (props) => {
   return (props.footerSecond
     .filter((item) => item.title === "Pricing")
     .map((item) => {
       return <footer-second footerSecond={item}></footer-second>;
+    }))
+};
+const FooterThird = (props) => {
+  return (props.footerThird
+    .filter((item) => item.title === "Resources")
+    .map((item) => {
+      return <footer-third footerThird={item}></footer-third>;
+    }))
+};
+
+const FooterFourth = (props) => {
+  return (props.footerFourth
+    .filter((item) => item.title === "Component ")
+    .map((item) => {
+      return <footer-fourth footerFourth={item}></footer-fourth>;
     }))
 };

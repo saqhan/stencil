@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Prop } from '@stencil/core';
+import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from '@stencil/core';
 
 @Component({
   tag: 'footer-second',
@@ -6,15 +6,16 @@ import { Component, ComponentInterface, h, Prop } from '@stencil/core';
   shadow: false,
 })
 export class FooterSecond implements ComponentInterface {
-
+  /**
+   * массив второго футера
+   */
   @Prop() footerSecond: any;
-
-  getItemsFooter(array){
-    return array.map(item => item)
-  }
-
+  /**
+   * клик по кнопке в футере
+   */
+  @Event() clickOnMenu: EventEmitter;
   render() {
-    console.log(this.footerSecond)
+
     return (
       <div>
         <div class="footer-title">{this.footerSecond.title}</div>

@@ -9,15 +9,48 @@ import { SSaqhanHedearMenuItem, } from "./components/res/view/s-saqhan-header-ap
 import { SSaqhanLentaNewsCardItem, } from "./components/s-saqhan-component/res/view/s-saqhan-first-slider/res/view/s-saqhan-lenta-news-card/interface/common.interface";
 export namespace Components {
     interface FooterFirst {
+        /**
+          * массив 1 футера
+         */
         "footer": any;
     }
-    interface FooterItem {
+    interface FooterFirstItem {
+        "arr": any;
+    }
+    interface FooterFourth {
+        /**
+          * массив второго футера
+         */
+        "footerFourth": any;
+    }
+    interface FooterFourthItem {
+        /**
+          * массив 4 футера
+         */
         "arr": any;
     }
     interface FooterSecond {
+        /**
+          * массив второго футера
+         */
         "footerSecond": any;
     }
     interface FooterSecondItem {
+        /**
+          * массив второго футера
+         */
+        "arr": any;
+    }
+    interface FooterThird {
+        /**
+          * массив второго футера
+         */
+        "footerThird": any;
+    }
+    interface FooterThirdItem {
+        /**
+          * массив 3 футера
+         */
         "arr": any;
     }
     interface MenuItem {
@@ -192,11 +225,23 @@ declare global {
         prototype: HTMLFooterFirstElement;
         new (): HTMLFooterFirstElement;
     };
-    interface HTMLFooterItemElement extends Components.FooterItem, HTMLStencilElement {
+    interface HTMLFooterFirstItemElement extends Components.FooterFirstItem, HTMLStencilElement {
     }
-    var HTMLFooterItemElement: {
-        prototype: HTMLFooterItemElement;
-        new (): HTMLFooterItemElement;
+    var HTMLFooterFirstItemElement: {
+        prototype: HTMLFooterFirstItemElement;
+        new (): HTMLFooterFirstItemElement;
+    };
+    interface HTMLFooterFourthElement extends Components.FooterFourth, HTMLStencilElement {
+    }
+    var HTMLFooterFourthElement: {
+        prototype: HTMLFooterFourthElement;
+        new (): HTMLFooterFourthElement;
+    };
+    interface HTMLFooterFourthItemElement extends Components.FooterFourthItem, HTMLStencilElement {
+    }
+    var HTMLFooterFourthItemElement: {
+        prototype: HTMLFooterFourthItemElement;
+        new (): HTMLFooterFourthItemElement;
     };
     interface HTMLFooterSecondElement extends Components.FooterSecond, HTMLStencilElement {
     }
@@ -209,6 +254,18 @@ declare global {
     var HTMLFooterSecondItemElement: {
         prototype: HTMLFooterSecondItemElement;
         new (): HTMLFooterSecondItemElement;
+    };
+    interface HTMLFooterThirdElement extends Components.FooterThird, HTMLStencilElement {
+    }
+    var HTMLFooterThirdElement: {
+        prototype: HTMLFooterThirdElement;
+        new (): HTMLFooterThirdElement;
+    };
+    interface HTMLFooterThirdItemElement extends Components.FooterThirdItem, HTMLStencilElement {
+    }
+    var HTMLFooterThirdItemElement: {
+        prototype: HTMLFooterThirdItemElement;
+        new (): HTMLFooterThirdItemElement;
     };
     interface HTMLMenuItemElement extends Components.MenuItem, HTMLStencilElement {
     }
@@ -452,9 +509,13 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "footer-first": HTMLFooterFirstElement;
-        "footer-item": HTMLFooterItemElement;
+        "footer-first-item": HTMLFooterFirstItemElement;
+        "footer-fourth": HTMLFooterFourthElement;
+        "footer-fourth-item": HTMLFooterFourthItemElement;
         "footer-second": HTMLFooterSecondElement;
         "footer-second-item": HTMLFooterSecondItemElement;
+        "footer-third": HTMLFooterThirdElement;
+        "footer-third-item": HTMLFooterThirdItemElement;
         "menu-item": HTMLMenuItemElement;
         "popular-banner": HTMLPopularBannerElement;
         "s-saqhan-app-footer": HTMLSSaqhanAppFooterElement;
@@ -499,16 +560,66 @@ declare global {
 }
 declare namespace LocalJSX {
     interface FooterFirst {
+        /**
+          * массив 1 футера
+         */
         "footer"?: any;
     }
-    interface FooterItem {
+    interface FooterFirstItem {
         "arr"?: any;
+        "onClickOnMenu"?: (event: CustomEvent<any>) => void;
+    }
+    interface FooterFourth {
+        /**
+          * массив второго футера
+         */
+        "footerFourth"?: any;
+    }
+    interface FooterFourthItem {
+        /**
+          * массив 4 футера
+         */
+        "arr"?: any;
+        /**
+          * клик по кнопке в футере
+         */
+        "onClickOnMenu"?: (event: CustomEvent<any>) => void;
     }
     interface FooterSecond {
+        /**
+          * массив второго футера
+         */
         "footerSecond"?: any;
+        /**
+          * клик по кнопке в футере
+         */
+        "onClickOnMenu"?: (event: CustomEvent<any>) => void;
     }
     interface FooterSecondItem {
+        /**
+          * массив второго футера
+         */
         "arr"?: any;
+        /**
+          * клик по кнопке в футере
+         */
+        "onClickOnMenu"?: (event: CustomEvent<any>) => void;
+    }
+    interface FooterThird {
+        /**
+          * массив второго футера
+         */
+        "footerThird"?: any;
+    }
+    interface FooterThirdItem {
+        /**
+          * массив 3 футера
+         */
+        "arr"?: any;
+        /**
+          * клик по кнопке в футере
+         */
+        "onClickOnMenu"?: (event: CustomEvent<any>) => void;
     }
     interface MenuItem {
         "arr"?: any;
@@ -521,6 +632,10 @@ declare namespace LocalJSX {
           * массив меню для вывода
          */
         "footerItems"?: any;
+        /**
+          * клик по кнопке в футере
+         */
+        "onClickOnMenu"?: (event: CustomEvent<any>) => void;
     }
     interface SSaqhanAuthorInfo {
         "author"?: any;
@@ -742,9 +857,13 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "footer-first": FooterFirst;
-        "footer-item": FooterItem;
+        "footer-first-item": FooterFirstItem;
+        "footer-fourth": FooterFourth;
+        "footer-fourth-item": FooterFourthItem;
         "footer-second": FooterSecond;
         "footer-second-item": FooterSecondItem;
+        "footer-third": FooterThird;
+        "footer-third-item": FooterThirdItem;
         "menu-item": MenuItem;
         "popular-banner": PopularBanner;
         "s-saqhan-app-footer": SSaqhanAppFooter;
@@ -792,9 +911,13 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "footer-first": LocalJSX.FooterFirst & JSXBase.HTMLAttributes<HTMLFooterFirstElement>;
-            "footer-item": LocalJSX.FooterItem & JSXBase.HTMLAttributes<HTMLFooterItemElement>;
+            "footer-first-item": LocalJSX.FooterFirstItem & JSXBase.HTMLAttributes<HTMLFooterFirstItemElement>;
+            "footer-fourth": LocalJSX.FooterFourth & JSXBase.HTMLAttributes<HTMLFooterFourthElement>;
+            "footer-fourth-item": LocalJSX.FooterFourthItem & JSXBase.HTMLAttributes<HTMLFooterFourthItemElement>;
             "footer-second": LocalJSX.FooterSecond & JSXBase.HTMLAttributes<HTMLFooterSecondElement>;
             "footer-second-item": LocalJSX.FooterSecondItem & JSXBase.HTMLAttributes<HTMLFooterSecondItemElement>;
+            "footer-third": LocalJSX.FooterThird & JSXBase.HTMLAttributes<HTMLFooterThirdElement>;
+            "footer-third-item": LocalJSX.FooterThirdItem & JSXBase.HTMLAttributes<HTMLFooterThirdItemElement>;
             "menu-item": LocalJSX.MenuItem & JSXBase.HTMLAttributes<HTMLMenuItemElement>;
             "popular-banner": LocalJSX.PopularBanner & JSXBase.HTMLAttributes<HTMLPopularBannerElement>;
             "s-saqhan-app-footer": LocalJSX.SSaqhanAppFooter & JSXBase.HTMLAttributes<HTMLSSaqhanAppFooterElement>;
