@@ -10,11 +10,11 @@ export class FooterFirstItem implements ComponentInterface {
   @Event() clickOnMenu: EventEmitter;
   render() {
     return (
-      <li>
+      <div>
         <span class="foot-nav-link" onClick={() => this.clickOnMenu.emit(this.arr.name) } >
           {this.arr.name}
         </span>
-      </li>
+      </div>
     );
   }
 }

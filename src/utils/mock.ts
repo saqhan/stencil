@@ -278,10 +278,22 @@ export const footerItems = [
   {
     title: "Resources",
     links: [
-      { name: "Subscribe ", id: "Subscribe " },
+      { name: "SubscribeWithChild ", id: "Subscribe ", links: [
+          {name: 'Subscribe1', id: 'Subscribe1' },
+          {name: 'Subscribe2', id: 'Subscribe2' },
+        ] },
       { name: "Language ", id: "Languag " },
       { name: "Month ", id: "Month " },
       { name: "Ready ", id: "Ready " },
+    ],
+  },
+  {
+    title: "Component ",
+    links: [
+      { name: "FooterValue ", id: "FooterValue " },
+      { name: "Items ", id: "Items " },
+      { name: "Saqhan ", id: "Saqhan " },
+      { name: "Intocode ", id: "Intocode " },
     ],
   },
   {

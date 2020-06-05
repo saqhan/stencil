@@ -1,4 +1,11 @@
-import { Component, ComponentInterface, h, Prop, EventEmitter, Event } from "@stencil/core";
+import {
+  Component,
+  ComponentInterface,
+  h,
+  Prop,
+  EventEmitter,
+  Event,
+} from "@stencil/core";
 
 @Component({
   tag: "s-saqhan-app-footer",
@@ -38,29 +45,22 @@ export class SSaqhanAppFooter implements ComponentInterface {
                 >
                   <i class="fab fa-youtube"></i>
                 </button>
-                <button type="button" class="btn btn-social-icon btn-instagram btn-rounded">
+                <button
+                  type="button"
+                  class="btn btn-social-icon btn-instagram btn-rounded"
+                >
                   <i class="fab fa-instagram"></i>
                 </button>
-                <button type="button" class="btn btn-social-icon btn-instagram btn-rounded"                >
+                <button
+                  type="button"
+                  class="btn btn-social-icon btn-instagram btn-rounded"
+                >
                   <i class="fab fa-twitter"></i>
                 </button>
               </div>
             </div>
           </div>
-          <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-            <FooterFirst
-              footer={(this.footerItems)}
-            ></FooterFirst>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-            <FooterSecond footerSecond={(this.footerItems)} ></FooterSecond>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-            <FooterThird footerThird={(this.footerItems)} ></FooterThird>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-            <FooterFourth footerFourth={(this.footerItems)} ></FooterFourth>
-          </div>
+          <FooterFirst footer={this.footerItems}></FooterFirst>
           <div class="col-12 pt-5">
             <div class="choose-language text-muted small">
               <i class="fas fa-globe-africa"></i> Choose Language
@@ -77,32 +77,11 @@ export class SSaqhanAppFooter implements ComponentInterface {
   }
 }
 const FooterFirst = (props) => {
-  return (props.footer
-    .filter((item) => item.title === "Solutions")
-    .map((item) => {
-      return <footer-first footer={item}></footer-first>;
-    }))
-};
-
-const FooterSecond = (props) => {
-  return (props.footerSecond
-    .filter((item) => item.title === "Pricing")
-    .map((item) => {
-      return <footer-second footerSecond={item}></footer-second>;
-    }))
-};
-const FooterThird = (props) => {
-  return (props.footerThird
-    .filter((item) => item.title === "Resources")
-    .map((item) => {
-      return <footer-third footerThird={item}></footer-third>;
-    }))
-};
-
-const FooterFourth = (props) => {
-  return (props.footerFourth
-    .filter((item) => item.title === "Component ")
-    .map((item) => {
-      return <footer-fourth footerFourth={item}></footer-fourth>;
-    }))
+  return props.footer.slice(0, 4).map((item) => {
+    return (
+      <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+        <footer-first footer={item}></footer-first>
+      </div>
+    );
+  });
 };
