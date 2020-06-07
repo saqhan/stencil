@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description     | Type  | Default     |
-| -------- | --------- | --------------- | ----- | ----------- |
-| `footer` | `footer`  | массив 1 футера | `any` | `undefined` |
+| Property | Attribute | Description     | Type                | Default     |
+| -------- | --------- | --------------- | ------------------- | ----------- |
+| `footer` | --        | массив 1 футера | `FooterWrapperItem` | `undefined` |
 
 
 ## Events
@@ -32,9 +32,9 @@
 ### Graph
 ```mermaid
 graph TD;
-  footer-first --> footer-first-item
-  s-saqhan-app-footer --> footer-first
-  style footer-first fill:#f9f,stroke:#333,stroke-width:4px
+  footer-wrapper --> footer-first-item
+  s-saqhan-app-footer --> footer-wrapper
+  style footer-wrapper fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type  | Default     |
-| -------- | --------- | ----------- | ----- | ----------- |
-| `author` | `author`  |             | `any` | `undefined` |
+| Property | Attribute | Description | Type                    | Default     |
+| -------- | --------- | ----------- | ----------------------- | ----------- |
+| `author` | --        |             | `SSaqhanCardAuthorItem` | `undefined` |
 
 
 ## Dependencies

@@ -5,6 +5,13 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property    | Attribute    | Description | Type  | Default     |
+| ----------- | ------------ | ----------- | ----- | ----------- |
+| `quoteText` | `quote-text` |             | `any` | `undefined` |
+
+
 ## Dependencies
 
 ### Used by

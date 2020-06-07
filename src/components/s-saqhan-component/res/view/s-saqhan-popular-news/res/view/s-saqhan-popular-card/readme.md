@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description                     | Type                     | Default     |
-| -------- | --------- | ------------------------------- | ------------------------ | ----------- |
-| `post`   | --        | Массив с популярными элементами | `SSaqhanPopularCardItem` | `undefined` |
+| Property | Attribute | Description                     | Type  | Default     |
+| -------- | --------- | ------------------------------- | ----- | ----------- |
+| `post`   | `post`    | Массив с популярными элементами | `any` | `undefined` |
 
 
 ## Events

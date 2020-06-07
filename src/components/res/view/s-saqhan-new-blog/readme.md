@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property   | Attribute   | Description           | Type  | Default     |
-| ---------- | ----------- | --------------------- | ----- | ----------- |
-| `blogPost` | `blog-post` | Массив с публикациями | `any` | `undefined` |
+| Property   | Attribute | Description           | Type            | Default     |
+| ---------- | --------- | --------------------- | --------------- | ----------- |
+| `blogPost` | --        | Массив с публикациями | `NewBlogItem[]` | `undefined` |
 
 
 ## Events

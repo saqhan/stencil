@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property             | Attribute        | Description                       | Type                         | Default     |
-| -------------------- | ---------------- | --------------------------------- | ---------------------------- | ----------- |
-| `subscribeBlockText` | --               | Массив данных для черного баннера | `clickOnSubscribeButtonItem` | `undefined` |
-| `subscribeText`      | `subscribe-text` | текст вывода в кнопке подписаться | `string`                     | `undefined` |
+| Property             | Attribute              | Description                       | Type     | Default     |
+| -------------------- | ---------------------- | --------------------------------- | -------- | ----------- |
+| `subscribeBlockText` | `subscribe-block-text` | Массив данных для черного баннера | `any`    | `undefined` |
+| `subscribeText`      | `subscribe-text`       | текст вывода в кнопке подписаться | `string` | `undefined` |
 
 
 ## Events
@@ -25,11 +25,13 @@
 ### Used by
 
  - [s-saqhan-component](../../../s-saqhan-component)
+ - [s-saqhan-second-page](../../../s-saqhan-second-page)
 
 ### Graph
 ```mermaid
 graph TD;
   s-saqhan-component --> s-saqhan-subsc-banner
+  s-saqhan-second-page --> s-saqhan-subsc-banner
   style s-saqhan-subsc-banner fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

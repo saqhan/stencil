@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property        | Attribute        | Description        | Type  | Default     |
-| --------------- | ---------------- | ------------------ | ----- | ----------- |
-| `bannerPopular` | `banner-popular` | Данные для баннера | `any` | `undefined` |
-| `popularNews`   | `popular-news`   | Массив публикаций  | `any` | `undefined` |
+| Property        | Attribute        | Description        | Type                       | Default     |
+| --------------- | ---------------- | ------------------ | -------------------------- | ----------- |
+| `bannerPopular` | `banner-popular` | Данные для баннера | `any`                      | `undefined` |
+| `popularNews`   | --               | Массив публикаций  | `SSaqhanPopularCardItem[]` | `undefined` |
 
 
 ## Events

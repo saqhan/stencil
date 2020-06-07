@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property     | Attribute     | Description | Type  | Default     |
-| ------------ | ------------- | ----------- | ----- | ----------- |
-| `bannerPost` | `banner-post` |             | `any` | `undefined` |
+| Property     | Attribute | Description | Type                    | Default     |
+| ------------ | --------- | ----------- | ----------------------- | ----------- |
+| `bannerPost` | --        |             | `SSaqhanCardBannerItem` | `undefined` |
 
 
 ## Dependencies

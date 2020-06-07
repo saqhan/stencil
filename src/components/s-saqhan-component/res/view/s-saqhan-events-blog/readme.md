@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description           | Type  | Default     |
-| -------- | --------- | --------------------- | ----- | ----------- |
-| `events` | `events`  | Массив с публикациями | `any` | `undefined` |
+| Property | Attribute | Description           | Type                     | Default     |
+| -------- | --------- | --------------------- | ------------------------ | ----------- |
+| `events` | --        | Массив с публикациями | `SSaqhanEventCardItem[]` | `undefined` |
 
 
 ## Events

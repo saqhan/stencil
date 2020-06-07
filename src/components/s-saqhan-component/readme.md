@@ -35,8 +35,8 @@ graph TD;
   s-saqhan-new-blog --> s-saqhan-blog-card
   s-saqhan-popular-news --> s-saqhan-popular-card
   s-saqhan-events-blog --> s-saqhan-event-card
-  s-saqhan-app-footer --> footer-first
-  footer-first --> footer-first-item
+  s-saqhan-app-footer --> footer-wrapper
+  footer-wrapper --> footer-first-item
   s-saqhan-chat-app --> s-saqhan-chat-wrapper
   s-saqhan-chat-wrapper --> s-saqhan-chat-personal
   s-saqhan-chat-wrapper --> s-saqhan-chat-users-wrapper

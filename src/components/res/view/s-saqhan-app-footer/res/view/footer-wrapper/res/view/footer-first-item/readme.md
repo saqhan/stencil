@@ -23,12 +23,12 @@
 
 ### Used by
 
- - [footer-first](../../..)
+ - [footer-wrapper](../../..)
 
 ### Graph
 ```mermaid
 graph TD;
-  footer-first --> footer-first-item
+  footer-wrapper --> footer-first-item
   style footer-first-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

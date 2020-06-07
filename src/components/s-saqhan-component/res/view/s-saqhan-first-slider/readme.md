@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property           | Attribute            | Description                | Type  | Default     |
-| ------------------ | -------------------- | -------------------------- | ----- | ----------- |
-| `blogCarouselMock` | `blog-carousel-mock` | массив новостей для вывода | `any` | `undefined` |
+| Property           | Attribute | Description                | Type                       | Default |
+| ------------------ | --------- | -------------------------- | -------------------------- | ------- |
+| `blogCarouselMock` | --        | массив новостей для вывода | `SSaqhanFirstSliderItem[]` | `[]`    |
 
 
 ## Events

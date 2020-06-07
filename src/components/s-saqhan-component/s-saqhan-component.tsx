@@ -95,7 +95,6 @@ export class SSaqhanComponent {
    *  Клик по кнопке подписаться
    * */
   public clickOnSubscribeButton({ detail }) {
-    event.preventDefault();
     return console.log(detail);
   }
   /**

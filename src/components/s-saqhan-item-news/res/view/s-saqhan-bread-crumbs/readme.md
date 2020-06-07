@@ -20,7 +20,7 @@
 
 ### Depends on
 
-- [s-saqhan-bread-card](./res/wiev/s-saqhan-bread-card)
+- [s-saqhan-bread-card](./res/view/s-saqhan-bread-card)
 
 ### Graph
 ```mermaid
