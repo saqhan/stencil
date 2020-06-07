@@ -26,6 +26,8 @@ export class SSaqhanAppFooter implements ComponentInterface {
    */
   @Event() clickOnMenu: EventEmitter;
 
+
+
   render() {
     return (
       <div class="container">
@@ -88,3 +90,4 @@ const FooterFirst = (props) => {
     );
   });
 };
+

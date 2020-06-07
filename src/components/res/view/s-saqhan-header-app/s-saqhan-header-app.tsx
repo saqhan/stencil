@@ -22,7 +22,8 @@ export class SSaqhanHeaderApp implements ComponentInterface {
   /**
    * ссылка на изображение логотипа
    */
-  @Prop() logoUrl: string;
+  // @Prop() logoUrl: logoUrl[];
+  @Prop() logoUrl:any;
 
   /**
    * текст вывода в кнопке подписаться
@@ -56,7 +57,7 @@ export class SSaqhanHeaderApp implements ComponentInterface {
                     this.clickToLogo.emit();
                   }}
                   class="navbar-brand logo-header"
-                  style={{backgroundImage: `url( ${this.logoUrl} )`}}
+                  style={{backgroundImage: `url( ${this.logoUrl.img} )`}}
                 ></a>
                 <button
                   class="navbar-toggler"

@@ -74,21 +74,21 @@ export class SSaqhanComponent {
    *  Клик по меню
    */
   public clickOnMenu({ detail }) {
-    return console.log("MenuId - ", detail);
+    return console.log(detail);
   }
 
   /**
    *  Клик по новости
    * */
   public clickOnNews({ detail }) {
-    return console.log("id", detail);
+    return console.log(detail);
   }
 
   /**
    *  Клик по категории публикации
    * */
   public clickOnNewsCategory({ detail }) {
-    return console.log("id", detail);
+    return console.log( detail);
   }
 
   /**
@@ -96,12 +96,12 @@ export class SSaqhanComponent {
    * */
   public clickOnSubscribeButton({ detail }) {
     event.preventDefault();
-    return console.log("clickOnSubscribeButton", detail);
+    return console.log(detail);
   }
   /**
    *  Клик по категории
    * */
   public clickOnCategoryNews({ detail }) {
-    return console.log("клик по категории - ", detail);
+    return console.log( detail);
   }
 }

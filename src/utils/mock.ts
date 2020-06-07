@@ -173,8 +173,6 @@ export const quoteText = {
   text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. '
 }
 
-
-
 export const secondTitle = {
   category: 'Trends & Fashion',
   title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
@@ -321,7 +319,9 @@ export const footerItems = [
 ];
 export const footerInfo = {title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid asperiores.'}
 
-export const logoUrl = "https://saqhan.github.io/wibbitz/assets/img/logo.jpg";
+export const logoUrl = {
+  img:"https://saqhan.github.io/wibbitz/assets/img/logo.jpg",
+};
 
 export const subscribeText = "Subscribe";
 

@@ -6,6 +6,7 @@ import {
   Event,
   EventEmitter,
 } from "@stencil/core";
+import { SSaqhanFirstSliderItem } from "./res/interface/common.interface";
 
 @Component({
   tag: "s-saqhan-first-slider",
@@ -16,7 +17,8 @@ export class SSaqhanFirstSlider implements ComponentInterface {
   /**
    * массив новостей для вывода
    */
-  @Prop() blogCarouselMock: any;
+
+  @Prop() blogCarouselMock: SSaqhanFirstSliderItem[]=[];
 
   /**
    * Клик по новости

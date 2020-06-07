@@ -1,4 +1,5 @@
 import {Component, ComponentInterface, h, Prop, Event, EventEmitter} from "@stencil/core";
+import { NewBlogItem } from "./res/interface/commin.interface";
 @Component({
   tag: "s-saqhan-new-blog",
   styleUrl: "s-saqhan-new-blog.css",
@@ -7,11 +8,13 @@ import {Component, ComponentInterface, h, Prop, Event, EventEmitter} from "@sten
 
 
 
+
+
 export class SSaqhanNewBlog implements ComponentInterface {
   /**
    * Массив с публикациями
    * */
-  @Prop() blogPost: any; //NewBlogItem
+  @Prop() blogPost: NewBlogItem[]; //NewBlogItem
   /**
    * Клик по новости
    * */

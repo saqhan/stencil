@@ -6,7 +6,6 @@ import {
   h,
   Prop,
 } from "@stencil/core";
-import { SSaqhanMainNewsCardItem } from './interface/common.interface';
 
 @Component({
   tag: "s-saqhan-main-news-card",
@@ -17,44 +16,40 @@ export class SSaqhanMainNewsCard implements ComponentInterface {
   /**
   * Массив с новостями
   * */
-  @Prop() mainNews: SSaqhanMainNewsCardItem;
+  @Prop() mainNews: any;
   /**
   * Клик по новости
   * */
   @Event() clickOnNews: EventEmitter;
-  /**
-   * Клик по категории
-   * */
-  @Event() clickOnCategoryNews: EventEmitter;
   render() {
     return (
       <div class="main-news">
         <div>
           <div
             class="img-news m-auto custon-link"
-            onClick={() => this.clickOnNews.emit(this.mainNews.id)}
+            onClick={() => this.clickOnNews.emit({place: 'img', item: this.mainNews})}
             style={{ backgroundImage: `url(${this.mainNews.img})` }}
           ></div>
           <div
-            onClick={() => this.clickOnCategoryNews.emit(this.mainNews.category)}
+            onClick={() => this.clickOnNews.emit({place: 'category', item: this.mainNews})}
             class={this.ColorCategory(this.mainNews.category)}
           >
             {this.mainNews.category}
           </div>
           <div
-            onClick={() => this.clickOnNews.emit(this.mainNews.id)}
+            onClick={() => this.clickOnNews.emit({place: 'title', item: this.mainNews})}
             class="title-news pt-3 h2 font-weight-bold custon-link"
           >
             {this.mainNews.title}
           </div>
           <div
-            onClick={() => this.clickOnNews.emit(this.mainNews.id)}
+            onClick={() => this.clickOnNews.emit({place: 'subTitle', item: this.mainNews})}
             class="sub-title-news pt-3 pb-3 text-muted custon-link"
           >
             {this.mainNews.subTitle}
           </div>
           <span
-            onClick={() => this.clickOnNews.emit(this.mainNews.id)}
+            onClick={() => this.clickOnNews.emit({place: 'btn read', item: this.mainNews})}
             class="btn btn-primary btn-custom custon-link"
           >
             {this.mainNews.btnText}

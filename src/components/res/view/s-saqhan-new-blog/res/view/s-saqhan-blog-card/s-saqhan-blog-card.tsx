@@ -1,5 +1,4 @@
 import {Component, ComponentInterface, Prop, h, Event, EventEmitter} from "@stencil/core";
-import {NewBlogItem} from './interface/commin.interface';
 
 @Component({
   tag: "s-saqhan-blog-card",
@@ -12,7 +11,7 @@ export class SSaqhanBlogCard implements ComponentInterface {
   /**
    * Массив с публикациями
    * */
-  @Prop() post: NewBlogItem;
+  @Prop() post: any;
   /**
    * Клик по новости
    * */
@@ -28,18 +27,18 @@ export class SSaqhanBlogCard implements ComponentInterface {
         <div
           class="blog-img"
           style={{ backgroundImage: `url( ${this.post.img})` }}
-          onClick={() => this.clickOnNews.emit(this.post.id)}
+          onClick={() => this.clickOnNews.emit({place: 'img', item: this.post })}
         ></div>
         <div class={this.ColorCategory(this.post.category)}
-             onClick={() => this.clickOnCategoryNews.emit(this.post.category)}
+             onClick={() => this.clickOnCategoryNews.emit({place: 'category', item: this.post })}
         >
           {this.post.category}
         </div>
         <div class="blog-title pt-3 font-weight-bold"
-             onClick={() => this.clickOnNews.emit(this.post.id)}
+             onClick={() => this.clickOnNews.emit({place: 'title', item: this.post })}
         >{this.post.title}</div>
         <div class="btn-read pt-3">
-          <span  onClick={() => this.clickOnNews.emit(this.post.id)}
+          <span  onClick={() => this.clickOnNews.emit({place: 'btn-read', item: this.post })}
           > {this.post.btnText} </span>
         </div>
       </div>

@@ -11,7 +11,7 @@ export class FooterFirstItem implements ComponentInterface {
   render() {
     return (
       <div>
-        <span class="foot-nav-link" onClick={() => this.clickOnMenu.emit(this.arr.id) } >
+        <span class="foot-nav-link" onClick={() => this.clickOnMenu.emit({place: 'footerItem', item: this.arr} ) } >
           {this.arr.name}
         </span>
       </div>

@@ -1,4 +1,6 @@
 import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from '@stencil/core';
+import { SSaqhanPopularCardItem } from './res/interface/common.interface';
+
 
 @Component({
   tag: 's-saqhan-popular-news',
@@ -9,7 +11,7 @@ export class SSaqhanPopularNews implements ComponentInterface {
   /**
    * Массив публикаций
    * */
-  @Prop() popularNews:any;
+  @Prop() popularNews:SSaqhanPopularCardItem[];
   /**
    * Данные для баннера
    * */
@@ -41,12 +43,12 @@ export class SSaqhanPopularNews implements ComponentInterface {
 
         >
           <div class="banner-title text-center text-white"
-               onClick={() => this.clickOnNews.emit(this.bannerPopular.title)}
+               onClick={() => this.clickOnNews.emit({place: 'title', item : this.bannerPopular})}
           >
             {this.bannerPopular.title}
           </div>
           <div class="btn-read pt-3"
-               onClick={() => this.clickOnNews.emit(this.bannerPopular.nameLink)}
+               onClick={() => this.clickOnNews.emit({place: 'btn-read', item : this.bannerPopular})}
           >
             <span >{this.bannerPopular.nameLink}</span>
           </div>

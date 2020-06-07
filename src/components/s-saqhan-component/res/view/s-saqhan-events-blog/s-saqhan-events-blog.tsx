@@ -1,4 +1,5 @@
 import {Component, ComponentInterface, Prop, h, Event, EventEmitter} from "@stencil/core";
+import { SSaqhanEventCardItem } from "./res/interface/common.interface";
 
 @Component({
   tag: "s-saqhan-events-blog",
@@ -9,7 +10,7 @@ export class SSaqhanEventsBlog implements ComponentInterface {
   /**
    * Массив с публикациями
    * */
-  @Prop() events: any;
+  @Prop() events: SSaqhanEventCardItem[];
   /**
    * Клик по новости
    * */

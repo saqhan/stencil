@@ -77,6 +77,7 @@ const FooterValue = (props) => {
  * блок куда будет помещен дочерний блок
  * */
 const SubFooterBlock = (props) => {
+
   return (
     <div>
       <div class="footer-title">{props.name}</div>
@@ -84,7 +85,7 @@ const SubFooterBlock = (props) => {
         {props.links.map((item) => {
           return (
             <div
-              onClick={() => this.clickOnMenu.emit(item.id)}
+              onClick={() => this.clickOnMenu.emit({place: 'footerItem', item: this.item}) }
               class="foot-nav-link"
             >
               {item.name}
