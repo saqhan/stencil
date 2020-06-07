@@ -27,5 +27,9 @@
     text-align: center;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 320px) {
+  .blog-img {
+    width: 100%;
+  }
 }
+

@@ -1,0 +1,49 @@
+.title-wrapper {
+  margin: 50px 0px;
+}
+
+.header-img-title{
+  width: 80%;
+  margin: auto;
+  min-height: 500px;
+  background-color: red;
+  background-size: cover;
+  background-position: center;
+}
+
+.text-title {
+  width: 70%;
+  margin:50px auto;
+  text-align: justify;
+}
+
+.second-category {
+  color: #0f91e3;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.second-title-news {
+  font-size: 24px;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.second-title-author {
+  font-size: 13px;
+margin-bottom: 30px;
+  text-align: center;
+}
+
+.second-title-author .name {
+  font-weight: 700;
+}
+.second-title-author .date {
+  color: #ccc;
+
+}

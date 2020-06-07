@@ -1,19 +1,25 @@
 import {Component, ComponentInterface, h, Prop, Event, EventEmitter} from "@stencil/core";
-
 @Component({
   tag: "s-saqhan-new-blog",
   styleUrl: "s-saqhan-new-blog.css",
   shadow: false,
 })
+
+
+
 export class SSaqhanNewBlog implements ComponentInterface {
   /**
    * Массив с публикациями
    * */
-  @Prop() blogPost: object;
+  @Prop() blogPost: any; //NewBlogItem
   /**
    * Клик по новости
    * */
   @Event() clickOnNews: EventEmitter;
+  /**
+   * Клик по category
+   * */
+  @Event() clickOnCategoryNews: EventEmitter;
 
   getNewPosts(arr): any[] {
     return arr.map((item) => item);

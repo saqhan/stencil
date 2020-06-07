@@ -169,6 +169,21 @@ export const banner = [
   },
 ];
 
+export const quoteText = {
+  text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. '
+}
+
+
+
+export const secondTitle = {
+  category: 'Trends & Fashion',
+  title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+  authorName: 'Saqhan Abaev',
+  date: '7 Июнь, 2020',
+  img: 'https://via.placeholder.com/600x600?text=Title',
+  text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur aut, corporis distinctio doloribus eius expedita fugiat fugit, in ipsum, laudantium mollitia necessitatibus quibusdam quo rem totam? Adipisci expedita iste quo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur aut, corporis distinctio doloribus eius expedita fugiat fugit, in ipsum, laudantium mollitia necessitatibus quibusdam quo rem totam? Adipisci expedita iste quo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur aut, corporis distinctio doloribus eius expedita fugiat fugit, in ipsum, laudantium mollitia necessitatibus quibusdam quo rem totam? Adipisci expedita iste quo.",
+}
+
 export const authors = [
   {
     id: 1,
@@ -259,53 +274,52 @@ export const footerItems = [
   {
     title: "Solutions",
     links: [
-      { name: "Marketing", id: "Marketing" },
-      { name: "Social Media", id: "Social" },
-      { name: "Agencies", id: "Agencies" },
-      { name: "Internal", id: "Internal" },
-      { name: "How to optimize", id: "How" },
+      { name: "Marketing", id: "MarketingId" },
+      { name: "Social Media", id: "SocialId" },
+      { name: "Agencies", id: "AgenciesId" },
+      { name: "Internal", id: "InternalId" },
+      { name: "How to optimize", id: "HowId" },
     ],
   },
   {
     title: "Pricing",
     links: [
-      { name: "Lorem ", id: "Lorem " },
-      { name: "Alias ", id: "Alias " },
-      { name: "Choose ", id: "Choose " },
-      { name: "Language", id: "Language" },
+      { name: "Lorem ", id: "LoremId " },
+      { name: "Alias ", id: "AliasId " },
+      { name: "Choose ", id: "ChooseId " },
+      { name: "Language", id: "LanguageId" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { name: "SubscribeWithChild ", id: "Subscribe ", links: [
-          {name: 'Subscribe1', id: 'Subscribe1' },
-          {name: 'Subscribe2', id: 'Subscribe2' },
+
+      { name: "Normal ", id: "NormalId " },
+      { name: "Month ", id: "MonthId " },
+      { name: "Time ", id: "TimeId ",
+        links: [
+          {name: 'Absolutely', id: 'AbsolutelyId' },
+          {name: 'Search', id: 'SearchId' },
         ] },
-      { name: "Language ", id: "Languag " },
-      { name: "Month ", id: "Month " },
-      { name: "Ready ", id: "Ready " },
+      { name: "Ready ", id: "ReadyId " },
     ],
   },
   {
     title: "Component ",
     links: [
-      { name: "FooterValue ", id: "FooterValue " },
-      { name: "Items ", id: "Items " },
-      { name: "Saqhan ", id: "Saqhan " },
-      { name: "Intocode ", id: "Intocode " },
-    ],
-  },
-  {
-    title: "Component ",
-    links: [
-      { name: "FooterValue ", id: "FooterValue " },
-      { name: "Items ", id: "Items " },
-      { name: "Saqhan ", id: "Saqhan " },
-      { name: "Intocode ", id: "Intocode " },
+      { name: "FooterValue ", id: "FooterValueId " },
+      { name: "Items ", id: "ItemsId " },
+      { name: "Saqhan ", id: "SaqhanId " },
+      { name: "Intocode ", id: "IntocodeId " },
+      { name: "Other ", id: "OtherId ",
+        links: [
+          {name: 'Footer', id: 'FooterId' },
+          {name: 'Header', id: 'HeaderId' },
+        ] },
     ],
   }
 ];
+export const footerInfo = {title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid asperiores.'}
 
 export const logoUrl = "https://saqhan.github.io/wibbitz/assets/img/logo.jpg";
 

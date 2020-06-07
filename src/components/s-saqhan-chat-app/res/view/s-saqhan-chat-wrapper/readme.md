@@ -42,6 +42,7 @@ graph TD;
   s-saqhan-chat-wrapper --> s-saqhan-chat-personal
   s-saqhan-chat-wrapper --> s-saqhan-chat-users-wrapper
   s-saqhan-chat-wrapper --> s-saqhan-chat-files-wrapper
+  s-saqhan-chat-personal --> s-saqhan-chat-add-question
   s-saqhan-chat-users-wrapper --> s-saqhan-chat-form-search
   s-saqhan-chat-users-wrapper --> s-saqhan-chat-users
   s-saqhan-chat-users-wrapper --> s-saqhan-chat-add-question

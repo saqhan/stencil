@@ -6,6 +6,7 @@ import {
   h,
   Prop,
 } from "@stencil/core";
+import { SSaqhanMainNewsCardItem } from './interface/common.interface';
 
 @Component({
   tag: "s-saqhan-main-news-card",
@@ -16,11 +17,15 @@ export class SSaqhanMainNewsCard implements ComponentInterface {
   /**
   * Массив с новостями
   * */
-  @Prop() mainNews: any;
+  @Prop() mainNews: SSaqhanMainNewsCardItem;
   /**
   * Клик по новости
   * */
   @Event() clickOnNews: EventEmitter;
+  /**
+   * Клик по категории
+   * */
+  @Event() clickOnCategoryNews: EventEmitter;
   render() {
     return (
       <div class="main-news">
@@ -31,7 +36,7 @@ export class SSaqhanMainNewsCard implements ComponentInterface {
             style={{ backgroundImage: `url(${this.mainNews.img})` }}
           ></div>
           <div
-            onClick={() => this.clickOnNews.emit(this.mainNews.category)}
+            onClick={() => this.clickOnCategoryNews.emit(this.mainNews.category)}
             class={this.ColorCategory(this.mainNews.category)}
           >
             {this.mainNews.category}

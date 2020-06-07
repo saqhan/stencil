@@ -5,53 +5,27 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { FooterWrapperItem, } from "./components/res/view/s-saqhan-app-footer/res/view/footer-wrapper/res/interface/common.interface";
+import { NewBlogItem, } from "./components/res/view/s-saqhan-new-blog/res/view/s-saqhan-blog-card/interface/commin.interface";
+import { SSaqhanCardAuthorItem, } from "./components/s-saqhan-second-page/res/view/s-saqhan-author-info/res/view/s-saqhan-card-author/interface/common.interface";
+import { SSaqhanCardBannerItem, } from "./components/s-saqhan-second-page/res/view/s-saqhan-line-book/res/view/s-saqhan-card-banner/interface/common.interface";
+import { SSaqhanEventCardItem, } from "./components/s-saqhan-component/res/view/s-saqhan-events-blog/res/view/s-saqhan-event-card/interface/common.interface";
 import { SSaqhanHedearMenuItem, } from "./components/res/view/s-saqhan-header-app/interface/common.interface";
 import { SSaqhanLentaNewsCardItem, } from "./components/s-saqhan-component/res/view/s-saqhan-first-slider/res/view/s-saqhan-lenta-news-card/interface/common.interface";
+import { SSaqhanMainNewsCardItem, } from "./components/s-saqhan-component/res/view/s-saqhan-first-slider/res/view/s-saqhan-main-news-card/interface/common.interface";
+import { SSaqhanNewsCardItem, } from "./components/s-saqhan-item-news/res/view/s-saqhan-list-news/res/view/s-saqhan-news-card/interface/common.interface";
+import { SSaqhanPopularCardItem, } from "./components/s-saqhan-component/res/view/s-saqhan-popular-news/res/view/s-saqhan-popular-card/interface/common.interface";
+import { clickOnSubscribeButtonItem, } from "./components/res/view/s-saqhan-subsc-banner/interface/common.interface";
+import { secondTitleBlockItem, } from "./components/s-saqhan-second-page/res/view/second-title-block/res/interface/common.interface";
 export namespace Components {
-    interface FooterFirst {
-        /**
-          * массив 1 футера
-         */
-        "footer": any;
-    }
     interface FooterFirstItem {
         "arr": any;
     }
-    interface FooterFourth {
+    interface FooterWrapper {
         /**
-          * массив второго футера
+          * массив 1 футера
          */
-        "footerFourth": any;
-    }
-    interface FooterFourthItem {
-        /**
-          * массив 4 футера
-         */
-        "arr": any;
-    }
-    interface FooterSecond {
-        /**
-          * массив второго футера
-         */
-        "footerSecond": any;
-    }
-    interface FooterSecondItem {
-        /**
-          * массив второго футера
-         */
-        "arr": any;
-    }
-    interface FooterThird {
-        /**
-          * массив второго футера
-         */
-        "footerThird": any;
-    }
-    interface FooterThirdItem {
-        /**
-          * массив 3 футера
-         */
-        "arr": any;
+        "footer": FooterWrapperItem;
     }
     interface MenuItem {
         "arr": any;
@@ -59,6 +33,10 @@ export namespace Components {
     interface PopularBanner {
     }
     interface SSaqhanAppFooter {
+        /**
+          * Инфо о компании в футере
+         */
+        "footerInfo": any;
         /**
           * массив меню для вывода
          */
@@ -71,7 +49,7 @@ export namespace Components {
         /**
           * Массив с публикациями
          */
-        "post": any;
+        "post": NewBlogItem;
     }
     interface SSaqhanBreadCard {
         "links": any;
@@ -80,10 +58,10 @@ export namespace Components {
         "links": any;
     }
     interface SSaqhanCardAuthor {
-        "author": any;
+        "author": SSaqhanCardAuthorItem;
     }
     interface SSaqhanCardBanner {
-        "bannerPost": any;
+        "bannerPost": SSaqhanCardBannerItem;
     }
     interface SSaqhanChatAddQuestion {
     }
@@ -130,7 +108,7 @@ export namespace Components {
         /**
           * Массив публикаций Ивентов
          */
-        "event": any;
+        "event": SSaqhanEventCardItem;
     }
     interface SSaqhanEventsBlog {
         /**
@@ -176,22 +154,22 @@ export namespace Components {
         /**
           * Массив с новостями
          */
-        "mainNews": any;
+        "mainNews": SSaqhanMainNewsCardItem;
     }
     interface SSaqhanNewBlog {
         /**
           * Массив с публикациями
          */
-        "blogPost": object;
+        "blogPost": any;
     }
     interface SSaqhanNewsCard {
-        "news": any;
+        "news": SSaqhanNewsCardItem;
     }
     interface SSaqhanPopularCard {
         /**
           * Массив с популярными элементами
          */
-        "post": any;
+        "post": SSaqhanPopularCardItem;
     }
     interface SSaqhanPopularNews {
         /**
@@ -204,6 +182,7 @@ export namespace Components {
         "popularNews": any;
     }
     interface SSaqhanQuoteText {
+        "quoteText": any;
     }
     interface SSaqhanSecondPage {
     }
@@ -211,61 +190,28 @@ export namespace Components {
         /**
           * Массив данных для черного баннера
          */
-        "subscribeBlockText": any;
+        "subscribeBlockText": clickOnSubscribeButtonItem;
         /**
           * текст вывода в кнопке подписаться
          */
         "subscribeText": string;
     }
+    interface SecondTitleBlock {
+        "secondTitle": secondTitleBlockItem;
+    }
 }
 declare global {
-    interface HTMLFooterFirstElement extends Components.FooterFirst, HTMLStencilElement {
-    }
-    var HTMLFooterFirstElement: {
-        prototype: HTMLFooterFirstElement;
-        new (): HTMLFooterFirstElement;
-    };
     interface HTMLFooterFirstItemElement extends Components.FooterFirstItem, HTMLStencilElement {
     }
     var HTMLFooterFirstItemElement: {
         prototype: HTMLFooterFirstItemElement;
         new (): HTMLFooterFirstItemElement;
     };
-    interface HTMLFooterFourthElement extends Components.FooterFourth, HTMLStencilElement {
+    interface HTMLFooterWrapperElement extends Components.FooterWrapper, HTMLStencilElement {
     }
-    var HTMLFooterFourthElement: {
-        prototype: HTMLFooterFourthElement;
-        new (): HTMLFooterFourthElement;
-    };
-    interface HTMLFooterFourthItemElement extends Components.FooterFourthItem, HTMLStencilElement {
-    }
-    var HTMLFooterFourthItemElement: {
-        prototype: HTMLFooterFourthItemElement;
-        new (): HTMLFooterFourthItemElement;
-    };
-    interface HTMLFooterSecondElement extends Components.FooterSecond, HTMLStencilElement {
-    }
-    var HTMLFooterSecondElement: {
-        prototype: HTMLFooterSecondElement;
-        new (): HTMLFooterSecondElement;
-    };
-    interface HTMLFooterSecondItemElement extends Components.FooterSecondItem, HTMLStencilElement {
-    }
-    var HTMLFooterSecondItemElement: {
-        prototype: HTMLFooterSecondItemElement;
-        new (): HTMLFooterSecondItemElement;
-    };
-    interface HTMLFooterThirdElement extends Components.FooterThird, HTMLStencilElement {
-    }
-    var HTMLFooterThirdElement: {
-        prototype: HTMLFooterThirdElement;
-        new (): HTMLFooterThirdElement;
-    };
-    interface HTMLFooterThirdItemElement extends Components.FooterThirdItem, HTMLStencilElement {
-    }
-    var HTMLFooterThirdItemElement: {
-        prototype: HTMLFooterThirdItemElement;
-        new (): HTMLFooterThirdItemElement;
+    var HTMLFooterWrapperElement: {
+        prototype: HTMLFooterWrapperElement;
+        new (): HTMLFooterWrapperElement;
     };
     interface HTMLMenuItemElement extends Components.MenuItem, HTMLStencilElement {
     }
@@ -507,15 +453,15 @@ declare global {
         prototype: HTMLSSaqhanSubscBannerElement;
         new (): HTMLSSaqhanSubscBannerElement;
     };
+    interface HTMLSecondTitleBlockElement extends Components.SecondTitleBlock, HTMLStencilElement {
+    }
+    var HTMLSecondTitleBlockElement: {
+        prototype: HTMLSecondTitleBlockElement;
+        new (): HTMLSecondTitleBlockElement;
+    };
     interface HTMLElementTagNameMap {
-        "footer-first": HTMLFooterFirstElement;
         "footer-first-item": HTMLFooterFirstItemElement;
-        "footer-fourth": HTMLFooterFourthElement;
-        "footer-fourth-item": HTMLFooterFourthItemElement;
-        "footer-second": HTMLFooterSecondElement;
-        "footer-second-item": HTMLFooterSecondItemElement;
-        "footer-third": HTMLFooterThirdElement;
-        "footer-third-item": HTMLFooterThirdItemElement;
+        "footer-wrapper": HTMLFooterWrapperElement;
         "menu-item": HTMLMenuItemElement;
         "popular-banner": HTMLPopularBannerElement;
         "s-saqhan-app-footer": HTMLSSaqhanAppFooterElement;
@@ -556,68 +502,21 @@ declare global {
         "s-saqhan-quote-text": HTMLSSaqhanQuoteTextElement;
         "s-saqhan-second-page": HTMLSSaqhanSecondPageElement;
         "s-saqhan-subsc-banner": HTMLSSaqhanSubscBannerElement;
+        "second-title-block": HTMLSecondTitleBlockElement;
     }
 }
 declare namespace LocalJSX {
-    interface FooterFirst {
-        /**
-          * массив 1 футера
-         */
-        "footer"?: any;
-    }
     interface FooterFirstItem {
         "arr"?: any;
         "onClickOnMenu"?: (event: CustomEvent<any>) => void;
     }
-    interface FooterFourth {
+    interface FooterWrapper {
         /**
-          * массив второго футера
+          * массив 1 футера
          */
-        "footerFourth"?: any;
-    }
-    interface FooterFourthItem {
+        "footer"?: FooterWrapperItem;
         /**
-          * массив 4 футера
-         */
-        "arr"?: any;
-        /**
-          * клик по кнопке в футере
-         */
-        "onClickOnMenu"?: (event: CustomEvent<any>) => void;
-    }
-    interface FooterSecond {
-        /**
-          * массив второго футера
-         */
-        "footerSecond"?: any;
-        /**
-          * клик по кнопке в футере
-         */
-        "onClickOnMenu"?: (event: CustomEvent<any>) => void;
-    }
-    interface FooterSecondItem {
-        /**
-          * массив второго футера
-         */
-        "arr"?: any;
-        /**
-          * клик по кнопке в футере
-         */
-        "onClickOnMenu"?: (event: CustomEvent<any>) => void;
-    }
-    interface FooterThird {
-        /**
-          * массив второго футера
-         */
-        "footerThird"?: any;
-    }
-    interface FooterThirdItem {
-        /**
-          * массив 3 футера
-         */
-        "arr"?: any;
-        /**
-          * клик по кнопке в футере
+          * Клик на пункт меню
          */
         "onClickOnMenu"?: (event: CustomEvent<any>) => void;
     }
@@ -628,6 +527,10 @@ declare namespace LocalJSX {
     interface PopularBanner {
     }
     interface SSaqhanAppFooter {
+        /**
+          * Инфо о компании в футере
+         */
+        "footerInfo"?: any;
         /**
           * массив меню для вывода
          */
@@ -642,13 +545,17 @@ declare namespace LocalJSX {
     }
     interface SSaqhanBlogCard {
         /**
+          * Клик по category
+         */
+        "onClickOnCategoryNews"?: (event: CustomEvent<any>) => void;
+        /**
           * Клик по новости
          */
         "onClickOnNews"?: (event: CustomEvent<any>) => void;
         /**
           * Массив с публикациями
          */
-        "post"?: any;
+        "post"?: NewBlogItem;
     }
     interface SSaqhanBreadCard {
         "links"?: any;
@@ -657,10 +564,10 @@ declare namespace LocalJSX {
         "links"?: any;
     }
     interface SSaqhanCardAuthor {
-        "author"?: any;
+        "author"?: SSaqhanCardAuthorItem;
     }
     interface SSaqhanCardBanner {
-        "bannerPost"?: any;
+        "bannerPost"?: SSaqhanCardBannerItem;
     }
     interface SSaqhanChatAddQuestion {
     }
@@ -720,7 +627,11 @@ declare namespace LocalJSX {
         /**
           * Массив публикаций Ивентов
          */
-        "event"?: any;
+        "event"?: SSaqhanEventCardItem;
+        /**
+          * Клик по категории
+         */
+        "onClickOnCategoryNews"?: (event: CustomEvent<any>) => void;
         /**
           * Клик по новости
          */
@@ -732,6 +643,10 @@ declare namespace LocalJSX {
          */
         "events"?: any;
         /**
+          * Клик по категории
+         */
+        "onClickOnCategoryNews"?: (event: CustomEvent<any>) => void;
+        /**
           * Клик по новости
          */
         "onClickOnNews"?: (event: CustomEvent<any>) => void;
@@ -741,6 +656,10 @@ declare namespace LocalJSX {
           * массив новостей для вывода
          */
         "blogCarouselMock"?: any;
+        /**
+          * Фильтруем для ленты новостей
+         */
+        "onClickOnCategoryNews"?: (event: CustomEvent<any>) => void;
         /**
           * Клик по новости
          */
@@ -780,6 +699,10 @@ declare namespace LocalJSX {
          */
         "lentaNews"?: SSaqhanLentaNewsCardItem;
         /**
+          * Клик по категории
+         */
+        "onClickOnCategoryNews"?: (event: CustomEvent<any>) => void;
+        /**
           * Клик по новости
          */
         "onClickOnNews"?: (event: CustomEvent<any>) => void;
@@ -794,7 +717,11 @@ declare namespace LocalJSX {
         /**
           * Массив с новостями
          */
-        "mainNews"?: any;
+        "mainNews"?: SSaqhanMainNewsCardItem;
+        /**
+          * Клик по категории
+         */
+        "onClickOnCategoryNews"?: (event: CustomEvent<any>) => void;
         /**
           * Клик по новости
          */
@@ -804,14 +731,18 @@ declare namespace LocalJSX {
         /**
           * Массив с публикациями
          */
-        "blogPost"?: object;
+        "blogPost"?: any;
+        /**
+          * Клик по category
+         */
+        "onClickOnCategoryNews"?: (event: CustomEvent<any>) => void;
         /**
           * Клик по новости
          */
         "onClickOnNews"?: (event: CustomEvent<any>) => void;
     }
     interface SSaqhanNewsCard {
-        "news"?: any;
+        "news"?: SSaqhanNewsCardItem;
     }
     interface SSaqhanPopularCard {
         /**
@@ -821,7 +752,7 @@ declare namespace LocalJSX {
         /**
           * Массив с популярными элементами
          */
-        "post"?: any;
+        "post"?: SSaqhanPopularCardItem;
     }
     interface SSaqhanPopularNews {
         /**
@@ -838,6 +769,7 @@ declare namespace LocalJSX {
         "popularNews"?: any;
     }
     interface SSaqhanQuoteText {
+        "quoteText"?: any;
     }
     interface SSaqhanSecondPage {
     }
@@ -849,21 +781,18 @@ declare namespace LocalJSX {
         /**
           * Массив данных для черного баннера
          */
-        "subscribeBlockText"?: any;
+        "subscribeBlockText"?: clickOnSubscribeButtonItem;
         /**
           * текст вывода в кнопке подписаться
          */
         "subscribeText"?: string;
     }
+    interface SecondTitleBlock {
+        "secondTitle"?: secondTitleBlockItem;
+    }
     interface IntrinsicElements {
-        "footer-first": FooterFirst;
         "footer-first-item": FooterFirstItem;
-        "footer-fourth": FooterFourth;
-        "footer-fourth-item": FooterFourthItem;
-        "footer-second": FooterSecond;
-        "footer-second-item": FooterSecondItem;
-        "footer-third": FooterThird;
-        "footer-third-item": FooterThirdItem;
+        "footer-wrapper": FooterWrapper;
         "menu-item": MenuItem;
         "popular-banner": PopularBanner;
         "s-saqhan-app-footer": SSaqhanAppFooter;
@@ -904,20 +833,15 @@ declare namespace LocalJSX {
         "s-saqhan-quote-text": SSaqhanQuoteText;
         "s-saqhan-second-page": SSaqhanSecondPage;
         "s-saqhan-subsc-banner": SSaqhanSubscBanner;
+        "second-title-block": SecondTitleBlock;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "footer-first": LocalJSX.FooterFirst & JSXBase.HTMLAttributes<HTMLFooterFirstElement>;
             "footer-first-item": LocalJSX.FooterFirstItem & JSXBase.HTMLAttributes<HTMLFooterFirstItemElement>;
-            "footer-fourth": LocalJSX.FooterFourth & JSXBase.HTMLAttributes<HTMLFooterFourthElement>;
-            "footer-fourth-item": LocalJSX.FooterFourthItem & JSXBase.HTMLAttributes<HTMLFooterFourthItemElement>;
-            "footer-second": LocalJSX.FooterSecond & JSXBase.HTMLAttributes<HTMLFooterSecondElement>;
-            "footer-second-item": LocalJSX.FooterSecondItem & JSXBase.HTMLAttributes<HTMLFooterSecondItemElement>;
-            "footer-third": LocalJSX.FooterThird & JSXBase.HTMLAttributes<HTMLFooterThirdElement>;
-            "footer-third-item": LocalJSX.FooterThirdItem & JSXBase.HTMLAttributes<HTMLFooterThirdItemElement>;
+            "footer-wrapper": LocalJSX.FooterWrapper & JSXBase.HTMLAttributes<HTMLFooterWrapperElement>;
             "menu-item": LocalJSX.MenuItem & JSXBase.HTMLAttributes<HTMLMenuItemElement>;
             "popular-banner": LocalJSX.PopularBanner & JSXBase.HTMLAttributes<HTMLPopularBannerElement>;
             "s-saqhan-app-footer": LocalJSX.SSaqhanAppFooter & JSXBase.HTMLAttributes<HTMLSSaqhanAppFooterElement>;
@@ -958,6 +882,7 @@ declare module "@stencil/core" {
             "s-saqhan-quote-text": LocalJSX.SSaqhanQuoteText & JSXBase.HTMLAttributes<HTMLSSaqhanQuoteTextElement>;
             "s-saqhan-second-page": LocalJSX.SSaqhanSecondPage & JSXBase.HTMLAttributes<HTMLSSaqhanSecondPageElement>;
             "s-saqhan-subsc-banner": LocalJSX.SSaqhanSubscBanner & JSXBase.HTMLAttributes<HTMLSSaqhanSubscBannerElement>;
+            "second-title-block": LocalJSX.SecondTitleBlock & JSXBase.HTMLAttributes<HTMLSecondTitleBlockElement>;
         }
     }
 }

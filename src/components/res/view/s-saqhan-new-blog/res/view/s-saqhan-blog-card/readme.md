@@ -7,9 +7,17 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type  | Default     |
-| -------- | --------- | ----------- | ----- | ----------- |
-| `post`   | `post`    |             | `any` | `undefined` |
+| Property | Attribute | Description           | Type          | Default     |
+| -------- | --------- | --------------------- | ------------- | ----------- |
+| `post`   | --        | Массив с публикациями | `NewBlogItem` | `undefined` |
+
+
+## Events
+
+| Event                 | Description      | Type               |
+| --------------------- | ---------------- | ------------------ |
+| `clickOnCategoryNews` | Клик по category | `CustomEvent<any>` |
+| `clickOnNews`         | Клик по новости  | `CustomEvent<any>` |
 
 
 ## Dependencies

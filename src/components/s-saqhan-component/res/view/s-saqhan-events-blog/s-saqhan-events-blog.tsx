@@ -14,7 +14,10 @@ export class SSaqhanEventsBlog implements ComponentInterface {
    * Клик по новости
    * */
   @Event() clickOnNews: EventEmitter;
-
+  /**
+   * Клик по категории
+   * */
+  @Event() clickOnCategoryNews: EventEmitter;
   getEvents(arr) {
     return arr.map((item) => item);
   }

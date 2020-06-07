@@ -1,4 +1,5 @@
 import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import { SSaqhanCardBannerItem } from './interface/common.interface';
 
 @Component({
   tag: 's-saqhan-card-banner',
@@ -7,7 +8,7 @@ import {Component, ComponentInterface, h, Prop} from '@stencil/core';
 })
 export class SSaqhanCardBanner implements ComponentInterface {
 
-  @Prop() bannerPost: any;
+  @Prop() bannerPost: SSaqhanCardBannerItem;
 
   render() {
     return (

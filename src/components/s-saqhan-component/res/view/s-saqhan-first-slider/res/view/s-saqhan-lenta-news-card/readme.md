@@ -7,9 +7,17 @@
 
 ## Properties
 
-| Property    | Attribute    | Description | Type  | Default     |
-| ----------- | ------------ | ----------- | ----- | ----------- |
-| `lentaNews` | `lenta-news` |             | `any` | `undefined` |
+| Property    | Attribute | Description                  | Type                       | Default     |
+| ----------- | --------- | ---------------------------- | -------------------------- | ----------- |
+| `lentaNews` | --        | Массив с новостями для ленты | `SSaqhanLentaNewsCardItem` | `undefined` |
+
+
+## Events
+
+| Event                 | Description       | Type               |
+| --------------------- | ----------------- | ------------------ |
+| `clickOnCategoryNews` | Клик по категории | `CustomEvent<any>` |
+| `clickOnNews`         | Клик по новости   | `CustomEvent<any>` |
 
 
 ## Dependencies

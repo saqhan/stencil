@@ -1,9 +1,10 @@
 import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from '@stencil/core';
-
+import {clickOnSubscribeButtonItem} from './interface/common.interface';
 @Component({
   tag: 's-saqhan-subsc-banner',
   styleUrl: 's-saqhan-subsc-banner.css',
   shadow: false,
+
 })
 export class SSaqhanSubscBanner implements ComponentInterface {
 
@@ -14,7 +15,7 @@ export class SSaqhanSubscBanner implements ComponentInterface {
   /**
   * Массив данных для черного баннера
   * */
-  @Prop() subscribeBlockText: any;
+  @Prop() subscribeBlockText: clickOnSubscribeButtonItem;
   /**
    * клик по кнопке подписаться
    */
@@ -30,8 +31,8 @@ export class SSaqhanSubscBanner implements ComponentInterface {
             </div>
             <div class="subs-sub-title text-muted">
               {this.subscribeBlockText.subTitle}
-              <span class="btn-read">
-                <span>{this.subscribeBlockText.nameLink}</span>
+              <span class="btn-read-sub">
+                <span> {this.subscribeBlockText.nameLink}</span>
               </span>
             </div>
           </div>

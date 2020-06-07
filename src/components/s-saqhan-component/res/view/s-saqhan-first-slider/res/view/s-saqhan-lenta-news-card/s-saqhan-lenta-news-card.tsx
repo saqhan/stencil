@@ -23,6 +23,10 @@ export class SSaqhanLentaNewsCard implements ComponentInterface {
  * Клик по новости
  * */
  @Event() clickOnNews: EventEmitter;
+  /**
+   * Клик по категории
+   * */
+  @Event() clickOnCategoryNews: EventEmitter;
   render() {
     return (
       <div class="lenta-news ">
@@ -32,7 +36,7 @@ export class SSaqhanLentaNewsCard implements ComponentInterface {
           style={{ backgroundImage: `url(${this.lentaNews.img})` }}
         ></div>
         <div class="lenta-info custom-link">
-          <div onClick={() => this.clickOnNews.emit(this.lentaNews.category)} class={this.ColorCategory(this.lentaNews.category)}>
+          <div onClick={() => this.clickOnCategoryNews.emit(this.lentaNews.category)} class={this.ColorCategory(this.lentaNews.category)}>
             {this.lentaNews.category}
           </div>
           <div onClick={() => this.clickOnNews.emit(this.lentaNews.id)} class="lenta-title  custom-link">

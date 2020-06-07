@@ -1,5 +1,5 @@
-/*
- * лента новостей
+/**
+ * Элементы ленты новостей
  * */
 
 export interface SSaqhanLentaNewsCardItem {

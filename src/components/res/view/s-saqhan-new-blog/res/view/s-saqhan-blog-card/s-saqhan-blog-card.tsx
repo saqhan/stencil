@@ -1,19 +1,26 @@
 import {Component, ComponentInterface, Prop, h, Event, EventEmitter} from "@stencil/core";
+import {NewBlogItem} from './interface/commin.interface';
 
 @Component({
   tag: "s-saqhan-blog-card",
   styleUrl: "s-saqhan-blog-card.css",
   shadow: false,
 })
+
+
 export class SSaqhanBlogCard implements ComponentInterface {
   /**
    * Массив с публикациями
    * */
-  @Prop() post: any;
+  @Prop() post: NewBlogItem;
   /**
    * Клик по новости
    * */
   @Event() clickOnNews: EventEmitter;
+  /**
+   * Клик по category
+   * */
+  @Event() clickOnCategoryNews: EventEmitter;
 
   render() {
     return (
@@ -24,7 +31,7 @@ export class SSaqhanBlogCard implements ComponentInterface {
           onClick={() => this.clickOnNews.emit(this.post.id)}
         ></div>
         <div class={this.ColorCategory(this.post.category)}
-             onClick={() => this.clickOnNews.emit(this.post.category)}
+             onClick={() => this.clickOnCategoryNews.emit(this.post.category)}
         >
           {this.post.category}
         </div>

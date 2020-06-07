@@ -22,11 +22,16 @@ export class SSaqhanFirstSlider implements ComponentInterface {
    * Клик по новости
    * */
   @Event() clickOnNews: EventEmitter;
-
+  /**
+   * Фильтруем для главной новости
+   * */
   mainNews(arr): any[] {
     return (arr.filter((item) => item.main) || []).slice(-1);
   }
-
+  /**
+   * Фильтруем для ленты новостей
+   * */
+  @Event() clickOnCategoryNews: EventEmitter;
   lentaNews(arr): any[] {
     return arr
       .filter((item) => item.lenta)
@@ -51,13 +56,18 @@ export class SSaqhanFirstSlider implements ComponentInterface {
     );
   }
 }
-// получает и передает в компонент элементы
+
+/**
+ * Компонентная функция для главной новости
+ * */
 const MainNews = (props) => {
   return props.arr.map((item) => {
     return <s-saqhan-main-news-card mainNews={item}></s-saqhan-main-news-card>;
   });
 };
-
+/**
+ * Компонентная функция для ленты новостей
+ * */
 //лента новостей
 const LentaNews = (props) => {
   return props.lenta.map((item) => {

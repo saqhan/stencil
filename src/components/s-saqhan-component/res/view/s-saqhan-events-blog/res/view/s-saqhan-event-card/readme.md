@@ -7,9 +7,17 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type  | Default     |
-| -------- | --------- | ----------- | ----- | ----------- |
-| `event`  | `event`   |             | `any` | `undefined` |
+| Property | Attribute | Description               | Type                   | Default     |
+| -------- | --------- | ------------------------- | ---------------------- | ----------- |
+| `event`  | --        | Массив публикаций Ивентов | `SSaqhanEventCardItem` | `undefined` |
+
+
+## Events
+
+| Event                 | Description       | Type               |
+| --------------------- | ----------------- | ------------------ |
+| `clickOnCategoryNews` | Клик по категории | `CustomEvent<any>` |
+| `clickOnNews`         | Клик по новости   | `CustomEvent<any>` |
 
 
 ## Dependencies

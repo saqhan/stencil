@@ -10,6 +10,7 @@ import {
   subscribeText,
   footerItems,
   subscribeBlockText,
+  footerInfo
 } from "../../utils/mock";
 
 @Component({
@@ -34,12 +35,14 @@ export class SSaqhanComponent {
           }
         />
         <s-saqhan-first-slider
+          onClickOnCategoryNews={(event)=> this.clickOnCategoryNews(event)}
           onClickOnNews={(event) => this.clickOnNews(event)}
           blogCarouselMock={blogCarouselMock}
         />
         <s-saqhan-new-blog
           blogPost={blogPost}
           onClickOnNews={(event) => this.clickOnNews(event)}
+          onClickOnCategoryNews={(event)=> this.clickOnCategoryNews(event)}
         />
         <s-saqhan-popular-news
           popularNews={popularNews}
@@ -48,6 +51,7 @@ export class SSaqhanComponent {
         />
         <s-saqhan-events-blog
           onClickOnNews={(event) => this.clickOnNews(event)}
+          onClickOnCategoryNews={(event)=> this.clickOnCategoryNews(event)}
           events={events}
         />
         <s-saqhan-subsc-banner
@@ -59,7 +63,9 @@ export class SSaqhanComponent {
         />
         <s-saqhan-app-footer
           onClickOnMenu={(item) => this.clickOnMenu(item)}
-          footerItems={footerItems} />
+          footerItems={footerItems}
+          footerInfo={footerInfo}
+        />
         <s-saqhan-chat-app></s-saqhan-chat-app>
       </div>
     );
@@ -68,21 +74,21 @@ export class SSaqhanComponent {
    *  Клик по меню
    */
   public clickOnMenu({ detail }) {
-    return console.log("clickOnMenu", detail);
+    return console.log("MenuId - ", detail);
   }
 
   /**
    *  Клик по новости
    * */
   public clickOnNews({ detail }) {
-    return console.log("clickOnNews", detail);
+    return console.log("id", detail);
   }
 
   /**
    *  Клик по категории публикации
    * */
   public clickOnNewsCategory({ detail }) {
-    return console.log("clickOnNewsCategory", detail);
+    return console.log("id", detail);
   }
 
   /**
@@ -91,5 +97,11 @@ export class SSaqhanComponent {
   public clickOnSubscribeButton({ detail }) {
     event.preventDefault();
     return console.log("clickOnSubscribeButton", detail);
+  }
+  /**
+   *  Клик по категории
+   * */
+  public clickOnCategoryNews({ detail }) {
+    return console.log("клик по категории - ", detail);
   }
 }

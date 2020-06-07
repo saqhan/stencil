@@ -9,13 +9,13 @@
   font-size: 52px;
 }
 
-.btn-read  span {
+.btn-read-sub  span {
   transition: 0.3s all;
   color: #6c757d;
   border-bottom: 1px solid #6c757d;
 }
 
-.btn-read  span:hover {
+.btn-read-sub  span:hover {
   text-decoration: none;
   color: #fff;
   border-bottom: 1px solid #fff;

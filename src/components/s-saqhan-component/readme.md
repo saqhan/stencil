@@ -29,15 +29,19 @@ graph TD;
   s-saqhan-component --> s-saqhan-subsc-banner
   s-saqhan-component --> s-saqhan-app-footer
   s-saqhan-component --> s-saqhan-chat-app
+  s-saqhan-header-app --> menu-item
   s-saqhan-first-slider --> s-saqhan-main-news-card
   s-saqhan-first-slider --> s-saqhan-lenta-news-card
   s-saqhan-new-blog --> s-saqhan-blog-card
   s-saqhan-popular-news --> s-saqhan-popular-card
   s-saqhan-events-blog --> s-saqhan-event-card
+  s-saqhan-app-footer --> footer-first
+  footer-first --> footer-first-item
   s-saqhan-chat-app --> s-saqhan-chat-wrapper
   s-saqhan-chat-wrapper --> s-saqhan-chat-personal
   s-saqhan-chat-wrapper --> s-saqhan-chat-users-wrapper
   s-saqhan-chat-wrapper --> s-saqhan-chat-files-wrapper
+  s-saqhan-chat-personal --> s-saqhan-chat-add-question
   s-saqhan-chat-users-wrapper --> s-saqhan-chat-form-search
   s-saqhan-chat-users-wrapper --> s-saqhan-chat-users
   s-saqhan-chat-users-wrapper --> s-saqhan-chat-add-question

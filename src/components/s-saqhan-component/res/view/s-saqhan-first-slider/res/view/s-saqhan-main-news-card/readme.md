@@ -7,9 +7,17 @@
 
 ## Properties
 
-| Property   | Attribute   | Description | Type  | Default     |
-| ---------- | ----------- | ----------- | ----- | ----------- |
-| `mainNews` | `main-news` |             | `any` | `undefined` |
+| Property   | Attribute | Description        | Type                      | Default     |
+| ---------- | --------- | ------------------ | ------------------------- | ----------- |
+| `mainNews` | --        | Массив с новостями | `SSaqhanMainNewsCardItem` | `undefined` |
+
+
+## Events
+
+| Event                 | Description       | Type               |
+| --------------------- | ----------------- | ------------------ |
+| `clickOnCategoryNews` | Клик по категории | `CustomEvent<any>` |
+| `clickOnNews`         | Клик по новости   | `CustomEvent<any>` |
 
 
 ## Dependencies

@@ -18,6 +18,10 @@ export class SSaqhanAppFooter implements ComponentInterface {
    */
   @Prop() footerItems: any;
   /**
+   * Инфо о компании в футере
+   */
+  @Prop() footerInfo:any;
+  /**
    * клик по кнопке в футере
    */
   @Event() clickOnMenu: EventEmitter;
@@ -28,8 +32,7 @@ export class SSaqhanAppFooter implements ComponentInterface {
         <div class="row footer">
           <div class="col-lg-4 col-md-12 footer-info-block">
             <div class="footer-info">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
-              aliquid asperiores.
+              {this.footerInfo.title}
             </div>
             <div class="footer-soc">
               <div class="template-demo">
@@ -80,7 +83,7 @@ const FooterFirst = (props) => {
   return props.footer.slice(0, 4).map((item) => {
     return (
       <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-        <footer-first footer={item}></footer-first>
+        <footer-wrapper footer={item}></footer-wrapper>
       </div>
     );
   });

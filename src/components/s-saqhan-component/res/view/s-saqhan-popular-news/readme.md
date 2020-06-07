@@ -7,9 +7,17 @@
 
 ## Properties
 
-| Property      | Attribute      | Description | Type  | Default     |
-| ------------- | -------------- | ----------- | ----- | ----------- |
-| `popularNews` | `popular-news` |             | `any` | `undefined` |
+| Property        | Attribute        | Description        | Type  | Default     |
+| --------------- | ---------------- | ------------------ | ----- | ----------- |
+| `bannerPopular` | `banner-popular` | Данные для баннера | `any` | `undefined` |
+| `popularNews`   | `popular-news`   | Массив публикаций  | `any` | `undefined` |
+
+
+## Events
+
+| Event         | Description     | Type               |
+| ------------- | --------------- | ------------------ |
+| `clickOnNews` | Клик по новости | `CustomEvent<any>` |
 
 
 ## Dependencies

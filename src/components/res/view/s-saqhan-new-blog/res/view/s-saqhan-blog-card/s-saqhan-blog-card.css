@@ -21,3 +21,9 @@
 }
 
 
+@media (max-width: 320px) {
+  .blog-img, .blog-card {
+    width: 100%;
+
+  }
+}

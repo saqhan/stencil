@@ -7,9 +7,17 @@
 
 ## Properties
 
-| Property           | Attribute            | Description | Type  | Default     |
-| ------------------ | -------------------- | ----------- | ----- | ----------- |
-| `blogCarouselMock` | `blog-carousel-mock` |             | `any` | `undefined` |
+| Property           | Attribute            | Description                | Type  | Default     |
+| ------------------ | -------------------- | -------------------------- | ----- | ----------- |
+| `blogCarouselMock` | `blog-carousel-mock` | массив новостей для вывода | `any` | `undefined` |
+
+
+## Events
+
+| Event                 | Description                  | Type               |
+| --------------------- | ---------------------------- | ------------------ |
+| `clickOnCategoryNews` | Фильтруем для ленты новостей | `CustomEvent<any>` |
+| `clickOnNews`         | Клик по новости              | `CustomEvent<any>` |
 
 
 ## Dependencies

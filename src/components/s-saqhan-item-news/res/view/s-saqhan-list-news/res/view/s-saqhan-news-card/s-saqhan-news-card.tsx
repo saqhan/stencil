@@ -1,5 +1,5 @@
 import {Component, ComponentInterface, h, Prop} from '@stencil/core';
-
+import {SSaqhanNewsCardItem} from './interface/common.interface';
 @Component({
   tag: 's-saqhan-news-card',
   styleUrl: 's-saqhan-news-card.css',
@@ -9,7 +9,7 @@ import {Component, ComponentInterface, h, Prop} from '@stencil/core';
 
 export class SSaqhanNewsCard implements ComponentInterface {
 
-  @Prop() news:any;
+  @Prop() news:SSaqhanNewsCardItem;
 
   render() {
     return (

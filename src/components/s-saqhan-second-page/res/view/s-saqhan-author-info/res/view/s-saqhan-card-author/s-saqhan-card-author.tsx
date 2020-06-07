@@ -1,4 +1,5 @@
 import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import { SSaqhanCardAuthorItem } from './interface/common.interface';
 
 @Component({
   tag: 's-saqhan-card-author',
@@ -7,7 +8,7 @@ import {Component, ComponentInterface, h, Prop} from '@stencil/core';
 })
 export class SSaqhanCardAuthor implements ComponentInterface {
 
-  @Prop() author:any;
+  @Prop() author:SSaqhanCardAuthorItem;
 
   render() {
     return (

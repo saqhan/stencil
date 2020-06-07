@@ -11,7 +11,6 @@ export class SSaqhanItemNews implements ComponentInterface {
   render() {
     return (
       <div>
-        <s-saqhan-header-app />
         <s-saqhan-bread-crumbs links={breadCrumbs} />
         <s-saqhan-list-news news={NewsStore}/>
         <s-saqhan-app-footer />

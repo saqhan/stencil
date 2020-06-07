@@ -7,6 +7,8 @@ import {
   Prop,
 } from "@stencil/core";
 
+import {SSaqhanPopularCardItem} from './interface/common.interface';
+
 @Component({
   tag: "s-saqhan-popular-card",
   styleUrl: "s-saqhan-popular-card.css",
@@ -16,7 +18,7 @@ export class SSaqhanPopularCard implements ComponentInterface {
   /**
   * Массив с популярными элементами
   * */
-  @Prop() post: any;
+  @Prop() post: SSaqhanPopularCardItem;
   /**
    * Клик по новости
   **/

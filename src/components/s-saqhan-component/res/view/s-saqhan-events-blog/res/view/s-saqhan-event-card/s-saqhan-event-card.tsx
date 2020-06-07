@@ -1,5 +1,5 @@
 import {Component, ComponentInterface, Prop, h, Event, EventEmitter} from "@stencil/core";
-
+import {SSaqhanEventCardItem} from './interface/common.interface';
 @Component({
   tag: "s-saqhan-event-card",
   styleUrl: "s-saqhan-event-card.css",
@@ -9,12 +9,15 @@ export class SSaqhanEventCard implements ComponentInterface {
   /**
   * Массив публикаций Ивентов
   * */
-  @Prop() event: any;
+  @Prop() event: SSaqhanEventCardItem;
   /**
    * Клик по новости
    * */
   @Event() clickOnNews: EventEmitter;
-
+  /**
+   * Клик по категории
+   * */
+  @Event() clickOnCategoryNews: EventEmitter;
   render() {
     return (
       <div class="blog-card">
@@ -28,7 +31,7 @@ export class SSaqhanEventCard implements ComponentInterface {
 
         <div
           class={this.ColorCategory(this.event.category)}
-          onClick={() => this.clickOnNews.emit(this.event.category)}
+          onClick={() => this.clickOnCategoryNews.emit(this.event.category)}
         >
           {this.event.category}
         </div>
