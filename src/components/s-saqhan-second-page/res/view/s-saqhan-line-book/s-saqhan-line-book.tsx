@@ -1,4 +1,5 @@
-import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import {Component, ComponentInterface, EventEmitter, h, Prop, Event} from '@stencil/core';
+import {SSaqhanLineBookItem} from "./res/interface/common.interface";
 
 @Component({
   tag: 's-saqhan-line-book',
@@ -6,8 +7,14 @@ import {Component, ComponentInterface, h, Prop} from '@stencil/core';
   shadow: false,
 })
 export class SSaqhanLineBook implements ComponentInterface {
-
-  @Prop() banner:any;
+  /**
+   * Массив элементов для баннера
+   * */
+  @Prop() banner:SSaqhanLineBookItem[];
+  /**
+   * Клик по элементам
+   * */
+  @Event() clickOnLink:EventEmitter;
 
   getBanner(arr){
     return arr.map(item => item);

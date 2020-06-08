@@ -1,4 +1,5 @@
-import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
+import {authorItem} from "./res/interface/common.interface";
 
 @Component({
   tag: "s-saqhan-author-info",
@@ -6,7 +7,15 @@ import { Component, ComponentInterface, h, Prop } from "@stencil/core";
   shadow: false,
 })
 export class SSaqhanAuthorInfo implements ComponentInterface {
-  @Prop() author: any;
+
+  /**
+   * Элементы об авторе статьи
+   * */
+  @Prop() author: authorItem[];
+  /**
+   * Клик по автору статьи
+   * */
+  @Event() clickOnLink: EventEmitter;
 
   getAuthor(arr) {
     return arr.map((item) => item);

@@ -1,5 +1,4 @@
-import {Component, ComponentInterface, h, Prop} from '@stencil/core';
-import { SSaqhanCardAuthorItem } from './interface/common.interface';
+import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from '@stencil/core';
 
 @Component({
   tag: 's-saqhan-card-author',
@@ -8,18 +7,29 @@ import { SSaqhanCardAuthorItem } from './interface/common.interface';
 })
 export class SSaqhanCardAuthor implements ComponentInterface {
 
-  @Prop() author:SSaqhanCardAuthorItem;
+  /**
+   * Элементы об авторе статьи
+   * */
+  @Prop() author:any;
+  /**
+   * Клик по автору статьи
+   * */
+  @Event() clickOnLink: EventEmitter;
 
   render() {
     return (
       <div class="row sub-auth">
         <div class="col">
           <div class="author-sub">
-            <div class="img" style={{ backgroundImage: 'url(' + this.author.img + ')'}}>
+            <div class="img custom-links"
+                 onClick={() => this.clickOnLink.emit({place: 'img-author', item: this.author})}
+                 style={{ backgroundImage: 'url(' + this.author.img + ')'}}>
 
             </div>
-            <div class="author-info">
-              <div class="name">
+            <div class="author-info custom-links">
+              <div class="name"
+                   onClick={() => this.clickOnLink.emit({place: 'name-author', item: this.author})}
+              >
                 {this.author.firstName}
               </div>
               <div class="info">

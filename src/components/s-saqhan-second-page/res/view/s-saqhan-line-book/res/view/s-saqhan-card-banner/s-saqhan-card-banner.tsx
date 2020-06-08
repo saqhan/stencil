@@ -1,5 +1,4 @@
-import {Component, ComponentInterface, h, Prop} from '@stencil/core';
-import { SSaqhanCardBannerItem } from './interface/common.interface';
+import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from '@stencil/core';
 
 @Component({
   tag: 's-saqhan-card-banner',
@@ -7,8 +6,15 @@ import { SSaqhanCardBannerItem } from './interface/common.interface';
   shadow: false,
 })
 export class SSaqhanCardBanner implements ComponentInterface {
+  /**
+   * массив элементов
+   * */
+  @Prop() bannerPost: any;
 
-  @Prop() bannerPost: SSaqhanCardBannerItem;
+  /**
+   * Клик по элементам
+   * */
+  @Event() clickOnLink:EventEmitter;
 
   render() {
     return (
@@ -22,10 +28,14 @@ export class SSaqhanCardBanner implements ComponentInterface {
             {this.bannerPost.subTitle}
           </div>
           <div class="btn-read">
-            <button class="btn btn-primary btn-custom-head btn-black-line">{this.bannerPost.btnText}</button>
+            <button
+              onClick={() => this.clickOnLink.emit({place: 'btn', item: this.bannerPost})}
+              class="btn btn-primary btn-custom-head btn-black-line">{this.bannerPost.btnText}</button>
           </div>
         </div>
-        <div class="col-4 right-banner">
+        <div class="col-4 right-banner"
+             onClick={() => this.clickOnLink.emit({place: 'banner', item: this.bannerPost})}
+        >
           <img src={this.bannerPost.img} alt=""/>
         </div>
       </div>

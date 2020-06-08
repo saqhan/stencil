@@ -1,8 +1,8 @@
 /**
- * Элементы для баннера
+ * Интерфейс для черного блока
  * */
 
-export interface SSaqhanCardBannerItem {
+export interface SSaqhanLineBookItem {
   id: number;
   title: string;
   subTitle: string;

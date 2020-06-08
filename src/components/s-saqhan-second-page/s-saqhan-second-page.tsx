@@ -27,10 +27,16 @@ export class SSaqhanSecondPage implements ComponentInterface {
           subscribeText={subscribeText}
           logoUrl={logoUrl}
         />
-        <second-title-block secondTitle={secondTitle}></second-title-block>
-        <s-saqhan-line-book banner={banner} />
+        <second-title-block
+          onClickOnLink={(event) => this.clickOnLink(event)}
+          secondTitle={secondTitle}></second-title-block>
+        <s-saqhan-line-book
+          onClickOnLink={(event) => this.clickOnLink(event)}
+          banner={banner} />
         <s-saqhan-quote-text quoteText={quoteText} />
-        <s-saqhan-author-info author={authors} />
+        <s-saqhan-author-info
+          onClickOnLink={(event) => this.clickOnLink(event)}
+          author={authors} />
         <s-saqhan-subsc-banner
           subscribeText={subscribeText}
           subscribeBlockText={subscribeBlockText}
@@ -49,6 +55,9 @@ export class SSaqhanSecondPage implements ComponentInterface {
    *  Клик по кнопке подписаться
    * */
   public clickOnSubscribeButton({ detail }) {
+    return console.log(detail);
+  }
+  public clickOnLink({ detail }) {
     return console.log(detail);
   }
 }

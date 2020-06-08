@@ -163,7 +163,7 @@ export const banner = [
     id: 1,
     title: "Lorem ipsum dolor sit amet",
     subTitle:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid asperiores.\n",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid asperiores",
     btnText: "Explore Report",
     img: "https://via.placeholder.com/300x400?text=Banner",
   },

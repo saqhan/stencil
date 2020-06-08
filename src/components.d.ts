@@ -6,11 +6,11 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { FooterWrapperItem, } from "./components/res/view/s-saqhan-app-footer/res/view/footer-wrapper/res/interface/common.interface";
-import { SSaqhanCardAuthorItem, } from "./components/s-saqhan-second-page/res/view/s-saqhan-author-info/res/view/s-saqhan-card-author/interface/common.interface";
-import { SSaqhanCardBannerItem, } from "./components/s-saqhan-second-page/res/view/s-saqhan-line-book/res/view/s-saqhan-card-banner/interface/common.interface";
+import { authorItem, } from "./components/s-saqhan-second-page/res/view/s-saqhan-author-info/res/interface/common.interface";
 import { SSaqhanEventCardItem, } from "./components/s-saqhan-component/res/view/s-saqhan-events-blog/res/interface/common.interface";
 import { SSaqhanFirstSliderItem, } from "./components/s-saqhan-component/res/view/s-saqhan-first-slider/res/interface/common.interface";
 import { logoUrl, SSaqhanHedearMenuItem, } from "./components/res/view/s-saqhan-header-app/res/interface/common.interface";
+import { SSaqhanLineBookItem, } from "./components/s-saqhan-second-page/res/view/s-saqhan-line-book/res/interface/common.interface";
 import { NewBlogItem, } from "./components/res/view/s-saqhan-new-blog/res/interface/commin.interface";
 import { SSaqhanNewsCardItem, } from "./components/s-saqhan-item-news/res/view/s-saqhan-list-news/res/view/s-saqhan-news-card/interface/common.interface";
 import { SSaqhanPopularCardItem, } from "./components/s-saqhan-component/res/view/s-saqhan-popular-news/res/interface/common.interface";
@@ -39,7 +39,10 @@ export namespace Components {
         "footerItems": any;
     }
     interface SSaqhanAuthorInfo {
-        "author": any;
+        /**
+          * Элементы об авторе статьи
+         */
+        "author": authorItem[];
     }
     interface SSaqhanBlogCard {
         /**
@@ -54,10 +57,16 @@ export namespace Components {
         "links": any;
     }
     interface SSaqhanCardAuthor {
-        "author": SSaqhanCardAuthorItem;
+        /**
+          * Элементы об авторе статьи
+         */
+        "author": any;
     }
     interface SSaqhanCardBanner {
-        "bannerPost": SSaqhanCardBannerItem;
+        /**
+          * массив элементов
+         */
+        "bannerPost": any;
     }
     interface SSaqhanChatAddQuestion {
     }
@@ -141,7 +150,10 @@ export namespace Components {
         "lentaNews": any;
     }
     interface SSaqhanLineBook {
-        "banner": any;
+        /**
+          * Массив элементов для баннера
+         */
+        "banner": SSaqhanLineBookItem[];
     }
     interface SSaqhanListNews {
         "news": any;
@@ -193,6 +205,9 @@ export namespace Components {
         "subscribeText": string;
     }
     interface SecondTitleBlock {
+        /**
+          * массив данных для первого блока
+         */
         "secondTitle": secondTitleBlockItem;
     }
 }
@@ -528,7 +543,14 @@ declare namespace LocalJSX {
         "onClickOnMenu"?: (event: CustomEvent<any>) => void;
     }
     interface SSaqhanAuthorInfo {
-        "author"?: any;
+        /**
+          * Элементы об авторе статьи
+         */
+        "author"?: authorItem[];
+        /**
+          * Клик по автору статьи
+         */
+        "onClickOnLink"?: (event: CustomEvent<any>) => void;
     }
     interface SSaqhanBlogCard {
         /**
@@ -551,10 +573,24 @@ declare namespace LocalJSX {
         "links"?: any;
     }
     interface SSaqhanCardAuthor {
-        "author"?: SSaqhanCardAuthorItem;
+        /**
+          * Элементы об авторе статьи
+         */
+        "author"?: any;
+        /**
+          * Клик по автору статьи
+         */
+        "onClickOnLink"?: (event: CustomEvent<any>) => void;
     }
     interface SSaqhanCardBanner {
-        "bannerPost"?: SSaqhanCardBannerItem;
+        /**
+          * массив элементов
+         */
+        "bannerPost"?: any;
+        /**
+          * Клик по элементам
+         */
+        "onClickOnLink"?: (event: CustomEvent<any>) => void;
     }
     interface SSaqhanChatAddQuestion {
     }
@@ -691,7 +727,14 @@ declare namespace LocalJSX {
         "onClickOnNews"?: (event: CustomEvent<any>) => void;
     }
     interface SSaqhanLineBook {
-        "banner"?: any;
+        /**
+          * Массив элементов для баннера
+         */
+        "banner"?: SSaqhanLineBookItem[];
+        /**
+          * Клик по элементам
+         */
+        "onClickOnLink"?: (event: CustomEvent<any>) => void;
     }
     interface SSaqhanListNews {
         "news"?: any;
@@ -767,6 +810,13 @@ declare namespace LocalJSX {
         "subscribeText"?: string;
     }
     interface SecondTitleBlock {
+        /**
+          * события при клике на элементы первого блока в одностраничной новостиы
+         */
+        "onClickOnLink"?: (event: CustomEvent<any>) => void;
+        /**
+          * массив данных для первого блока
+         */
         "secondTitle"?: secondTitleBlockItem;
     }
     interface IntrinsicElements {
