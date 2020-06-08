@@ -9,5 +9,4 @@ export interface SSaqhanHedearMenuItem {
 
 export interface logoUrl {
   img:string;
-  alt: string;
 }

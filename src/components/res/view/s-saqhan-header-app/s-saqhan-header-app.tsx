@@ -6,7 +6,8 @@ import {
   Event,
   Prop,
 } from "@stencil/core";
-import { SSaqhanHedearMenuItem } from "./interface/common.interface";
+import { SSaqhanHedearMenuItem } from "./res/interface/common.interface";
+import { logoUrl } from "./res/interface/common.interface";
 
 @Component({
   tag: "s-saqhan-header-app",
@@ -22,8 +23,8 @@ export class SSaqhanHeaderApp implements ComponentInterface {
   /**
    * ссылка на изображение логотипа
    */
-  // @Prop() logoUrl: logoUrl[];
-  @Prop() logoUrl:any;
+  @Prop() logoUrl: logoUrl;
+  // @Prop() logoUrl:any;
 
   /**
    * текст вывода в кнопке подписаться
@@ -53,9 +54,7 @@ export class SSaqhanHeaderApp implements ComponentInterface {
             <header>
               <nav class="navbar navbar-expand-lg navbar-light p-0 d-flex ">
                 <a
-                  onClick={() => {
-                    this.clickToLogo.emit();
-                  }}
+                  onClick={() => this.clickToLogo.emit({place: "logo", item: this.logoUrl })}
                   class="navbar-brand logo-header"
                   style={{backgroundImage: `url( ${this.logoUrl.img} )`}}
                 ></a>
@@ -91,7 +90,7 @@ export class SSaqhanHeaderApp implements ComponentInterface {
                         />
                         <div class="input-group-append">
                           <button
-                            onClick={() => this.clickOnSubscribeButton.emit()}
+                            onClick={() => this.clickOnSubscribeButton.emit({place: "SubscribeButton", item: this.subscribeText })}
                             class="btn btn-primary btn-custom-head"
                           >
                             {this.subscribeText}

@@ -10,7 +10,7 @@ import { SSaqhanCardAuthorItem, } from "./components/s-saqhan-second-page/res/vi
 import { SSaqhanCardBannerItem, } from "./components/s-saqhan-second-page/res/view/s-saqhan-line-book/res/view/s-saqhan-card-banner/interface/common.interface";
 import { SSaqhanEventCardItem, } from "./components/s-saqhan-component/res/view/s-saqhan-events-blog/res/interface/common.interface";
 import { SSaqhanFirstSliderItem, } from "./components/s-saqhan-component/res/view/s-saqhan-first-slider/res/interface/common.interface";
-import { SSaqhanHedearMenuItem, } from "./components/res/view/s-saqhan-header-app/interface/common.interface";
+import { logoUrl, SSaqhanHedearMenuItem, } from "./components/res/view/s-saqhan-header-app/res/interface/common.interface";
 import { NewBlogItem, } from "./components/res/view/s-saqhan-new-blog/res/interface/commin.interface";
 import { SSaqhanNewsCardItem, } from "./components/s-saqhan-item-news/res/view/s-saqhan-list-news/res/view/s-saqhan-news-card/interface/common.interface";
 import { SSaqhanPopularCardItem, } from "./components/s-saqhan-component/res/view/s-saqhan-popular-news/res/interface/common.interface";
@@ -122,7 +122,7 @@ export namespace Components {
         /**
           * ссылка на изображение логотипа
          */
-        "logoUrl": any;
+        "logoUrl": logoUrl;
         /**
           * массив меню для вывода
          */
@@ -656,7 +656,7 @@ declare namespace LocalJSX {
         /**
           * ссылка на изображение логотипа
          */
-        "logoUrl"?: any;
+        "logoUrl"?: logoUrl;
         /**
           * массив меню для вывода
          */
