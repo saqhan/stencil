@@ -55,7 +55,7 @@ export class SSaqhanHeaderApp implements ComponentInterface {
               <nav class="navbar navbar-expand-lg navbar-light p-0 d-flex ">
                 <a
                   onClick={() => this.clickToLogo.emit({place: "logo", item: this.logoUrl })}
-                  class="navbar-brand logo-header"
+                  class="navbar-brand logo-header custom-links"
                   style={{backgroundImage: `url( ${this.logoUrl.img} )`}}
                 ></a>
                 <button

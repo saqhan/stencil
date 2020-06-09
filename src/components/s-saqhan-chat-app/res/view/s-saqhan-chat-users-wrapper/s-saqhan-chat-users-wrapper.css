@@ -1,5 +1,6 @@
 .chat-wrap {
   width: 100%;
+  /*height: calc(100vh - 310px);*/
   height: 65vh;
   overflow: overlay;
 }
@@ -24,7 +25,7 @@
   .chat-wrap {
     height: 72vh;
   }
-  
+
   .block-input {
     text-align: center;
   }

@@ -7,6 +7,10 @@
   background-size: cover;
 }
 
+.custom-links {
+  cursor: pointer;
+}
+
 .btn-custom-head {
   padding: 2px 10px ;
   font-size: 12px;

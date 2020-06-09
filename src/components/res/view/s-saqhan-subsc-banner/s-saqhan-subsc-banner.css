@@ -1,6 +1,7 @@
 .subscribe {
   background-color: #000;
   margin-bottom: 20px;
+  border-radius: 3px;
 }
 .subscribe .left {
   padding-left: 50px;

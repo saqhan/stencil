@@ -19,7 +19,7 @@ export class SSaqhanChatUserCard implements ComponentInterface {
               class="img-user"
               style={{ backgroundImage: "url(" + this.user.img + ")" }}></div>
           </div>
-          <div class="right">
+          <div class="user-right">
             <div class="user-data">
               <div class="user-name">{this.user.name}</div>
               <div class="message-date">{this.user.date}</div>

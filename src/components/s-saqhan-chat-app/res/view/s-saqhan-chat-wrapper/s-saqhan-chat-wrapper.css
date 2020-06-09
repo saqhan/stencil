@@ -1,6 +1,6 @@
 .wrapper-chat {
   box-shadow: 0 0 10px 1px #828282;
-  border-radius: 2px;
+  border-radius: 5px;
   margin-bottom: 10px;
   width: 400px;
   height: 85vh;
@@ -11,6 +11,8 @@
   text-align: center;
   padding: 10px 0px;
   font-weight: 500;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
