@@ -7,7 +7,6 @@ import {
   Prop,
 } from "@stencil/core";
 
-
 @Component({
   tag: "s-saqhan-popular-card",
   styleUrl: "s-saqhan-popular-card.css",
@@ -15,37 +14,50 @@ import {
 })
 export class SSaqhanPopularCard implements ComponentInterface {
   /**
-  * Массив с популярными элементами
-  * */
+   * Массив с популярными элементами
+   * */
   @Prop() post: any;
   /**
    * Клик по новости
-  **/
+   **/
   @Event() clickOnNews: EventEmitter;
 
   render() {
     return (
       <div class="news-block">
         <div
-          class="news-img"
+          class="news-img custom-links"
           style={{ backgroundImage: `url(${this.post.img})` }}
-          onClick={() => this.clickOnNews.emit({place: 'img', item : this.post})}
+          onClick={() =>
+            this.clickOnNews.emit({ place: "img", item: this.post })
+          }
         ></div>
         <div class="news-info">
-          <div
+          <span
             class={this.ColorCategory(this.post.category)}
-            onClick={() => this.clickOnNews.emit({place: 'category', item : this.post})}
+            onClick={() =>
+              this.clickOnNews.emit({ place: "category", item: this.post })
+            }
           >
             {this.post.category}
-          </div>
-          <div
-            class="lenta-title"
-            onClick={() => this.clickOnNews.emit({place: 'title', item : this.post})}
-          >
-            {this.post.title}
+          </span>
+          <div class="lenta-title ">
+            <span
+              class="custom-links"
+              onClick={() =>
+                this.clickOnNews.emit({ place: "title", item: this.post })
+              }
+            >
+              {this.post.title}
+            </span>
           </div>
           <div class="btn-read">
-            <span onClick={() => this.clickOnNews.emit({place: 'btn-read', item : this.post})}>
+            <span
+              class="custom-links"
+              onClick={() =>
+                this.clickOnNews.emit({ place: "btn-read", item: this.post })
+              }
+            >
               {this.post.btnText}
             </span>
           </div>
@@ -54,7 +66,7 @@ export class SSaqhanPopularCard implements ComponentInterface {
     );
   }
   public ColorCategory = (nameCategory) => {
-    const classCategory = "lenta-category category";
+    const classCategory = "lenta-category category custom-links";
     switch (nameCategory) {
       case "Report":
         return `report ${classCategory}`;

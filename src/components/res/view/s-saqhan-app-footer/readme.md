@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property      | Attribute      | Description              | Type  | Default     |
-| ------------- | -------------- | ------------------------ | ----- | ----------- |
-| `footerInfo`  | `footer-info`  | Инфо о компании в футере | `any` | `undefined` |
-| `footerItems` | `footer-items` | массив меню для вывода   | `any` | `undefined` |
+| Property          | Attribute          | Description              | Type  | Default     |
+| ----------------- | ------------------ | ------------------------ | ----- | ----------- |
+| `footerCopyright` | `footer-copyright` | Текст для копирайта      | `any` | `undefined` |
+| `footerInfo`      | `footer-info`      | Инфо о компании в футере | `any` | `undefined` |
+| `footerItems`     | `footer-items`     | массив меню для вывода   | `any` | `undefined` |
 
 
 ## Events

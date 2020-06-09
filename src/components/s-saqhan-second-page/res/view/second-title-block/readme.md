@@ -7,9 +7,16 @@
 
 ## Properties
 
-| Property      | Attribute | Description | Type                   | Default     |
-| ------------- | --------- | ----------- | ---------------------- | ----------- |
-| `secondTitle` | --        |             | `secondTitleBlockItem` | `undefined` |
+| Property      | Attribute | Description                     | Type                   | Default     |
+| ------------- | --------- | ------------------------------- | ---------------------- | ----------- |
+| `secondTitle` | --        | массив данных для первого блока | `secondTitleBlockItem` | `undefined` |
+
+
+## Events
+
+| Event         | Description                                                           | Type               |
+| ------------- | --------------------------------------------------------------------- | ------------------ |
+| `clickOnLink` | события при клике на элементы первого блока в одностраничной новостиы | `CustomEvent<any>` |
 
 
 ## Dependencies

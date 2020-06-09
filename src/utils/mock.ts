@@ -318,6 +318,10 @@ export const footerItems = [
   }
 ];
 export const footerInfo = {title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid asperiores.'}
+export const footerCopyright = {
+  title: 'Saqhan Abaev',
+  description: 'Frontend-developer'
+}
 
 export const logoUrl = {
   img:"https://saqhan.github.io/wibbitz/assets/img/logo.jpg",

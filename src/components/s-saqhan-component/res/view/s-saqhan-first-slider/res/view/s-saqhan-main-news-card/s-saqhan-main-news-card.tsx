@@ -30,23 +30,23 @@ export class SSaqhanMainNewsCard implements ComponentInterface {
             onClick={() => this.clickOnNews.emit({place: 'img', item: this.mainNews})}
             style={{ backgroundImage: `url(${this.mainNews.img})` }}
           ></div>
-          <div
+          <div class="category-main"
             onClick={() => this.clickOnNews.emit({place: 'category', item: this.mainNews})}
-            class={this.ColorCategory(this.mainNews.category)}
+
           >
-            {this.mainNews.category}
+            <span class={this.ColorCategory(this.mainNews.category)}>{this.mainNews.category}</span>
           </div>
           <div
             onClick={() => this.clickOnNews.emit({place: 'title', item: this.mainNews})}
-            class="title-news pt-3 h2 font-weight-bold custon-link"
+            class="title-news custon-link"
           >
-            {this.mainNews.title}
+            <span class="custon-link" ><h2>{this.mainNews.title}</h2></span>
           </div>
           <div
             onClick={() => this.clickOnNews.emit({place: 'subTitle', item: this.mainNews})}
-            class="sub-title-news pt-3 pb-3 text-muted custon-link"
+            class="sub-title-news "
           >
-            {this.mainNews.subTitle}
+            <span class="text-muted custon-link">{this.mainNews.subTitle}</span>
           </div>
           <span
             onClick={() => this.clickOnNews.emit({place: 'btn read', item: this.mainNews})}
@@ -59,7 +59,7 @@ export class SSaqhanMainNewsCard implements ComponentInterface {
     );
   }
   public ColorCategory = (nameCategory) => {
-    const classCategory = "category category-news pt-3 small custon-link";
+    const classCategory = "category category-news small custon-link";
     switch (nameCategory) {
       case "Report":
         return `report ${classCategory}`;

@@ -20,10 +20,36 @@
   font-weight: 600;
 }
 
+.blog-title {
+  margin-top: 15px;
+  font-weight: 600;
+}
+.btn-read {
+  margin-top: 10px;
+}
+.btn-read span {
+  color: #000000;
+  font-weight: 700;
+  transition: 0.3s all;
+  border-bottom: 1px solid #000;
+}
+
+.btn-read span:hover {
+  text-decoration: none;
+  color: #007bff;
+  border-bottom: 1px solid #007bff;
+  cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  .blog-img {
+    width: 100%;
+  }
+}
 
 @media (max-width: 320px) {
-  .blog-img, .blog-card {
+  .blog-img,
+  .blog-card {
     width: 100%;
-
   }
 }

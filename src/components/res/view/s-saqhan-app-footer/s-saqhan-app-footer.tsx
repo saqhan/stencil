@@ -20,22 +20,23 @@ export class SSaqhanAppFooter implements ComponentInterface {
   /**
    * Инфо о компании в футере
    */
-  @Prop() footerInfo:any;
+  @Prop() footerInfo: any;
+  /**
+   * Текст для копирайта
+   * */
+  @Prop() footerCopyright: any;
+
   /**
    * клик по кнопке в футере
    */
   @Event() clickOnMenu: EventEmitter;
-
-
 
   render() {
     return (
       <div class="container">
         <div class="row footer">
           <div class="col-lg-4 col-md-12 footer-info-block">
-            <div class="footer-info">
-              {this.footerInfo.title}
-            </div>
+            <div class="footer-info">{this.footerInfo.title}</div>
             <div class="footer-soc">
               <div class="template-demo">
                 <button
@@ -68,12 +69,17 @@ export class SSaqhanAppFooter implements ComponentInterface {
           <FooterFirst footer={this.footerItems}></FooterFirst>
           <div class="col-12 pt-5">
             <div class="choose-language text-muted small">
-              <i class="fas fa-globe-africa"></i> Choose Language
-              <br />
-              <a href="/" class="pr-3">
-                English (United Tates)
+              <a
+                class="pr-3 custom-links"
+                onClick={(event) =>
+                  this.clickOnMenu.emit({ place: "footer copyright", event })
+                }
+              >
+                <i class="fas fa-globe-africa"></i> {this.footerCopyright.title}
+                <br />
+                {this.footerCopyright.description}
               </a>
-              <a href="/">French</a>
+              {/*<a href="/">French</a>*/}
             </div>
           </div>
         </div>
@@ -90,4 +96,3 @@ const FooterFirst = (props) => {
     );
   });
 };
-

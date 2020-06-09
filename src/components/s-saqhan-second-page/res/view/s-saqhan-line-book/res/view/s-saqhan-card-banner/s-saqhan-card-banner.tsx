@@ -30,10 +30,10 @@ export class SSaqhanCardBanner implements ComponentInterface {
           <div class="btn-read">
             <button
               onClick={() => this.clickOnLink.emit({place: 'btn', item: this.bannerPost})}
-              class="btn btn-primary btn-custom-head btn-black-line">{this.bannerPost.btnText}</button>
+              class="btn btn-primary btn-custom-head btn-black-line custom-links">{this.bannerPost.btnText}</button>
           </div>
         </div>
-        <div class="col-4 right-banner"
+        <div class="col-4 right-banner custom-links"
              onClick={() => this.clickOnLink.emit({place: 'banner', item: this.bannerPost})}
         >
           <img src={this.bannerPost.img} alt=""/>

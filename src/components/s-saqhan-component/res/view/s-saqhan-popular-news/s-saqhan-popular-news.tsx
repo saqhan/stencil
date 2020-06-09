@@ -1,30 +1,38 @@
-import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from '@stencil/core';
-import { SSaqhanPopularCardItem } from './res/interface/common.interface';
-
+import {
+  Component,
+  ComponentInterface,
+  Event,
+  EventEmitter,
+  h,
+  Prop,
+} from "@stencil/core";
+import { SSaqhanPopularCardItem } from "./res/interface/common.interface";
 
 @Component({
-  tag: 's-saqhan-popular-news',
-  styleUrl: 's-saqhan-popular-news.css',
+  tag: "s-saqhan-popular-news",
+  styleUrl: "s-saqhan-popular-news.css",
   shadow: false,
 })
 export class SSaqhanPopularNews implements ComponentInterface {
   /**
    * Массив публикаций
    * */
-  @Prop() popularNews:SSaqhanPopularCardItem[];
+  @Prop() popularNews: SSaqhanPopularCardItem[];
   /**
    * Данные для баннера
    * */
-  @Prop() bannerPopular:any;
+  @Prop() bannerPopular: any;
   /**
    * Клик по новости
    * */
   @Event() clickOnNews: EventEmitter;
 
+  /**
+   *  Получаем популярные новости
+   * */
   getPopularNews(arr): any[] {
-    return arr.map(item => item);
+    return arr.map((item) => item);
   }
-
 
   render() {
     return (
@@ -35,33 +43,44 @@ export class SSaqhanPopularNews implements ComponentInterface {
           </div>
           <div class="col-12 col-lg-7">
             <div class="cards-popular">
-              <CardPopular post={this.getPopularNews(this.popularNews)}/>
+              <CardPopular post={this.getPopularNews(this.popularNews)} />
             </div>
           </div>
-        <div class="col-12 col-lg-5 p-5 p-lg-0 banner"
-          style={{backgroundImage: `url(${this.bannerPopular.img})`}}
-
-        >
-          <div class="banner-title text-center text-white"
-               onClick={() => this.clickOnNews.emit({place: 'title', item : this.bannerPopular})}
+          <div
+            class="col-12 col-lg-5 p-5 p-lg-0 banner"
+            style={{ backgroundImage: `url(${this.bannerPopular.img})` }}
           >
-            {this.bannerPopular.title}
-          </div>
-          <div class="btn-read pt-3"
-               onClick={() => this.clickOnNews.emit({place: 'btn-read', item : this.bannerPopular})}
-          >
-            <span >{this.bannerPopular.nameLink}</span>
+            <div
+              class="banner-title text-center text-white"
+              onClick={() =>
+                this.clickOnNews.emit({
+                  place: "title",
+                  item: this.bannerPopular,
+                })
+              }
+            >
+              {this.bannerPopular.title}
+            </div>
+            <div
+              class="btn-read pt-3"
+              onClick={() =>
+                this.clickOnNews.emit({
+                  place: "btn-read",
+                  item: this.bannerPopular,
+                })
+              }
+            >
+              <span>{this.bannerPopular.nameLink}</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     );
   }
 }
 
 const CardPopular = (props) => {
-  return (props.post.map((item) => {
-      return <s-saqhan-popular-card post={item}/>
-    }
-  ))
-}
+  return props.post.map((item) => {
+    return <s-saqhan-popular-card post={item} />;
+  });
+};

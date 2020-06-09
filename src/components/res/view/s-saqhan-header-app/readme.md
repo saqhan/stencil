@@ -9,7 +9,7 @@
 
 | Property        | Attribute        | Description                       | Type                      | Default     |
 | --------------- | ---------------- | --------------------------------- | ------------------------- | ----------- |
-| `logoUrl`       | `logo-url`       | ссылка на изображение логотипа    | `any`                     | `undefined` |
+| `logoUrl`       | --               | ссылка на изображение логотипа    | `logoUrl`                 | `undefined` |
 | `menu`          | --               | массив меню для вывода            | `SSaqhanHedearMenuItem[]` | `[]`        |
 | `subscribeText` | `subscribe-text` | текст вывода в кнопке подписаться | `string`                  | `undefined` |
 

@@ -7,9 +7,16 @@
 
 ## Properties
 
-| Property     | Attribute | Description | Type                    | Default     |
-| ------------ | --------- | ----------- | ----------------------- | ----------- |
-| `bannerPost` | --        |             | `SSaqhanCardBannerItem` | `undefined` |
+| Property     | Attribute     | Description      | Type  | Default     |
+| ------------ | ------------- | ---------------- | ----- | ----------- |
+| `bannerPost` | `banner-post` | массив элементов | `any` | `undefined` |
+
+
+## Events
+
+| Event         | Description       | Type               |
+| ------------- | ----------------- | ------------------ |
+| `clickOnLink` | Клик по элементам | `CustomEvent<any>` |
 
 
 ## Dependencies

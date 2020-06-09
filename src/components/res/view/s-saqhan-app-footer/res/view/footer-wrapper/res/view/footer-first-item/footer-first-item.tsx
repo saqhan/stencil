@@ -1,4 +1,11 @@
-import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
+import {
+  Component,
+  ComponentInterface,
+  Event,
+  EventEmitter,
+  h,
+  Prop,
+} from "@stencil/core";
 
 @Component({
   tag: "footer-first-item",
@@ -11,7 +18,12 @@ export class FooterFirstItem implements ComponentInterface {
   render() {
     return (
       <div>
-        <span class="foot-nav-link" onClick={() => this.clickOnMenu.emit({place: 'footerItem', item: this.arr} ) } >
+        <span
+          class="foot-nav-link"
+          onClick={() =>
+            this.clickOnMenu.emit({ place: "footerItem", item: this.arr })
+          }
+        >
           {this.arr.name}
         </span>
       </div>

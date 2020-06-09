@@ -9,6 +9,10 @@
   font-size: 52px;
 }
 
+.custom-links {
+  cursor: pointer;
+}
+
 .btn-read-sub  span {
   transition: 0.3s all;
   color: #6c757d;
@@ -19,7 +23,7 @@
   text-decoration: none;
   color: #fff;
   border-bottom: 1px solid #fff;
-  cursor: context-menu;
+
 }
 
 

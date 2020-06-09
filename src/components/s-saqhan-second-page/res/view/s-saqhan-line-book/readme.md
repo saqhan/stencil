@@ -7,9 +7,16 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type  | Default     |
-| -------- | --------- | ----------- | ----- | ----------- |
-| `banner` | `banner`  |             | `any` | `undefined` |
+| Property | Attribute | Description                  | Type                    | Default     |
+| -------- | --------- | ---------------------------- | ----------------------- | ----------- |
+| `banner` | --        | Массив элементов для баннера | `SSaqhanLineBookItem[]` | `undefined` |
+
+
+## Events
+
+| Event         | Description       | Type               |
+| ------------- | ----------------- | ------------------ |
+| `clickOnLink` | Клик по элементам | `CustomEvent<any>` |
 
 
 ## Dependencies

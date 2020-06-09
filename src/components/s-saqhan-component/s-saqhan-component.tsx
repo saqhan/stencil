@@ -10,7 +10,10 @@ import {
   subscribeText,
   footerItems,
   subscribeBlockText,
-  footerInfo
+  footerInfo,
+  messages,
+  mainUser,
+  footerCopyright
 } from "../../utils/mock";
 
 @Component({
@@ -65,8 +68,13 @@ export class SSaqhanComponent {
           onClickOnMenu={(item) => this.clickOnMenu(item)}
           footerItems={footerItems}
           footerInfo={footerInfo}
+          footerCopyright={footerCopyright}
         />
-        <s-saqhan-chat-app></s-saqhan-chat-app>
+        <s-saqhan-chat-app
+          messages={messages}
+          mainUser={mainUser}
+          onClickOnSearchChat={(event) => this.clickOnSearchChat(event)}
+        ></s-saqhan-chat-app>
       </div>
     );
   }
@@ -102,5 +110,12 @@ export class SSaqhanComponent {
    * */
   public clickOnCategoryNews({ detail }) {
     return console.log( detail);
+  }
+
+  /**
+   *  Метод поиска по чату
+   * */
+  public clickOnSearchChat({detail}) {
+    return console.log(detail.data);
   }
 }

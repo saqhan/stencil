@@ -33,7 +33,7 @@ export class SSaqhanSubscBanner implements ComponentInterface {
               <span class="btn-read-sub"
                     onClick={() => this.clickOnSubscribeButton.emit({place:'See pricing', item: this.subscribeText})}
               >
-                <span> {this.subscribeBlockText.nameLink}</span>
+                <span class="custom-links" > {this.subscribeBlockText.nameLink}</span>
               </span>
             </div>
           </div>

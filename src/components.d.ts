@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { FooterWrapperItem, } from "./components/res/view/s-saqhan-app-footer/res/view/footer-wrapper/res/interface/common.interface";
 import { authorItem, } from "./components/s-saqhan-second-page/res/view/s-saqhan-author-info/res/interface/common.interface";
+import { mainUser, messages, } from "./components/s-saqhan-component/res/interface/common.interface";
 import { SSaqhanEventCardItem, } from "./components/s-saqhan-component/res/view/s-saqhan-events-blog/res/interface/common.interface";
 import { SSaqhanFirstSliderItem, } from "./components/s-saqhan-component/res/view/s-saqhan-first-slider/res/interface/common.interface";
 import { logoUrl, SSaqhanHedearMenuItem, } from "./components/res/view/s-saqhan-header-app/res/interface/common.interface";
@@ -29,6 +30,10 @@ export namespace Components {
         "arr": any;
     }
     interface SSaqhanAppFooter {
+        /**
+          * Текст для копирайта
+         */
+        "footerCopyright": any;
         /**
           * Инфо о компании в футере
          */
@@ -71,6 +76,14 @@ export namespace Components {
     interface SSaqhanChatAddQuestion {
     }
     interface SSaqhanChatApp {
+        /**
+          * Массив данных для главного пользователя (админа)
+         */
+        "mainUser": mainUser[];
+        /**
+          * Массив данных для обычных пользователей
+         */
+        "messages": messages[];
     }
     interface SSaqhanChatFiles {
     }
@@ -530,6 +543,10 @@ declare namespace LocalJSX {
     }
     interface SSaqhanAppFooter {
         /**
+          * Текст для копирайта
+         */
+        "footerCopyright"?: any;
+        /**
           * Инфо о компании в футере
          */
         "footerInfo"?: any;
@@ -595,9 +612,33 @@ declare namespace LocalJSX {
     interface SSaqhanChatAddQuestion {
     }
     interface SSaqhanChatApp {
+        /**
+          * Массив данных для главного пользователя (админа)
+         */
+        "mainUser"?: mainUser[];
+        /**
+          * Массив данных для обычных пользователей
+         */
+        "messages"?: messages[];
+        /**
+          * Клик по кнопке в чате
+         */
+        "onClickOnSearchChat"?: (event: CustomEvent<any>) => void;
+        /**
+          * Переменная для закрытия модального чата
+         */
         "onClose"?: (event: CustomEvent<any>) => void;
+        /**
+          * Открываем файлы чата
+         */
         "onSelectFiles"?: (event: CustomEvent<any>) => void;
+        /**
+          * Событие при клике на диалог, открываем личные сообщения
+         */
         "onSelectPersonal"?: (event: CustomEvent<any>) => void;
+        /**
+          * Открываем диалоги
+         */
         "onSelectUsers"?: (event: CustomEvent<any>) => void;
     }
     interface SSaqhanChatFiles {
@@ -605,6 +646,13 @@ declare namespace LocalJSX {
     interface SSaqhanChatFilesWrapper {
     }
     interface SSaqhanChatFormSearch {
+        /**
+          * Клик по кнопке в чате
+         */
+        "onClickOnSearchChat"?: (event: CustomEvent<any>) => void;
+        /**
+          * Клик по кнопке files
+         */
         "onSelectFiles"?: (event: CustomEvent<any>) => void;
     }
     interface SSaqhanChatFormSearchFiles {

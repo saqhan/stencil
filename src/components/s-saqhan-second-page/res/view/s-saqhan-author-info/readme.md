@@ -7,9 +7,16 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type  | Default     |
-| -------- | --------- | ----------- | ----- | ----------- |
-| `author` | `author`  |             | `any` | `undefined` |
+| Property | Attribute | Description               | Type           | Default     |
+| -------- | --------- | ------------------------- | -------------- | ----------- |
+| `author` | --        | Элементы об авторе статьи | `authorItem[]` | `undefined` |
+
+
+## Events
+
+| Event         | Description           | Type               |
+| ------------- | --------------------- | ------------------ |
+| `clickOnLink` | Клик по автору статьи | `CustomEvent<any>` |
 
 
 ## Dependencies

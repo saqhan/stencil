@@ -1,4 +1,11 @@
-import {Component, ComponentInterface, Prop, h, Event, EventEmitter} from "@stencil/core";
+import {
+  Component,
+  ComponentInterface,
+  Prop,
+  h,
+  Event,
+  EventEmitter,
+} from "@stencil/core";
 @Component({
   tag: "s-saqhan-event-card",
   styleUrl: "s-saqhan-event-card.css",
@@ -6,8 +13,8 @@ import {Component, ComponentInterface, Prop, h, Event, EventEmitter} from "@sten
 })
 export class SSaqhanEventCard implements ComponentInterface {
   /**
-  * Массив публикаций Ивентов
-  * */
+   * Массив публикаций Ивентов
+   * */
   @Prop() event: any;
   /**
    * Клик по новости
@@ -21,34 +28,50 @@ export class SSaqhanEventCard implements ComponentInterface {
     return (
       <div class="blog-card">
         <div
-          class="blog-img"
+          class="blog-img custom-links"
           style={{ backgroundImage: "url(" + this.event.img + ")" }}
-          onClick={() => this.clickOnNews.emit({place: 'img', item : this.event})}
+          onClick={() =>
+            this.clickOnNews.emit({ place: "img", item: this.event })
+          }
         >
-          <span class={!this.event.date ? 'no-date' : 'date-event' }
-
-          > {this.event.date} </span>
+          <span class={!this.event.date ? "no-date" : "date-event"}>
+            {" "}
+            {this.event.date}{" "}
+          </span>
         </div>
 
-        <div
+        <span
           class={this.ColorCategory(this.event.category)}
-          onClick={() => this.clickOnCategoryNews.emit({place: 'category', item : this.event})}
+          onClick={() =>
+            this.clickOnCategoryNews.emit({
+              place: "category",
+              item: this.event,
+            })
+          }
         >
           {this.event.category}
-        </div>
-        <div class="blog-title pt-3 font-weight-bold"
-             onClick={() => this.clickOnNews.emit({place: 'title', item : this.event})}
-        >{this.event.title}</div>
-        <div class="btn-read pt-3"
-             onClick={() => this.clickOnNews.emit({place: 'btn-read', item : this.event})}
+        </span>
+        <div
+          class="blog-title"
+          onClick={() =>
+            this.clickOnNews.emit({ place: "title", item: this.event })
+          }
         >
-          <span> {this.event.btnText} </span>
+          <span class="custom-links">{this.event.title}</span>
+        </div>
+        <div
+          class="btn-read "
+          onClick={() =>
+            this.clickOnNews.emit({ place: "btn-read", item: this.event })
+          }
+        >
+          <span class="custom-links"> {this.event.btnText} </span>
         </div>
       </div>
     );
   }
   public ColorCategory = (nameCategory) => {
-    const classCategory = "category text-warning small";
+    const classCategory = "category text-warning small custom-links";
     switch (nameCategory) {
       case "Report":
         return `report ${classCategory}`;

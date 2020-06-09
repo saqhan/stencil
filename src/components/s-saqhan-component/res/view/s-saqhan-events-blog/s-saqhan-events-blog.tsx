@@ -19,6 +19,10 @@ export class SSaqhanEventsBlog implements ComponentInterface {
    * Клик по категории
    * */
   @Event() clickOnCategoryNews: EventEmitter;
+
+  /**
+   * Получаем элементы ивентов
+   * */
   getEvents(arr) {
     return arr.map((item) => item);
   }
@@ -38,7 +42,9 @@ export class SSaqhanEventsBlog implements ComponentInterface {
     );
   }
 }
-
+/**
+ * Компонентная функция для передачи элементов из массива в дочерний компонент
+ * */
 const EventsPost = (props) => {
   return props.event.map((item) => {
     return (

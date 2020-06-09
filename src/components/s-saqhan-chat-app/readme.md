@@ -5,14 +5,23 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property   | Attribute | Description                                      | Type         | Default     |
+| ---------- | --------- | ------------------------------------------------ | ------------ | ----------- |
+| `mainUser` | --        | Массив данных для главного пользователя (админа) | `mainUser[]` | `undefined` |
+| `messages` | --        | Массив данных для обычных пользователей          | `messages[]` | `undefined` |
+
+
 ## Events
 
-| Event            | Description | Type               |
-| ---------------- | ----------- | ------------------ |
-| `close`          |             | `CustomEvent<any>` |
-| `selectFiles`    |             | `CustomEvent<any>` |
-| `selectPersonal` |             | `CustomEvent<any>` |
-| `selectUsers`    |             | `CustomEvent<any>` |
+| Event               | Description                                             | Type               |
+| ------------------- | ------------------------------------------------------- | ------------------ |
+| `clickOnSearchChat` | Клик по кнопке в чате                                   | `CustomEvent<any>` |
+| `close`             | Переменная для закрытия модального чата                 | `CustomEvent<any>` |
+| `selectFiles`       | Открываем файлы чата                                    | `CustomEvent<any>` |
+| `selectPersonal`    | Событие при клике на диалог, открываем личные сообщения | `CustomEvent<any>` |
+| `selectUsers`       | Открываем диалоги                                       | `CustomEvent<any>` |
 
 
 ## Dependencies

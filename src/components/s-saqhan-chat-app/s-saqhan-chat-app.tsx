@@ -1,5 +1,16 @@
-import { Component, ComponentInterface, h, State, Event } from "@stencil/core";
-import { messages, mainUser } from "../../utils/mock";
+import {
+  Component,
+  ComponentInterface,
+  h,
+  State,
+  Event,
+  Prop,
+  EventEmitter,
+} from "@stencil/core";
+import {
+  mainUser,
+  messages,
+} from "../s-saqhan-component/res/interface/common.interface";
 
 @Component({
   tag: "s-saqhan-chat-app",
@@ -7,39 +18,48 @@ import { messages, mainUser } from "../../utils/mock";
   shadow: false,
 })
 export class SSaqhanChatApp implements ComponentInterface {
+  /**
+   * Массив данных для главного пользователя (админа)
+   **/
+  @Prop() mainUser: mainUser[];
+  /**
+   * Массив данных для обычных пользователей
+   * */
+  @Prop() messages: messages[];
+  /**
+   * Перменная для включения/отключения показа чата в развернутом виде
+   * */
   @State() showChat: boolean;
+  /**
+   * По умолчанию отображается вид с диалогами
+   * */
   @State() showContent = "users";
-
+  /**
+   * Переменная для закрытия модального чата
+   **/
   @Event() close: boolean;
+  /**
+   * Событие при клике на диалог, открываем личные сообщения
+   * */
   @Event() selectPersonal: string;
+  /**
+   * Открываем диалоги
+   * */
   @Event() selectUsers: string;
+  /**
+   * Открываем файлы чата
+   * */
   @Event() selectFiles: string;
-
-  public isShowChat() {
-    this.showChat = !this.showChat;
-  }
-  public onClose() {
-    this.showChat = false;
-  }
-
-  public onSelectPersonal() {
-    return  this.showContent = 'personal';
-  }
-  public onSelectUsers() {
-    return  this.showContent = 'users';
-  }
-  public onSelectFiles() {
-    return  this.showContent = 'files';
-  }
-
+  /**
+   * Клик по кнопке в чате
+   * */
+  @Event() clickOnSearchChat: EventEmitter;
 
   render() {
     return (
       <div class="wrapper-modal">
         {this.showChat ? (
           <s-saqhan-chat-wrapper
-            messages={messages}
-            mainUser={mainUser}
             onSelectPersonal={() => this.onSelectPersonal()}
             onSelectUsers={() => this.onSelectUsers()}
             onSelectFiles={() => this.onSelectFiles()}
@@ -64,5 +84,36 @@ export class SSaqhanChatApp implements ComponentInterface {
         </div>
       </div>
     );
+  }
+  /**
+   * Метод для изменения состояния чата
+   * */
+  public isShowChat() {
+    this.showChat = !this.showChat;
+  }
+  /**
+   * Метод для закрытия чата
+   * */
+  public onClose() {
+    this.showChat = false;
+  }
+  /**
+   * Если кликнули на диалог и открываем личные сообщения пользователя
+   * */
+  public onSelectPersonal() {
+    return (this.showContent = "personal");
+  }
+  /**
+   * Метод для открывания диалогов
+   * */
+  public onSelectUsers() {
+    return (this.showContent = "users");
+  }
+  /**
+   * Метод для выбора раздела файлов
+   * */
+  public onSelectFiles() {
+    return (this.showContent = "files");
+
   }
 }

@@ -7,9 +7,16 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                    | Default     |
-| -------- | --------- | ----------- | ----------------------- | ----------- |
-| `author` | --        |             | `SSaqhanCardAuthorItem` | `undefined` |
+| Property | Attribute | Description               | Type  | Default     |
+| -------- | --------- | ------------------------- | ----- | ----------- |
+| `author` | `author`  | Элементы об авторе статьи | `any` | `undefined` |
+
+
+## Events
+
+| Event         | Description           | Type               |
+| ------------- | --------------------- | ------------------ |
+| `clickOnLink` | Клик по автору статьи | `CustomEvent<any>` |
 
 
 ## Dependencies

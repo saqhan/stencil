@@ -31,12 +31,12 @@ export class SSaqhanLentaNewsCard implements ComponentInterface {
           onClick={() => this.clickOnNews.emit({place: 'img', item: this.lentaNews})}
           style={{ backgroundImage: `url(${this.lentaNews.img})` }}
         ></div>
-        <div class="lenta-info custom-link">
+        <div class="lenta-info ">
           <div onClick={() => this.clickOnNews.emit({place: 'category', item: this.lentaNews})} class={this.ColorCategory(this.lentaNews.category)}>
-            {this.lentaNews.category}
+            <span class="custom-link">{this.lentaNews.category}</span>
           </div>
-          <div onClick={() => this.clickOnNews.emit({place: 'title', item: this.lentaNews})} class="lenta-title  custom-link">
-            {this.lentaNews.title}
+          <div onClick={() => this.clickOnNews.emit({place: 'title', item: this.lentaNews})} class="lenta-title ">
+            <span class="custom-link">{this.lentaNews.title}</span>
           </div>
           <div class="btn-read custom-link"  >
             <span onClick={() => this.clickOnNews.emit({place: 'btn-read', item: this.lentaNews})} >{this.lentaNews.btnText}</span>
@@ -45,6 +45,11 @@ export class SSaqhanLentaNewsCard implements ComponentInterface {
       </div>
     );
   }
+
+
+  /**
+   * Метод для выбора цвета категории публикации
+   * */
   public ColorCategory = (nameCategory) => {
     const classCategory = "category lenta-category small";
     switch (nameCategory) {

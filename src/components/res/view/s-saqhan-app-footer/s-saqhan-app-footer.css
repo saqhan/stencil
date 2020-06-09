@@ -16,6 +16,9 @@
   font-weight: 400;
   font-family: "Open Sans", sans-serif;
 }
+.custom-links {
+  cursor: pointer;
+}
 
 .footer-info-number {
   color: #007bff;

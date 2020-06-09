@@ -57,6 +57,9 @@ export class SSaqhanSecondPage implements ComponentInterface {
   public clickOnSubscribeButton({ detail }) {
     return console.log(detail);
   }
+  /**
+   * Клик по кнопке перехода
+   * */
   public clickOnLink({ detail }) {
     return console.log(detail);
   }

@@ -43,6 +43,19 @@
   font-weight: 600;
 }
 
+.title-news {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.category-main {
+  margin-top: 15px;
+}
+
+.sub-title-news {
+  margin: 30px 0px;
+}
+
 .btn-read a {
   color: #000000;
   font-weight: 700;

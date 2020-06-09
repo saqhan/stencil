@@ -7,9 +7,10 @@
 
 ## Events
 
-| Event         | Description | Type               |
-| ------------- | ----------- | ------------------ |
-| `selectFiles` |             | `CustomEvent<any>` |
+| Event               | Description           | Type               |
+| ------------------- | --------------------- | ------------------ |
+| `clickOnSearchChat` | Клик по кнопке в чате | `CustomEvent<any>` |
+| `selectFiles`       | Клик по кнопке files  | `CustomEvent<any>` |
 
 
 ## Dependencies
