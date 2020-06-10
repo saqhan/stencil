@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description     | Type                | Default     |
-| -------- | --------- | --------------- | ------------------- | ----------- |
-| `footer` | --        | массив 1 футера | `FooterWrapperItem` | `undefined` |
+| Property | Attribute | Description     | Type  | Default     |
+| -------- | --------- | --------------- | ----- | ----------- |
+| `footer` | `footer`  | массив 1 футера | `any` | `undefined` |
 
 
 ## Events

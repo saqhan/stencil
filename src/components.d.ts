@@ -5,7 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { FooterWrapperItem, } from "./components/res/view/s-saqhan-app-footer/res/view/footer-wrapper/res/interface/common.interface";
+import { footerItems2, } from "./components/res/view/s-saqhan-app-footer/res/interface/common.interface";
 import { authorItem, } from "./components/s-saqhan-second-page/res/view/s-saqhan-author-info/res/interface/common.interface";
 import { mainUser, messages, } from "./components/s-saqhan-component/res/interface/common.interface";
 import { SSaqhanEventCardItem, } from "./components/s-saqhan-component/res/view/s-saqhan-events-blog/res/interface/common.interface";
@@ -24,7 +24,7 @@ export namespace Components {
         /**
           * массив 1 футера
          */
-        "footer": FooterWrapperItem;
+        "footer": any;
     }
     interface MenuItem {
         "arr": any;
@@ -41,7 +41,7 @@ export namespace Components {
         /**
           * массив меню для вывода
          */
-        "footerItems": any;
+        "footerItems": footerItems2[];
     }
     interface SSaqhanAuthorInfo {
         /**
@@ -531,7 +531,7 @@ declare namespace LocalJSX {
         /**
           * массив 1 футера
          */
-        "footer"?: FooterWrapperItem;
+        "footer"?: any;
         /**
           * Клик на пункт меню
          */
@@ -553,7 +553,7 @@ declare namespace LocalJSX {
         /**
           * массив меню для вывода
          */
-        "footerItems"?: any;
+        "footerItems"?: footerItems2[];
         /**
           * клик по кнопке в футере
          */

@@ -6,6 +6,7 @@ import {
   EventEmitter,
   Event,
 } from "@stencil/core";
+import { footerItems2 } from "./res/interface/common.interface";
 
 @Component({
   tag: "s-saqhan-app-footer",
@@ -16,7 +17,7 @@ export class SSaqhanAppFooter implements ComponentInterface {
   /**
    * массив меню для вывода
    */
-  @Prop() footerItems: any;
+  @Prop() footerItems: footerItems2[];
   /**
    * Инфо о компании в футере
    */

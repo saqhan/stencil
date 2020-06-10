@@ -7,7 +7,6 @@ import {
   Prop,
 } from "@stencil/core";
 
-import {FooterWrapperItem} from './res/interface/common.interface';
 
 
 @Component({
@@ -19,7 +18,7 @@ export class FooterWrapper implements ComponentInterface {
   /**
    * массив 1 футера
    */
-  @Prop() footer: FooterWrapperItem;
+  @Prop() footer: any;
 
   /**
    * Клик на пункт меню
