@@ -15,7 +15,7 @@ import {
   mainUser,
   footerCopyright
 } from "../../utils/mock";
-
+//any text
 @Component({
   tag: "s-saqhan-component",
   styleUrl: "s-saqhan-component.css",
